@@ -6,7 +6,9 @@
   "scripts": {
     "start": "webpack serve --env port=3000",
     "build:dev": "webpack --env mode=development",
-    "build:prod": "webpack --env mode=production"
+    "build:prod": "webpack --env mode=production",
+    "analyze:dev": "npm run build:dev --env analyze=true",
+    "analyze:prod": "npm run build:prod --env analyze=true"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +25,8 @@
     "@types/webpack": "^5.28.0",
     "@types/webpack-bundle-analyzer": "^4.4.1",
     "@types/webpack-dev-server": "^4.7.2",
+    "@svgr/webpack": "^6.2.1",
+    "file-loader": "^6.2.0",
     "babel-loader": "^8.2.3",
     "css-loader": "^6.6.0",
     "html-webpack-plugin": "^5.5.0",
