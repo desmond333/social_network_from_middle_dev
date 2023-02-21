@@ -3,11 +3,12 @@ import webpack from "webpack";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
 import { BuildOptions } from "./types/config";
+import ReactRefreshPlugin from "@pmmmwh/react-refresh-webpack-plugin";
 
 export const buildPlugins = (options: BuildOptions): webpack.WebpackPluginInstance[] => {
-  const { paths, analyze } = options;
+  const { isDev, paths, analyze } = options;
 
-  return [
+  const plugins = [
     new HTMLWebpackPlugin(
       {
         template: paths.html,
@@ -26,4 +27,12 @@ export const buildPlugins = (options: BuildOptions): webpack.WebpackPluginInstan
       },
     ),
   ];
+
+  const restPlugins = isDev ? [
+    // 2 плагина для обновления приложения после изменений в коде без обновления страницы
+    new ReactRefreshPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+  ] : [];
+
+  return [...plugins, ...restPlugins];
 };

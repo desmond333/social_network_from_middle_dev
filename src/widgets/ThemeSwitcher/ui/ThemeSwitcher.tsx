@@ -4,9 +4,10 @@ import { useTheme } from "app/providers/ThemeProvider";
 import { Button } from "shared/ui/Button/Button";
 import Logo from "shared/assets/icons/theme-icon.svg";
 import React from "react";
-import { Theme } from "app/providers/ThemeProvider/lib/ThemeContext";
+import { Theme, TTheme } from "app/providers/ThemeProvider/lib/ThemeContext";
 
-export const LogoColor = {
+// up
+export const LogoColor: Record<TTheme, string> = {
   [Theme.LIGHT]: "blue",
   [Theme.DARK]: "white",
 } as const;

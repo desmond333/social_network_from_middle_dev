@@ -8,5 +8,8 @@ export const buildDevServer = (options: BuildOptions): DevServerConfiguration =>
     port,
     open: true,
     historyApiFallback: true,
+
+    // для обновления приложения после изменений в коде без обновления страницы
+    hot: true,
   };
 };
