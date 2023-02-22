@@ -1,7 +1,13 @@
 .sidebar {
-  width: 300px;
   background: var(--inverted-bg-color);
+  background: red;
   height: calc(100vh - var(--navbar-height));
+  width: var(--sidebar-width);
 
   position: relative;
+  transition: width 0.4s;
+}
+
+.collapsed {
+  width: var(--sidebar-width-collapsed);
 }

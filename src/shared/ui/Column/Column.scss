@@ -5,7 +5,7 @@
   max-width: 100%;
   padding-left: var(--bases-gutter-mob-x);
   padding-right: var(--bases-gutter-mob-x);
-  flex: 1 0 0%;
+  flex: 1 0 0;
   box-sizing: border-box;
 
   @include screen(lg) {
