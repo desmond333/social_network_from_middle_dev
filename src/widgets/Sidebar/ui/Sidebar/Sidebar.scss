@@ -1,0 +1,7 @@
+.sidebar {
+  width: 300px;
+  background: var(--inverted-bg-color);
+  height: calc(100vh - var(--navbar-height));
+
+  position: relative;
+}

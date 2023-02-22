@@ -1,29 +1,27 @@
-import React, { Suspense } from "react";
-import { Route, Routes } from "react-router-dom";
-import "./styles/index.scss";
-import cn from "shared/lib/classNames/classNames";
-import { useTheme } from "app/providers/ThemeProvider";
-import { AboutPage } from "pages/AboutPage";
-import { MainPage } from "pages/MainPage";
-import { Navbar } from "widgets/Navbar";
-import Logo from "shared/assets/icons/theme-icon.svg";
-import { ThemeSwitcher } from "widgets/ThemeSwitcher";
+import "./styles/index.scss"
+import { classNames as cn } from "shared/lib/classNames"
+import { useTheme } from "app/providers/ThemeProvider"
+import { Navbar } from "widgets/Navbar"
+import AppRouter from "./providers/router/ui/AppRouter"
+import { Sidebar } from "widgets/Sidebar/ui/Sidebar/Sidebar"
+import { Column, Row } from "shared/ui"
 
 const App = () => {
-  const { theme } = useTheme();
+  const { theme } = useTheme()
 
   return (
     <div className={cn("app", {}, [theme])}>
       <Navbar />
-      <ThemeSwitcher />
-      <Suspense fallback={<div>Loading...</div>}>
-        <Routes>
-          <Route path={"/about"} element={<AboutPage />} />
-          <Route path={"/"} element={<MainPage />} />
-        </Routes>
-      </Suspense>
+      <Row>
+        <Column>
+          <Sidebar />
+        </Column>
+        <Column>
+          <AppRouter />
+        </Column>
+      </Row>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App

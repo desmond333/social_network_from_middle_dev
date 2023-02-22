@@ -1,17 +1,17 @@
-import cn from "shared/lib/classNames/classNames";
-import "./Button.scss";
-import { ButtonHTMLAttributes, FC } from "react";
+import { ButtonHTMLAttributes, FC } from "react"
+import { classNames as cn } from "shared/lib/classNames"
+import "./Button.scss"
 
 export const VariantButton = {
   CLEAR: "clear",
-} as const;
+} as const
 
 export type TVariantButton = typeof VariantButton[keyof typeof VariantButton]
 
 // up
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  className?: string;
-  variant?: TVariantButton;
+  className?: string
+  variant?: TVariantButton
 }
 
 export const Button: FC<ButtonProps> = (props) => {
@@ -20,13 +20,11 @@ export const Button: FC<ButtonProps> = (props) => {
     variant = VariantButton.CLEAR,
     children,
     ...otherProps
-  } = props;
+  } = props
 
   return (
-    <button
-      className={cn("button", {}, [className, variant])}
-      {...otherProps}>
+    <button className={cn("button", {}, [className, variant])} {...otherProps}>
       {children}
     </button>
-  );
-};
+  )
+}

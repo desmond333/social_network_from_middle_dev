@@ -1,0 +1,17 @@
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    .row-#{$infix}-align-center {
+      align-items: center;
+    }
+    .row-#{$infix}-align-flex-end {
+      align-items: flex-end;
+    }
+    .row-#{$infix}-align-flex-start {
+      align-items: flex-start;
+    }
+    .row-#{$infix}-align-stretch {
+      align-items: stretch;
+    }
+  }
+}

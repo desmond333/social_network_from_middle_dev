@@ -1,12 +1,12 @@
-import webpack from "webpack";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import webpack from "webpack"
+import MiniCssExtractPlugin from "mini-css-extract-plugin"
 
 export const buildLoaders = (isDev: boolean): webpack.RuleSetRule[] => {
   const tsLoader = {
     test: /\.tsx?$/,
     use: "ts-loader",
     exclude: /node_modules/,
-  };
+  }
 
   const cssLoader = {
     test: /\.s[ac]ss$/i,
@@ -19,12 +19,12 @@ export const buildLoaders = (isDev: boolean): webpack.RuleSetRule[] => {
       // Compiles Sass to CSS
       "sass-loader",
     ],
-  };
+  }
 
   const svgLoader = {
     test: /\.svg$/,
     use: ["@svgr/webpack"],
-  };
+  }
 
   const fileLoader = {
     test: /\.(png|jpe?g|gif|woff2|woff)$/i,
@@ -33,8 +33,8 @@ export const buildLoaders = (isDev: boolean): webpack.RuleSetRule[] => {
         loader: "file-loader",
       },
     ],
-  };
+  }
 
   // порядок loaders имеет значение
-  return [fileLoader, svgLoader, tsLoader, cssLoader];
-};
+  return [fileLoader, svgLoader, tsLoader, cssLoader]
+}

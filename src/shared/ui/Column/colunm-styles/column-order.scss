@@ -1,0 +1,41 @@
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    .column-#{$infix}-order-1 {
+      order: 1;
+    }
+    .column-#{$infix}-order-2 {
+      order: 2;
+    }
+    .column-#{$infix}-order-3 {
+      order: 3;
+    }
+    .column-#{$infix}-order-4 {
+      order: 4;
+    }
+    .column-#{$infix}-order-5 {
+      order: 5;
+    }
+    .column-#{$infix}-order-6 {
+      order: 6;
+    }
+    .column-#{$infix}-order-7 {
+      order: 7;
+    }
+    .column-#{$infix}-order-8 {
+      order: 8;
+    }
+    .column-#{$infix}-order-9 {
+      order: 9;
+    }
+    .column-#{$infix}-order-10 {
+      order: 10;
+    }
+    .column-#{$infix}-order-11 {
+      order: 11;
+    }
+    .column-#{$infix}-order-12 {
+      order: 12;
+    }
+  }
+}

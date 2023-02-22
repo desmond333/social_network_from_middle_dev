@@ -1,0 +1,41 @@
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    .column-#{$infix}-align-self-auto {
+      align-self: auto;
+    }
+    .column-#{$infix}-align-self-normal {
+      align-self: normal;
+    }
+    .column-#{$infix}-align-self-center {
+      align-self: center;
+    }
+    .column-#{$infix}-align-self-start {
+      align-self: start;
+    }
+    .column-#{$infix}-align-self-end {
+      align-self: end;
+    }
+    .column-#{$infix}-align-self-self-start {
+      align-self: self-start;
+    }
+    .column-#{$infix}-align-self-self-end {
+      align-self: self-end;
+    }
+    .column-#{$infix}-align-self-baseline {
+      align-self: baseline;
+    }
+    .column-#{$infix}-align-self-stretch {
+      align-self: stretch;
+    }
+    .column-#{$infix}-align-self-inherit {
+      align-self: inherit;
+    }
+    .column-#{$infix}-align-self-initial {
+      align-self: inherit;
+    }
+    .column-#{$infix}-align-self-unset {
+      align-self: unset;
+    }
+  }
+}

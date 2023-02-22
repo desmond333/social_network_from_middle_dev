@@ -1,11 +1,15 @@
-import React from 'react';
+import { Column, Container, Row } from "shared/ui"
 
 const MainPage = () => {
-    return (
-        <div>
-            MainPage
-        </div>
-    );
-};
+  return (
+    <section>
+      <Container>
+        <Row>
+          <Column>ABOUT PAGE</Column>
+        </Row>
+      </Container>
+    </section>
+  )
+}
 
-export default MainPage;
+export default MainPage
