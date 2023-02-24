@@ -5,8 +5,9 @@ import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer"
 import { BuildOptions } from "./types/config"
 import ReactRefreshPlugin from "@pmmmwh/react-refresh-webpack-plugin"
 
+// up js
 export const buildPlugins = (
-  options: BuildOptions
+  options: BuildOptions,
 ): webpack.WebpackPluginInstance[] => {
   const { isDev, paths, analyze } = options
 
@@ -22,14 +23,17 @@ export const buildPlugins = (
     new BundleAnalyzerPlugin({
       analyzerMode: analyze ? "server" : "disabled",
     }),
+    new webpack.DefinePlugin({
+      ___IS_DEV__: JSON.stringify(isDev),
+    }),
   ]
 
   const restPlugins = isDev
     ? [
-        // 2 плагина для обновления приложения после изменений в коде без обновления страницы
-        new ReactRefreshPlugin(),
-        new webpack.HotModuleReplacementPlugin(),
-      ]
+      // 2 плагина для обновления приложения после изменений в коде без обновления страницы
+      new ReactRefreshPlugin(),
+      new webpack.HotModuleReplacementPlugin(),
+    ]
     : []
 
   return [...plugins, ...restPlugins]

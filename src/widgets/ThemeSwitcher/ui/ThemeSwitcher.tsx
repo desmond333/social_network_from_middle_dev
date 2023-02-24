@@ -5,7 +5,7 @@ import { Button } from "shared/ui"
 import Logo from "shared/assets/icons/theme-icon.svg"
 import { Theme, TTheme } from "app/providers/ThemeProvider/lib/ThemeContext"
 
-// up
+// up ts
 export const LogoColor: Record<TTheme, string> = {
   [Theme.LIGHT]: "blue",
   [Theme.DARK]: "white",

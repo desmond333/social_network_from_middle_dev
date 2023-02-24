@@ -8,7 +8,7 @@ export const VariantButton = {
 
 export type TVariantButton = typeof VariantButton[keyof typeof VariantButton]
 
-// up
+// up ts
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string
   variant?: TVariantButton
