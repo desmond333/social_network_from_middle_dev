@@ -2,18 +2,18 @@ import { FC } from "react"
 import { Column, Container, Row } from "shared/ui"
 import { useTranslation } from "react-i18next"
 
-const MainPage: FC = () => {
-  const { t, i18n } = useTranslation("main")
+const AboutPage: FC = () => {
+  const { t } = useTranslation("about")
 
   return (
     <section>
       <Container>
         <Row>
-          <Column>{t("MAIN_PAGE")}</Column>
+          <Column>{t("ABOUT_PAGE")}</Column>
         </Row>
       </Container>
     </section>
   )
 }
 
-export default MainPage
+export default AboutPage

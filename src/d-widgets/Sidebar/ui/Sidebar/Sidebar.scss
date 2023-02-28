@@ -1,9 +1,9 @@
 .sidebar {
   background: var(--inverted-bg-color);
-  background: red;
-  height: calc(100vh - var(--navbar-height));
+  // up css
+  height: var(--inverted-navbar-height);
   width: var(--sidebar-width);
-
+  border-top: 1px solid var(--bg-color);
   position: relative;
   transition: width 0.4s;
 }

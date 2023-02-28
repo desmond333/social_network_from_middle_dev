@@ -1,20 +1,19 @@
-export enum AppRoutes {
-  MAIN = "main",
-  ABOUT = "about",
-}
+export const AppRoutes = {
+  MAIN: "main",
+  ABOUT: "about",
 
-const TEXT = {
-  FIRST: "some text",
-  SECOND: "other text",
-  THIRD: "some some text",
-} as const;
+  // если верхние маршруты не отработали, то
+  NOT_FOUND: "not_found",
+} as const
 
+export type TAppRoutes = typeof AppRoutes[keyof typeof AppRoutes]
+
+// up ts
 export type ValueOf<T> = T[keyof T]
+export type TAppRoutes2 = ValueOf<typeof AppRoutes>
 
-export type TextType1 = typeof TEXT[keyof typeof TEXT]
-export type TextType2 = ValueOf<typeof TEXT>
-
-export const RoutePath: Record<AppRoutes, string> = {
+export const RoutePath: Record<TAppRoutes, string> = {
   [AppRoutes.MAIN]: "/",
   [AppRoutes.ABOUT]: "/about",
-};
+  [AppRoutes.NOT_FOUND]: "*",
+}

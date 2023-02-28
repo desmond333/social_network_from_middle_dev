@@ -2,10 +2,10 @@ import { FC, Suspense } from "react"
 import "./styles/index.scss"
 import { classNames as cn } from "shared/lib/classNames"
 import { useTheme } from "app/providers/ThemeProvider"
-import { Navbar } from "widgets/Navbar"
 import AppRouter from "./providers/router/ui/AppRouter"
-import { Sidebar } from "widgets/Sidebar/ui/Sidebar/Sidebar"
 import { Column, Row } from "shared/ui"
+import { Navbar } from "d-widgets/Navbar"
+import { Sidebar } from "d-widgets/Sidebar"
 
 const App: FC = () => {
   const { theme } = useTheme()
@@ -18,7 +18,7 @@ const App: FC = () => {
           <Column col="auto">
             <Sidebar />
           </Column>
-          <Column col="auto">
+          <Column>
             <AppRouter />
           </Column>
         </Row>

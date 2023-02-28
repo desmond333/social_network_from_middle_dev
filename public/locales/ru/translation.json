@@ -1,4 +1,7 @@
 {
   "CURRENT_LANGUAGE": "RU",
-  "HEADER": "Это хедер"
+  "HEADER": "Это хедер",
+  "NOT_FOUND": "Такой страницы не найдено :(",
+  "MAIN_PAGE_LINK": "Главная",
+  "ABOUT_PAGE_LINK": "Страница о нас"
 }

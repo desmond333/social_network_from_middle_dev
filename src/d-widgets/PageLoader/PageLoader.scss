@@ -1,0 +1,8 @@
+.page-loader {
+  min-height: var(--inverted-navbar-height);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
