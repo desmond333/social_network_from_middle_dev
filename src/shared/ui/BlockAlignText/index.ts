@@ -1,0 +1,1 @@
+export { BlockAlignText } from "./BlockAlignText";

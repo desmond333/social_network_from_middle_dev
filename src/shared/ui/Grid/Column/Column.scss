@@ -1,0 +1,20 @@
+@import "src/app/styles/mixins.scss";
+
+.column {
+  width: 100%;
+  max-width: 100%;
+  padding-left: var(--bases-gutter-mob-x);
+  padding-right: var(--bases-gutter-mob-x);
+  flex: 1 0 0;
+  box-sizing: border-box;
+
+  @include screen(lg) {
+    padding-left: var(--bases-gutter-x);
+    padding-right: var(--bases-gutter-x);
+  }
+}
+
+@import "colunm-styles/column-col";
+@import "colunm-styles/column-order";
+@import "colunm-styles/column-align-self";
+@import "colunm-styles/column-display";

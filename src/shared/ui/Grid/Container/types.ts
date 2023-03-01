@@ -1,0 +1,1 @@
+export type ContainerSize = "fluid" | "md" | "lg" | "xl" | "xxl"

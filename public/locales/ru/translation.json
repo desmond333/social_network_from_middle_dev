@@ -1,7 +1,10 @@
 {
   "CURRENT_LANGUAGE": "RU",
   "HEADER": "Это хедер",
+  "TOGGLE_WIDTH_SIDEBAR": "Переключить ширину",
   "NOT_FOUND": "Такой страницы не найдено :(",
   "MAIN_PAGE_LINK": "Главная",
-  "ABOUT_PAGE_LINK": "Страница о нас"
+  "ABOUT_PAGE_LINK": "Страница о нас",
+  "ERROR_BLOCK_TITLE": "Что-то пошло не так",
+  "ERROR_BLOCK_BTN": "Перезапустить приложение"
 }

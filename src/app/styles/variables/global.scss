@@ -10,8 +10,8 @@
   --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
 
   // Размеры
-  --navbar-height: 50px;
-  --inverted-navbar-height: calc(100vh - var(--navbar-height));
+  --header-height: 50px;
+  --inverted-header-height: calc(100vh - var(--header-height));
   --sidebar-width: 300px;
   --sidebar-width-collapsed: 80px;
 }

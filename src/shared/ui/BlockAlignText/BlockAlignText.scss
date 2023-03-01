@@ -1,0 +1,16 @@
+@import "src/app/styles/mixins.scss";
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    .block-align-text-#{$infix}-align-center {
+      text-align: center;
+    }
+    .block-align-text-#{$infix}-align-left {
+      text-align: left;
+    }
+    .block-align-text-#{$infix}-align-right {
+      text-align: right;
+    }
+  }
+}

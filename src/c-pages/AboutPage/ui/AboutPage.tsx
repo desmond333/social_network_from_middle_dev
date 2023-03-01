@@ -1,18 +1,20 @@
 import { FC } from "react"
-import { Column, Container, Row } from "shared/ui"
+import { Container } from "shared/ui"
 import { useTranslation } from "react-i18next"
+import { ErrorFallback } from "shared/ui/ErrorFallback/ErrorFallback"
+import { ErrorBoundary } from "react-error-boundary"
+import { BugButton } from "shared/ui/BugButton/BugButton"
 
 const AboutPage: FC = () => {
   const { t } = useTranslation("about")
 
   return (
-    <section>
-      <Container>
-        <Row>
-          <Column>{t("ABOUT_PAGE")}</Column>
-        </Row>
+    <ErrorBoundary FallbackComponent={ErrorFallback}>
+      <Container size="lg">
+        {t("ABOUT_PAGE")}
+        <BugButton />
       </Container>
-    </section>
+    </ErrorBoundary>
   )
 }
 

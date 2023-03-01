@@ -1,0 +1,18 @@
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .space-#{$infix}-direction-row {
+      flex-direction: row;
+    }
+    .space-#{$infix}-direction-row-reverse {
+      flex-direction: row-reverse;
+    }
+    .space-#{$infix}-direction-column {
+      flex-direction: column;
+    }
+    .space-#{$infix}-direction-column-reverse {
+      flex-direction: column-reverse;
+    }
+  }
+}

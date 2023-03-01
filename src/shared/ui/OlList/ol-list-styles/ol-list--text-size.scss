@@ -1,0 +1,33 @@
+@import "../../Text/Text";
+
+.ol-list--text-size-body-xl {
+  @extend .text--size-body-xl;
+
+  .ol-list__item:before {
+    @extend .text--size-body-xl;
+  }
+}
+
+.ol-list--text-size-body-l {
+  @extend .text--size-body-l;
+
+  .ol-list__item:before {
+    @extend .text--size-body-l;
+  }
+}
+
+.ol-list--text-size-body-m {
+  @extend .text--size-body-m;
+
+  .ol-list__item:before {
+    @extend .text--size-body-m;
+  }
+}
+
+.ol-list--text-size-body-s {
+  @extend .text--size-body-s;
+
+  .ol-list__item:before {
+    @extend .text--size-body-s;
+  }
+}

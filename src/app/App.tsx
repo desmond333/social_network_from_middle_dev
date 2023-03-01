@@ -3,27 +3,29 @@ import "./styles/index.scss"
 import { classNames as cn } from "shared/lib/classNames"
 import { useTheme } from "app/providers/ThemeProvider"
 import AppRouter from "./providers/router/ui/AppRouter"
-import { Column, Row } from "shared/ui"
-import { Navbar } from "d-widgets/Navbar"
+import { Column, Container, Row } from "shared/ui"
+import { Header } from "d-widgets/Header"
 import { Sidebar } from "d-widgets/Sidebar"
 
 const App: FC = () => {
   const { theme } = useTheme()
 
   return (
-    <main className={cn("app", {}, [theme])}>
+    <div className={cn("app", {}, [theme])}>
       <Suspense fallback="">
-        <Navbar />
-        <Row>
-          <Column col="auto">
-            <Sidebar />
-          </Column>
-          <Column>
-            <AppRouter />
-          </Column>
-        </Row>
+        <Header />
+        <Container size="fluid">
+          <Row>
+            <Column col="auto">
+              <Sidebar />
+            </Column>
+            <Column>
+              <AppRouter />
+            </Column>
+          </Row>
+        </Container>
       </Suspense>
-    </main>
+    </div>
   )
 }
 

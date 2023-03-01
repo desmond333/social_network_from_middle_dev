@@ -1,0 +1,31 @@
+@import "src/app/styles/mixins.scss";
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  flex-direction: row;
+
+  margin-left: calc(-1 * var(--bases-gutter-mob-x));
+  margin-right: calc(-1 * var(--bases-gutter-mob-x));
+
+  @include screen(xl) {
+    margin-left: calc(-1 * var(--bases-gutter-x));
+    margin-right: calc(-1 * var(--bases-gutter-x));
+  }
+}
+
+.row--no-gutters {
+  margin-left: 0;
+  margin-right: 0;
+
+  & > [class*="column-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@import "row-styles/row-gap";
+@import "row-styles/row-direction";
+@import "row-styles/row-align";
+@import "row-styles/row-justify";

@@ -1,0 +1,118 @@
+@import "src/app/styles/mixins.scss";
+
+.ul-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.ul-list--no-variant {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.ul-list--base {
+  @include space(padding, left, column-gap-constancy-level1);
+  @include space(margin, left, column-gap-constancy-level2);
+
+  list-style: initial;
+
+  .ul-list__item {
+    list-style: initial;
+
+    &::marker {
+      color: var(--ul-list-base-marker-color);
+    }
+  }
+}
+
+.ul-list--decimal {
+  @include space(padding, left, column-gap-constancy-level1);
+  @include space(margin, left, column-gap-constancy-level2);
+
+  list-style: decimal;
+
+  .ul-list__item {
+    list-style: decimal;
+
+    &::marker {
+      color: var(--ul-list-decimal-marker-color);
+    }
+  }
+}
+
+.ul-list--circle {
+  @include space(padding, left, column-gap-constancy-level1);
+  @include space(margin, left, column-gap-constancy-level2);
+
+  list-style: circle;
+
+  .ul-list__item {
+    list-style: circle;
+
+    &::marker {
+      color: var(--ul-list-circle-marker-color);
+    }
+  }
+}
+
+.ul-list--gap-level1 {
+  @include space(row-gap, all, level1);
+}
+
+.ul-list--gap-level2 {
+  @include space(row-gap, all, level2);
+}
+
+.ul-list--gap-level3 {
+  @include space(row-gap, all, level3);
+}
+
+.ul-list--gap-level4 {
+  @include space(row-gap, all, level4);
+}
+
+.ul-list--gap-level5 {
+  @include space(row-gap, all, level5);
+}
+
+.ul-list--gap-level6 {
+  @include space(row-gap, all, level6);
+}
+
+.ul-list--gap-level7 {
+  @include space(row-gap, all, level7);
+}
+
+.ul-list--gap-level8 {
+  @include space(row-gap, all, level8);
+}
+
+.ul-list--gap-level9 {
+  @include space(row-gap, all, level9);
+}
+
+.ul-list--gap-level10 {
+  @include space(row-gap, all, level10);
+}
+
+.ul-list--gap-const-level1 {
+  @include space(row-gap, all, row-gap-constancy-level1);
+}
+
+.ul-list--gap-const-level2 {
+  @include space(row-gap, all, row-gap-constancy-level2);
+}
+
+.ul-list--gap-const-level3 {
+  @include space(row-gap, all, row-gap-constancy-level3);
+}
+
+.ul-list--gap-const-level4 {
+  @include space(row-gap, all, row-gap-constancy-level4);
+}
+
+.ul-list--gap-const-level5 {
+  @include space(row-gap, all, row-gap-constancy-level5);
+}

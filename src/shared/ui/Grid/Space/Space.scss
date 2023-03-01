@@ -1,0 +1,22 @@
+@import "src/app/styles/mixins.scss";
+
+.space {
+  display: inline-flex;
+}
+
+.space--display-flex {
+  display: flex;
+}
+
+.space--wrap {
+  flex-wrap: wrap;
+}
+
+.space--wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+@import "space-styles/space-align";
+@import "space-styles/space-direction";
+@import "space-styles/space-row-gap";
+@import "space-styles/space-column-gap";
