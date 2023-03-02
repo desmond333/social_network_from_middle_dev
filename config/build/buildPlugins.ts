@@ -24,7 +24,7 @@ export const buildPlugins = (
       analyzerMode: analyze ? "server" : "disabled",
     }),
     new webpack.DefinePlugin({
-      ___IS_DEV__: JSON.stringify(isDev),
+      __IS_DEV__: JSON.stringify(isDev),
     }),
   ]
 
