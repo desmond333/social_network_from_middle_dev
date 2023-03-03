@@ -3,7 +3,7 @@ import { classNames as cn } from "shared/lib/classNames/classNames"
 import "./LangSwitcher.scss"
 import { Button } from "shared/ui"
 import { useTranslation } from "react-i18next"
-import { VariantButton } from "shared/ui/Button/Button"
+import { BtnVariant } from "shared/ui/Button/types"
 
 interface LangSwitcherProps {
   className?: string;
@@ -23,7 +23,7 @@ export const LangSwitcher: FC<LangSwitcherProps> = (props) => {
       className={
         cn("lang-switcher", {}, [className])
       }
-      variant={VariantButton.CLEAR}
+      variant={BtnVariant.OUTLINE}
       onClick={toggleLang}>
       {t("CURRENT_LANGUAGE")}
     </Button>

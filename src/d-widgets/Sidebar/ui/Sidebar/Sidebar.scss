@@ -1,13 +1,19 @@
 .sidebar {
-  background: var(--inverted-bg-color);
+  background: var(--sidebar-bg-color);
   // up css
   height: var(--inverted-header-height);
   width: var(--sidebar-width);
-  border-top: 1px solid var(--bg-color);
   position: relative;
   transition: width 0.4s;
 }
 
-.collapsed {
+.sidebar--collapsed {
   width: var(--sidebar-width-collapsed);
+}
+
+.sidebar--light {
+  box-shadow: var(--color-background-shadow-light);
+}
+
+.sidebar--dark {
 }

@@ -1,29 +1,33 @@
 import { ButtonHTMLAttributes, FC } from "react"
 import { classNames as cn } from "shared/lib/classNames"
 import "./Button.scss"
-
-export const VariantButton = {
-  CLEAR: "clear",
-} as const
-
-export type TVariantButton = typeof VariantButton[keyof typeof VariantButton]
+import { TBtnSize, TBtnVariant } from "shared/ui/Button/types"
 
 // up ts
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string
-  variant?: TVariantButton
+  variant?: TBtnVariant
+  btnSquareSize?: TBtnSize
 }
 
 export const Button: FC<ButtonProps> = (props) => {
   const {
     className,
     variant,
+    btnSquareSize,
     children,
     ...otherProps
   } = props
 
+  // const mods: Record<string, boolean> = {
+  //   square: square
+  // }
+  const additionalClasses = [className, variant, btnSquareSize]
+
   return (
-    <button className={cn("button", {}, [className, variant])} {...otherProps}>
+    <button className={cn("button", {}, additionalClasses)}
+            {...otherProps}
+    >
       {children}
     </button>
   )

@@ -10,6 +10,7 @@ type RowProps = {
   direction?: Direction
   rowGap?: RowGap
   noGutters?: boolean
+  isFullHeight?: boolean
   breakpoints?: {
     md?: RowTypes
     lg?: RowTypes
@@ -25,15 +26,18 @@ type RowTypes = {
   justify?: Justify
 }
 
-export const Row: FC<RowProps> = ({
-                                    align,
-                                    justify,
-                                    direction,
-                                    children,
-                                    rowGap,
-                                    noGutters = false,
-                                    breakpoints,
-                                  }) => {
+export const Row: FC<RowProps> = (props) => {
+  const {
+    align,
+    justify,
+    direction,
+    children,
+    rowGap,
+    noGutters = false,
+    breakpoints,
+    isFullHeight
+  } = props
+
   let breakpointsValue = ""
 
   breakpoints &&
@@ -64,6 +68,7 @@ export const Row: FC<RowProps> = ({
           [`row--align-${align}`]: align,
           [`row--justify-${justify}`]: justify,
           [`row--row-gap-${rowGap}`]: rowGap,
+          [`row--row-full-height`]: isFullHeight,
         },
         [breakpointsValue],
       )}

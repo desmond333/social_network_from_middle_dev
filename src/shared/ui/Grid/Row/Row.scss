@@ -25,6 +25,10 @@
   }
 }
 
+.row--row-full-height {
+  height: 100%;
+}
+
 @import "row-styles/row-gap";
 @import "row-styles/row-direction";
 @import "row-styles/row-align";

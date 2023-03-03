@@ -2,6 +2,7 @@ import { render } from "react-dom"
 import App from "./app/App"
 import { BrowserRouter } from "react-router-dom"
 import { ThemeProvider } from "app/providers/ThemeProvider"
+import { Theme } from "app/providers/ThemeProvider/lib/ThemeContext"
 import { ErrorBoundary } from "react-error-boundary"
 import { ErrorFallback } from "shared/ui/ErrorFallback/ErrorFallback"
 import "shared/config/internalization/i18n"
@@ -11,7 +12,7 @@ render(
   <StoreProvider>
     <BrowserRouter>
       <ErrorBoundary FallbackComponent={ErrorFallback}>
-        <ThemeProvider>
+        <ThemeProvider initialTheme={Theme.LIGHT}>
           <App />
         </ThemeProvider>
       </ErrorBoundary>

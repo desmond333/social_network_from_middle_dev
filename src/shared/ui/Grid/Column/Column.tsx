@@ -7,7 +7,8 @@ type ColumnProps = {
   col?: Col
   order?: Order
   alignSelf?: AlignSelf
-  display?: "flex"
+  isFlexNone?: boolean
+  isDisplayFlex?: boolean
   breakpoints?: {
     md?: ColumnTypes
     lg?: ColumnTypes
@@ -22,14 +23,17 @@ type ColumnTypes = {
   alignSelf?: AlignSelf
 }
 
-export const Column: React.FC<ColumnProps> = ({
-                                                children,
-                                                col,
-                                                alignSelf,
-                                                order,
-                                                breakpoints,
-                                                display,
-                                              }) => {
+export const Column: React.FC<ColumnProps> = (props) => {
+  const {
+    children,
+    col,
+    alignSelf,
+    order,
+    breakpoints,
+    isDisplayFlex,
+    isFlexNone
+  } = props
+
   let breakpointsValue = ""
 
   breakpoints &&
@@ -57,7 +61,8 @@ export const Column: React.FC<ColumnProps> = ({
           [`column--col-${col}`]: col,
           [`column--order-${order}`]: order,
           [`column--align-self-${alignSelf}`]: alignSelf,
-          [`column--display-${display}`]: display,
+          [`column--display-flex`]: isDisplayFlex,
+          [`column--display-flex-none`]: isFlexNone,
         },
         [breakpointsValue],
       )}

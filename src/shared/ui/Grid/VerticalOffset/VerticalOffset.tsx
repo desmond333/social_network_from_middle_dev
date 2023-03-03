@@ -1,9 +1,9 @@
 import { FC, ReactNode } from "react"
 import { classNames as cn } from "shared/lib/classNames"
-import { OffsetSize } from "shared/ui/Grid/VerticalOffset/types"
+import { RowGap } from "shared/ui/Grid/Row/types"
 
 type VerticalOffsetProps = {
-  offset?: OffsetSize
+  offset?: RowGap
   variant?: "row-gap" | "margin"
   children?: ReactNode
 }
