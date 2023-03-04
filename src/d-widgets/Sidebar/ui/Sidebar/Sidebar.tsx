@@ -3,10 +3,9 @@ import { classNames as cn } from "shared/lib/classNames"
 import "./Sidebar.scss"
 import { AppLink, Button, Column, Row } from "shared/ui"
 import { useTranslation } from "react-i18next"
-import { ThemeSwitcher } from "d-widgets/ThemeSwitcher"
+import { ThemeSwitcher } from "../../../ThemeSwitcher"
 import { Menu, MenuItem } from "shared/ui/Menu"
-import { useTheme } from "app/providers/ThemeProvider"
-import { Theme } from "app/providers/ThemeProvider/lib/ThemeContext"
+import { useTheme, Theme } from "app/providers/ThemeProvider"
 
 interface SidebarProps {
   className?: string
@@ -52,8 +51,6 @@ export const Sidebar: FC<SidebarProps> = (props) => {
           </Row>
         </Column>
       </Row>
-
-
     </aside>
   )
 }

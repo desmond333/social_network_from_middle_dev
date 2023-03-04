@@ -1,7 +1,7 @@
 import { classNames as cn } from "shared/lib/classNames"
 import "./Header.scss"
 import { Column, Row } from "shared/ui"
-import { LangSwitcher } from "d-widgets/LangSwitcher"
+import { LangSwitcher } from "../../LangSwitcher"
 
 interface HeaderProps {
   className?: string
