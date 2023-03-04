@@ -1,4 +1,4 @@
-import { FC, ReactNode } from "react"
+import { FC, ReactNode, useEffect, useState } from "react"
 import { classNames as cn } from "shared/lib/classNames"
 import Modal from "react-modal"
 import { Button } from "../Button/Button"
@@ -7,14 +7,16 @@ import IconCloseNew from "../../assets/icons/icon--close.svg"
 import { ModalWrapperSize } from "shared/ui/types"
 import { BtnVariant } from "shared/ui/Button/types"
 
-type ModalWrapperProps = {
+export interface ModalWrapperProps {
   children?: ReactNode;
   isOpen: boolean;
+  
+  // не рендерим до нажатия на isOpen
+  isLazy?: boolean;
   onClose?: () => void;
   size?: ModalWrapperSize;
   title: string;
-};
-
+}
 
 export const ModalWrapper: FC<ModalWrapperProps> = (props) => {
   const {
@@ -23,7 +25,16 @@ export const ModalWrapper: FC<ModalWrapperProps> = (props) => {
     children,
     size = "base",
     title,
+    isLazy,
   } = props
+
+  const [isMounted, setIsMounted] = useState(false)
+
+  useEffect(() => {
+    if (isOpen) setIsMounted(true)
+  }, [isOpen])
+
+  if (!isMounted && isLazy) return null
 
   return (
     <Modal

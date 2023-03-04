@@ -1,10 +1,10 @@
-import { ChangeEvent, FC, useState } from "react"
+import { ChangeEvent, FC, memo, useState } from "react"
 import { classNames as cn } from "shared/lib/classNames"
 import { FormInputText } from "../Text"
 import { InputProps } from "shared/ui/Input/types"
 import { IconDanger } from "shared/ui"
 
-export const Input: FC<InputProps> = (props) => {
+export const Input: FC<InputProps> = memo((props) => {
   const {
     variant,
     name,
@@ -82,6 +82,6 @@ export const Input: FC<InputProps> = (props) => {
       )}
     </div>
   )
-}
+})
 
 

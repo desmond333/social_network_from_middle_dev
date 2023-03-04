@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next"
 import { ThemeSwitcher } from "../../../ThemeSwitcher"
 import { Menu, MenuItem } from "shared/ui"
 import { useTheme, Theme } from "app/providers/ThemeProvider"
+import { BtnSize, BtnVariant } from "shared/ui/Button/types"
 
 interface SidebarProps {
   className?: string
@@ -44,8 +45,12 @@ export const Sidebar: FC<SidebarProps> = (props) => {
               <ThemeSwitcher />
             </Column>
             <Column>
-              <Button onClick={() => setIsCollapsed(prev => !prev)}>
-                {t("TOGGLE_WIDTH_SIDEBAR")}
+              <Button
+                onClick={() => setIsCollapsed(prev => !prev)}
+                variant={BtnVariant.BACKGROUND}
+                btnSquareSize={BtnSize.XL}
+              >
+                {isCollapsed ? ">" : "<"}
               </Button>
             </Column>
           </Row>

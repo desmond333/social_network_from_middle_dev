@@ -1,9 +1,10 @@
 export const BtnVariant = {
-  CLEAR: "clear",
-  OUTLINE: "outline",
-  BACKGROUND: "background",
-  BACKGROUND_INV: "background-inv",
-  ICON: "icon",
+  CLEAR: "btn--clear",
+  FLAT: "btn--flat",
+  OUTLINE: "btn--outline",
+  ICON: "btn--icon",
+  BACKGROUND: "btn--background",
+  BACKGROUND_INV: "btn--background-inv",
 } as const
 
 export type TBtnVariant = typeof BtnVariant[keyof typeof BtnVariant]

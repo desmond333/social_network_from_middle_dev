@@ -1,8 +1,11 @@
-import { ChangeEvent, ReactNode } from "react"
+import { ChangeEvent, InputHTMLAttributes, ReactNode } from "react"
 
-export type InputProps = {
+type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, "value" | "onChange">
+
+export interface InputProps extends HTMLInputProps {
   variant?: InputVariant;
   name: string;
+  onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
   type: InputType;
   value?: string;
   placeholder?: string;
@@ -17,12 +20,11 @@ export type InputProps = {
     left?: ReactNode;
     right?: ReactNode;
   };
-  onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
   required?: boolean;
   autoComplete?: "on" | "off";
   inputMode?: InputMode;
   noti?: string;
-};
+}
 
 export type InputVariant = "without";
 
