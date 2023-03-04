@@ -1,0 +1,122 @@
+.icon {
+  display: inline-flex;
+
+  /* Color Fill */
+  &--fill-none {
+    fill: none;
+  }
+  &--fill-primary {
+    fill: var(--icon-color-primary);
+  }
+  &--fill-secondary {
+    fill: var(--icon-color-secondary);
+  }
+  &--fill-tertiary {
+    fill: var(--icon-color-tertiary);
+  }
+  &--fill-fourt {
+    fill: var(--icon-color-fourt);
+  }
+  &--fill-success {
+    fill: var(--icon-color-success);
+  }
+  &--fill-error {
+    fill: var(--icon-color-error);
+  }
+  /* Color Stroke */
+  &--stroke-none {
+    stroke: none;
+  }
+  &--stroke-primary {
+    fill: none;
+    stroke: var(--icon-color-primary);
+  }
+  &--stroke-secondary {
+    fill: none;
+    stroke: var(--icon-color-secondary);
+  }
+  &--stroke-tertiary {
+    stroke: var(--icon-color-tertiary);
+  }
+  &--fill-fourt {
+    fill: none;
+    stroke: var(--icon-color-fourt);
+  }
+  &--stroke-success {
+    fill: none;
+    stroke: var(--icon-color-success);
+  }
+  &--stroke-error {
+    fill: none;
+    stroke: var(--icon-color-error);
+  }
+  /* Size */
+  &--size-base {
+    width: var(--icon-size-base);
+    height: var(--icon-size-base);
+    flex: 0 0 var(--icon-size-base);
+  }
+  &--size-xxsm {
+    width: var(--icon-size-xxsm);
+    height: var(--icon-size-xxsm);
+    flex: 0 0 var(--icon-size-xxsm);
+  }
+  &--size-xsm {
+    width: var(--icon-size-xsm);
+    height: var(--icon-size-xsm);
+    flex: 0 0 var(--icon-size-xsm);
+  }
+  &--size-sm {
+    width: var(--icon-size-sm);
+    height: var(--icon-size-sm);
+    flex: 0 0 var(--icon-size-sm);
+  }
+  &--size-md {
+    width: var(--icon-size-md);
+    height: var(--icon-size-md);
+    flex: 0 0 var(--icon-size-md);
+  }
+  &--size-lg {
+    width: var(--icon-size-lg);
+    height: var(--icon-size-lg);
+    flex: 0 0 var(--icon-size-lg);
+  }
+  &--size-xl {
+    width: var(--icon-size-xl);
+    height: var(--icon-size-xl);
+    flex: 0 0 var(--icon-size-xl);
+  }
+  &--size-xxl {
+    width: var(--icon-size-xxl);
+    height: var(--icon-size-xxl);
+    flex: 0 0 var(--icon-size-xxl);
+  }
+  &--size-xxxl {
+    width: var(--icon-size-xxxl);
+    height: var(--icon-size-xxxl);
+    flex: 0 0 var(--icon-size-xxxl);
+  }
+  &--size-auto {
+    width: auto;
+    height: auto;
+    flex: 0 0 auto;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: baseline;
+    padding: 20px;
+  }
+  &__list-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+
+    font-family: var(--font-main);
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--font-color-body);
+  }
+}

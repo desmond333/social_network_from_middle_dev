@@ -1,6 +1,6 @@
 import { FC, ReactNode } from "react"
 import { classNames as cn } from "shared/lib/classNames"
-import { ContainerSize } from "shared/ui/Grid/Container/types"
+import { ContainerSize } from "shared/ui/types"
 
 type ContainerProps = {
   children: ReactNode

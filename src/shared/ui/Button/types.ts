@@ -3,6 +3,7 @@ export const BtnVariant = {
   OUTLINE: "outline",
   BACKGROUND: "background",
   BACKGROUND_INV: "background-inv",
+  ICON: "icon",
 } as const
 
 export type TBtnVariant = typeof BtnVariant[keyof typeof BtnVariant]

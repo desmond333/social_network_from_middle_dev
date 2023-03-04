@@ -1,0 +1,11 @@
+// up css
+$sizes: m, l, xl;
+
+@each $size in $sizes {
+  .button--square--size-#{$size} {
+    width: var(--font-line-#{$size});
+    height: var(--font-line-#{$size});
+    padding: 0;
+    font-size: var(--font-size-#{$size});
+  }
+}

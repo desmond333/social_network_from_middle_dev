@@ -2,7 +2,7 @@ import { FC } from "react"
 import "./ErrorFallback.scss"
 import { Button, Column, Container } from "shared/ui"
 import { useTranslation } from "react-i18next"
-import { Space } from "shared/ui/Grid/Space"
+import { Space } from "../Grid/Space/Space"
 
 interface ErrorFallbackProps {
   error: Error

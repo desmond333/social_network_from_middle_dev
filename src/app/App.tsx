@@ -14,7 +14,7 @@ const App: FC = () => {
     <div className={cn("app", {}, [theme])}>
       <Suspense fallback="">
         <Header />
-        <Row>
+        <Row noGutters>
           <Column col="auto">
             <Sidebar />
           </Column>

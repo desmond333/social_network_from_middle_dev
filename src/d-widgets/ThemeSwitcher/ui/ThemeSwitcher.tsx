@@ -2,7 +2,8 @@ import { classNames as cn } from "shared/lib/classNames"
 import "./ThemeSwitcher.scss"
 import { useTheme } from "app/providers/ThemeProvider"
 import { Button } from "shared/ui"
-import Logo from "shared/assets/icons/theme-icon.svg"
+// todo: сделать компонент Лого по канону
+import Logo from "shared/assets/icons/icon--theme.svg"
 import { Theme, TTheme } from "app/providers/ThemeProvider/lib/ThemeContext"
 import { BtnVariant } from "shared/ui/Button/types"
 

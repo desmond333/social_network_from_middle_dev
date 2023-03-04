@@ -23,6 +23,12 @@ export type Justify =
 
 export type Direction = "row" | "column" | "row-reverse" | "column-reverse"
 
+// up ts
+export type Size = "base" | "auto" | "fluid" | "xxsm" | "xsm" | "sm" | "md" | "lg" | "xl" | "xxl"
+export type IconSize = Exclude<Size, "fluid">
+export type ContainerSize = Extract<Size, "fluid" | "md" | "lg" | "xl" | "xxl">
+export type ModalWrapperSize = Extract<Size, "base" | "sm" | "md">
+
 export type TextColors =
   | "primary"
   | "secondary"
@@ -31,3 +37,12 @@ export type TextColors =
   | "five"
   | "six"
   | "danger";
+
+export type Stroke =
+  | "primary"
+  | "secondary"
+  | "tertiary"
+  | "fourt"
+  | "success"
+  | "error"
+  | "none";

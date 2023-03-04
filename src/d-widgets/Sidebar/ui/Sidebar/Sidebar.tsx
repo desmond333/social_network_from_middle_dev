@@ -4,7 +4,7 @@ import "./Sidebar.scss"
 import { AppLink, Button, Column, Row } from "shared/ui"
 import { useTranslation } from "react-i18next"
 import { ThemeSwitcher } from "../../../ThemeSwitcher"
-import { Menu, MenuItem } from "shared/ui/Menu"
+import { Menu, MenuItem } from "shared/ui"
 import { useTheme, Theme } from "app/providers/ThemeProvider"
 
 interface SidebarProps {
@@ -29,7 +29,7 @@ export const Sidebar: FC<SidebarProps> = (props) => {
     <aside className={cn("sidebar", mods, [className])}>
       <Row direction="column" justify="space-between" isFullHeight>
         <Column isFlexNone>
-          <Menu direction="column">
+          <Menu direction="column" rowGap="level1">
             <MenuItem>
               <AppLink to={"/"}>{t("MAIN_PAGE_LINK")}</AppLink>
             </MenuItem>
