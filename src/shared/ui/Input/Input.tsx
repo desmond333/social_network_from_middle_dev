@@ -25,9 +25,7 @@ export const Input: FC<InputProps> = memo((props) => {
 
   const [valueInput, setValueInput] = useState<string>(value)
   const changeInputHandler = (e: ChangeEvent<HTMLInputElement>) => {
-    if (onChange) {
-      onChange(e)
-    }
+    if (onChange) onChange(e.target.value)
     setValueInput(e.target.value)
   }
 

@@ -25,9 +25,8 @@ export const InputActions: FC<InputProps> = (props) => {
 
   const [valueInput, setValueInput] = useState<string>(value)
   const changeInputHandler = (e: ChangeEvent<HTMLInputElement>) => {
-    if (onChange) {
-      onChange(e)
-    }
+    if (onChange) onChange(e.target.value)
+
     setValueInput(e.target.value)
   }
   const [focusPlaceholder, setFocusPlaceholder] = useState(false)
