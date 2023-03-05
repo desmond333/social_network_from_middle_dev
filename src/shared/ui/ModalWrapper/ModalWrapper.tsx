@@ -7,10 +7,12 @@ import IconCloseNew from "../../assets/icons/icon--close.svg"
 import { ModalWrapperSize } from "shared/ui/types"
 import { BtnVariant } from "shared/ui/Button/types"
 
+// todo: подтянуть стили
+
 export interface ModalWrapperProps {
   children?: ReactNode;
   isOpen: boolean;
-  
+
   // не рендерим до нажатия на isOpen
   isLazy?: boolean;
   onClose?: () => void;
@@ -28,6 +30,12 @@ export const ModalWrapper: FC<ModalWrapperProps> = (props) => {
     isLazy,
   } = props
 
+  // up ts
+  const ModalWrapperMods: Record<string, boolean> = {
+    [`modal-wrapper--size-${size}`]: Boolean(size),
+    "modal-wrapper--no-close": typeof onClose !== "function",
+  }
+
   const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
@@ -38,10 +46,7 @@ export const ModalWrapper: FC<ModalWrapperProps> = (props) => {
 
   return (
     <Modal
-      className={cn("modal-wrapper", {
-        [`modal-wrapper--size-${size}`]: size,
-        "modal-wrapper--no-close": typeof onClose !== "function",
-      })}
+      className={cn("modal-wrapper", ModalWrapperMods, ["app__modal"])}
       shouldCloseOnOverlayClick={true}
       isOpen={isOpen}
       ariaHideApp={false}

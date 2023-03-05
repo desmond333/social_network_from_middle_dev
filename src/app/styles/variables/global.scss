@@ -50,11 +50,19 @@
 
   //Themes
   //light theme
+  --primary-color-light: #0232c2;
+  --secondary-color-light: #0452ff;
+  --inverted-primary-color-light: var(--primary-color-dark);
+  --inverted-secondary-color-light: var(--secondary-color-dark);
   --color-background-light: #f6f9fe;
   --color-background-second-light: var(--color-white);
   --color-background-shadow-light: 10px 0 15px var(--color-dark-gray);
 
   //dark theme
+  --primary-color-dark: #04ff04;
+  --secondary-color-dark: #049604;
+  --inverted-primary-color-dark: var(--primary-color-light);
+  --inverted-secondary-color-dark: var(--secondary-color-light);
   --color-background-dark: #11162a;
   --color-background-gradient-dark: linear-gradient(180deg, rgba(73, 26, 70, 1) 0%, rgba(17, 22, 42, 1) 25%);
   --color-background-second-dark: #172144;

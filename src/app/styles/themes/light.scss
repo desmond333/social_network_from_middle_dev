@@ -1,11 +1,11 @@
-.app.light {
+.app--light-theme {
   --bg-color: var(--color-background-light);
   --inverted-bg-color: var(--color-background-dark);
   --sidebar-bg-color: var(--color-background-second-light);
 
-  --primary-color: #0232c2;
-  --secondary-color: #0449e0;
+  --primary-color: var(--primary-color-light);
+  --secondary-color: var(--secondary-color-light);
 
-  --inverted-primary-color: #04ff04;
-  --inverted-secondary-color: #049684;
+  --inverted-primary-color: var(--inverted-primary-color-light);
+  --inverted-secondary-color: var(--inverted-secondary-color-light);
 }
