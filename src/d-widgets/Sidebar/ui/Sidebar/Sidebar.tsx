@@ -7,6 +7,7 @@ import { ThemeSwitcher } from "../../../ThemeSwitcher"
 import { Menu, MenuItem } from "shared/ui"
 import { useTheme, Theme } from "app/providers/ThemeProvider"
 import { BtnSize, BtnVariant } from "shared/ui/Button/types"
+import { AppRoutes, RoutePath, TAppRoutes } from "shared/config/routeConfig/routes"
 
 interface SidebarProps {
   className?: string
@@ -31,12 +32,19 @@ export const Sidebar: FC<SidebarProps> = (props) => {
       <Row direction="column" justify="space-between" isFullHeight>
         <Column isFlexNone>
           <Menu direction="column" rowGap="level1">
-            <MenuItem>
-              <AppLink to={"/"}>{t("MAIN_PAGE_LINK")}</AppLink>
-            </MenuItem>
-            <MenuItem>
-              <AppLink to={"/about"}>{t("ABOUT_PAGE_LINK")}</AppLink>
-            </MenuItem>
+            {Object.keys(RoutePath).map((key: TAppRoutes) => {
+              if (key === AppRoutes.NOT_FOUND) return
+
+              else {
+                return (
+                  <MenuItem key={key}>
+                    <AppLink to={RoutePath[key]}>
+                      {t(`${key.toUpperCase()}_PAGE_LINK`)}
+                    </AppLink>
+                  </MenuItem>
+                )
+              }
+            })}
           </Menu>
         </Column>
         <Column isFlexNone>

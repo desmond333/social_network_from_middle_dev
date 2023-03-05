@@ -3,11 +3,13 @@ import { Route, Routes } from "react-router-dom"
 import { routeConfig } from "app/providers/Router/routeConfig/routeConfig"
 import { PageLoader } from "d-widgets/PageLoader/PageLoader"
 
+const routes = Object.values(routeConfig)
+
 const AppRouter = () => {
   return (
     <Suspense fallback={<PageLoader />}>
       <Routes>
-        {Object.values(routeConfig).map(({ element, path }) => (
+        {routes.map(({ element, path }) => (
           <Route key={path} path={path} element={element} />
         ))}
       </Routes>
