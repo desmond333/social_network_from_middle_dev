@@ -4,8 +4,8 @@
 @import "./themes/dark";
 @import "shared/ui/ui.scss";
 
-.app,
-.app__modal {
+// настройка глобальных параметров
+body, .app {
   font: var(--font-m);
   color: var(--primary-color);
 }

@@ -13,7 +13,7 @@ export interface ModalWrapperProps {
   children?: ReactNode;
   isOpen: boolean;
 
-  // не рендерим до нажатия на isOpen
+  // isLazy === true => не рендерим до нажатия на isOpen
   isLazy?: boolean;
   onClose?: () => void;
   size?: ModalWrapperSize;
@@ -46,7 +46,7 @@ export const ModalWrapper: FC<ModalWrapperProps> = (props) => {
 
   return (
     <Modal
-      className={cn("modal-wrapper", ModalWrapperMods, ["app__modal"])}
+      className={cn("modal-wrapper", ModalWrapperMods, [])}
       shouldCloseOnOverlayClick={true}
       isOpen={isOpen}
       ariaHideApp={false}
