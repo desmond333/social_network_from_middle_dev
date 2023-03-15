@@ -4,8 +4,10 @@ import { classNames as cn } from "shared/lib/classNames/classNames"
 import "./WeekDataList.scss"
 import { useDispatch, useSelector } from "react-redux"
 import { getWorkTimeState } from "e-features/WorkTimeTracking/model/selectors/getWorkTimeState"
-import { Button } from "shared/ui"
+import { Button, OlList } from "shared/ui"
 import { workTimeActions } from "e-features/WorkTimeTracking/model/slice/workTimeSlice"
+import { WeekDataListItem } from "e-features/WorkTimeTracking/ui/WeekDataList/WeekDataListItem"
+import { BtnVariant } from "shared/ui/Button/types"
 
 interface WeekDataListProps {
   className?: string;
@@ -22,20 +24,19 @@ export const WeekDataList: FC<WeekDataListProps> = (props) => {
     dispatch(workTimeActions.sortWeeksByHours())
   }, [dispatch])
 
+  const onSortWeeksByDate = useCallback(() => {
+    dispatch(workTimeActions.sortWeeksByHours())
+  }, [dispatch])
+
   return (
     <div className={cn("WeekDataList", {}, [className])}>
-      {weeks.map((week) => (
-        <div>
-          <span>
-          DATE: {week.date.range.start.getDate()} - {week.date.range.end.getDate()}
-        </span>
-          <span>
-            HOURS: {week.hours}
-        </span>
-        </div>
-      ))}
-
-      <Button onClick={onSortWeeksByHours}>Sort</Button>
+      <OlList>
+        {weeks.map((week) => (
+          <WeekDataListItem week={week} />
+        ))}
+      </OlList>
+      <Button variant={BtnVariant.OUTLINE} onClick={onSortWeeksByHours}>Sort by hours </Button>
+      <Button variant={BtnVariant.OUTLINE} onClick={onSortWeeksByDate}>Sort by date</Button>
     </div>
   )
 }

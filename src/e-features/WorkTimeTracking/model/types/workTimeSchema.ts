@@ -1,4 +1,9 @@
+type Company = "Hashbon" | "Outlines & DG" | "Self Education"
+
 export interface WeekData {
+  hours: number;
+  company: Company;
+  isWorking: boolean;
   date: {
     range: {
       start: Date,
@@ -6,8 +11,6 @@ export interface WeekData {
     };
     year: number;
   };
-  hours: number;
-  isWorking: boolean;
 }
 
 export interface WorkTimeSchema {

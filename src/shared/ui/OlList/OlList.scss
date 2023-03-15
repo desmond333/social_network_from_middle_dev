@@ -17,7 +17,7 @@
 
   &__item:before {
     font-family: var(--font-main);
-    color: currentColor;
+    color: var(--primary-color);
 
     counter-increment: li;
     content: counters(li, ".") ". ";
