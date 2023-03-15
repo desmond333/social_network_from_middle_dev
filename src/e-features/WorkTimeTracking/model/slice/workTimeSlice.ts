@@ -1,6 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit"
-import { WorkTimeSchema, WeekData } from "../types/workTimeSchema"
-import { WEEKS } from "../types/weeksData"
+import { WorkTimeSchema, TSort } from "../types/workTimeSchema"
+import { WeekData } from "../types/weekData"
+import { WEEKS } from "../mock"
 
 const initialState: WorkTimeSchema = {
   weeks: WEEKS,
@@ -13,8 +14,13 @@ const workTimeSlice = createSlice({
     addWeek(state, action: PayloadAction<WeekData>) {
       state.weeks.push(action.payload)
     },
-    sortWeeksByHours(state) {
-      state.weeks.sort((a, b) => b.hours - a.hours)
+    // task: учесть минуты
+    sortWeeksByHours(state, action: PayloadAction<TSort>) {
+      if (action.payload === "up") {
+        state.weeks.sort((a, b) => b.resultTime.hours - a.resultTime.hours)
+      } else if (action.payload === "down") {
+        state.weeks.sort((a, b) => a.resultTime.hours - b.resultTime.hours)
+      }
     },
   },
 })
