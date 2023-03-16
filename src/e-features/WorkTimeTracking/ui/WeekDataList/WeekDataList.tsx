@@ -15,7 +15,9 @@ interface WeekDataListProps {
 
 export const WeekDataList: FC<WeekDataListProps> = (props) => {
   const { className } = props
-  const [sortByHoursDirection, setSortByHoursDirection] = useState<TSort | false>(false)
+
+  const [sortByHoursDirection, setSortByHoursDirection] = useState<TSort | false>("up")
+  const [sortByDateDirection, setSortByDateDirection] = useState<TSort | false>(false)
 
   const dispatch = useDispatch()
   const { weeks } = useSelector(getWorkTimeState)
@@ -32,9 +34,19 @@ export const WeekDataList: FC<WeekDataListProps> = (props) => {
   }, [dispatch, sortByHoursDirection])
 
   const onSortWeeksByDate = useCallback(() => {
-    console.log("render onSortWeeksByHours")
+    console.log("render onSortWeeksByDate")
+    if (sortByDateDirection === "up") {
+      dispatch(workTimeActions.sortWeeksByDate("down"))
+      setSortByDateDirection("down")
+    } else {
+      dispatch(workTimeActions.sortWeeksByDate("up"))
+      setSortByDateDirection("up")
+    }
+  }, [dispatch, sortByDateDirection])
 
-    dispatch(workTimeActions.sortWeeksByHours("down"))
+  const onFilterByIsWorking = useCallback(() => {
+    console.log("render onFilterByIsWorking")
+    dispatch(workTimeActions.filterByIsWorking())
   }, [dispatch])
 
   return (
@@ -42,7 +54,7 @@ export const WeekDataList: FC<WeekDataListProps> = (props) => {
       <VerticalOffset offset={"level5"}>
         <Row justify={"space-between"}>
           <Column col={3}>
-            <Button variant={BtnVariant.OUTLINE} onClick={onSortWeeksByHours}>Sort by company </Button>
+            <Button variant={BtnVariant.OUTLINE} onClick={onFilterByIsWorking}>Working weeks</Button>
           </Column>
           <Column col={3}>
             <Button variant={BtnVariant.OUTLINE} onClick={onSortWeeksByHours}>Sort by hours </Button>

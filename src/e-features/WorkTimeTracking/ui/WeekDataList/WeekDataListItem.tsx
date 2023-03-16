@@ -1,5 +1,4 @@
 import { FC } from "react"
-import { useTranslation } from "react-i18next"
 import { classNames as cn } from "shared/lib/classNames/classNames"
 import "./WeekDataList.scss"
 import { Column, OlListItem, Row } from "shared/ui"
@@ -12,7 +11,9 @@ interface WeekDataListItemProps {
 export const WeekDataListItem: FC<WeekDataListItemProps> = (props) => {
   const { week } = props
 
-  const { t } = useTranslation()
+  const startDateArr = week.date.range.start.toString().split(" ")
+  const endDateArr = week.date.range.end.toString().split(" ")
+  const displayDate = `${startDateArr[2]} ${startDateArr[1]} ${startDateArr[3]} - ${endDateArr[2]} ${endDateArr[1]} ${endDateArr[3]}`
 
   return (
     <div className={cn("weeks-list__item")}>
@@ -24,8 +25,8 @@ export const WeekDataListItem: FC<WeekDataListItemProps> = (props) => {
           <Column>
             {week.resultTime.hours} h {week.resultTime.minutes} m
           </Column>
-          <Column col={6}>
-            DATE: {week.date.range.start.getDate()} - {week.date.range.end.getDate()}
+          <Column col={5}>
+            {displayDate}
           </Column>
         </Row>
       </OlListItem>

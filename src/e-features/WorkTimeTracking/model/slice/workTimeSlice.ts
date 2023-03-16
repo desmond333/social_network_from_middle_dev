@@ -5,6 +5,7 @@ import { WEEKS } from "../mock"
 
 const initialState: WorkTimeSchema = {
   weeks: WEEKS,
+  isWorkingAllWeeks: false,
 }
 
 const workTimeSlice = createSlice({
@@ -14,13 +15,37 @@ const workTimeSlice = createSlice({
     addWeek(state, action: PayloadAction<WeekData>) {
       state.weeks.push(action.payload)
     },
-    // task: учесть минуты
     sortWeeksByHours(state, action: PayloadAction<TSort>) {
       if (action.payload === "up") {
-        state.weeks.sort((a, b) => b.resultTime.hours - a.resultTime.hours)
+        state.weeks.sort((a, b) => {
+          if (b.resultTime.hours === a.resultTime.hours) {
+            return b.resultTime.minutes - a.resultTime.minutes
+          } else {
+            return b.resultTime.hours - a.resultTime.hours
+          }
+        })
       } else if (action.payload === "down") {
-        state.weeks.sort((a, b) => a.resultTime.hours - b.resultTime.hours)
+        state.weeks.sort((a, b) => {
+          if (a.resultTime.hours === b.resultTime.hours) {
+            return a.resultTime.minutes - b.resultTime.minutes
+          } else {
+            return a.resultTime.hours - b.resultTime.hours
+          }
+        })
       }
+    },
+    sortWeeksByDate(state, action: PayloadAction<TSort>) {
+      if (action.payload === "up") {
+        state.weeks.sort((a, b) => a.date.range.end.getTime() - b.date.range.end.getTime(),
+        )
+      } else if (action.payload === "down") {
+        state.weeks.sort((a, b) => b.date.range.end.getTime() - a.date.range.end.getTime(),
+        )
+      }
+    },
+    filterByIsWorking(state) {
+      state.weeks = state.weeks.filter((week) => week.isWorking)
+      state.isWorkingAllWeeks = true
     },
   },
 })

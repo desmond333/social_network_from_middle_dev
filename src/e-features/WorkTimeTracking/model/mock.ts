@@ -42,7 +42,7 @@ export const WEEKS: WeekData[] = [
       year: 2023,
       range: {
         start: new Date("2023-02-28"),
-        end: new Date("2022-03-05"),
+        end: new Date("2023-03-05"),
       },
     },
   },
@@ -56,8 +56,8 @@ export const WEEKS: WeekData[] = [
     date: {
       year: 2022,
       range: {
-        start: new Date("2022-05-30"),
-        end: new Date("2022-06-05"),
+        start: new Date("2022-06-06"),
+        end: new Date("2022-06-12"),
       },
     },
   },
