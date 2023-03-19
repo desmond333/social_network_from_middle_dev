@@ -5,17 +5,14 @@ export interface ResultTime {
   minutes: number,
 }
 
-export interface MyDate {
-  range: {
-    start: Date,
-    end: Date,
-  };
-  year: number;
+export interface Range {
+  start: Date,
+  end: Date,
 }
 
 export interface WeekData {
   company: Company;
   isWorking: boolean;
   resultTime: ResultTime,
-  date: MyDate
+  date: Range
 }

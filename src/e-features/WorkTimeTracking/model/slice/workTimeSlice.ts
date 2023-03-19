@@ -36,10 +36,10 @@ const workTimeSlice = createSlice({
     },
     sortWeeksByDate(state, action: PayloadAction<TSort>) {
       if (action.payload === "up") {
-        state.weeks.sort((a, b) => a.date.range.end.getTime() - b.date.range.end.getTime(),
+        state.weeks.sort((a, b) => a.date.end.getTime() - b.date.end.getTime(),
         )
       } else if (action.payload === "down") {
-        state.weeks.sort((a, b) => b.date.range.end.getTime() - a.date.range.end.getTime(),
+        state.weeks.sort((a, b) => b.date.end.getTime() - a.date.end.getTime(),
         )
       }
     },
