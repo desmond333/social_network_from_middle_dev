@@ -271,7 +271,7 @@
 
   /* Button */
   --button-height: 50px;
-  --button-padding: 0 30px;
+  --button-padding: 5px 15px;
   --button-column-gap: 8px;
 
   --button-font-family: var(--font-main);
@@ -895,4 +895,7 @@
   --tooltips-content-width-size-s: 223px;
   --tooltips-content-width-size-m: 284px;
   --tooltips-content-width-size-l: 368px;
+
+  /* Tag */
+  --tag-border-radius: 12px;
 }

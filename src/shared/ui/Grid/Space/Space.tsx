@@ -27,16 +27,18 @@ type SpaceTypes = {
   direction?: Direction;
 };
 
-export const Space: FC<SpaceProps> = ({
-                                        children,
-                                        align,
-                                        flex,
-                                        wrap,
-                                        direction,
-                                        rowGap,
-                                        columnGap,
-                                        breakpoints,
-                                      }) => {
+export const Space: FC<SpaceProps> = (props) => {
+  const {
+    children,
+    align,
+    flex,
+    wrap,
+    direction,
+    rowGap,
+    columnGap,
+    breakpoints,
+  } = props
+
   let breakpointsValue = ""
 
   breakpoints &&

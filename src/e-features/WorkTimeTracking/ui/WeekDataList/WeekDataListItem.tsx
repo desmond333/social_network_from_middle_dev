@@ -1,7 +1,6 @@
 import { FC } from "react"
-import { classNames as cn } from "shared/lib/classNames/classNames"
 import "./WeekDataList.scss"
-import { Column, OlListItem, Row } from "shared/ui"
+import { BlockWithShadow, Column, OlListItem, Row, Tag } from "shared/ui"
 import { WeekData } from "../../model/types/weekData"
 import { daysSince } from "shared/lib/daysSince"
 
@@ -21,14 +20,16 @@ export const WeekDataListItem: FC<WeekDataListItemProps> = (props) => {
   const uiDateWithDaysAfter = `${displayDate} (${timeAfterThisDate})`
 
   return (
-    <div className={cn("weeks-list__item")}>
+    <BlockWithShadow>
       <OlListItem>
         <Row justify={"space-between"}>
-          <Column col={3}>{week.company}</Column>
-          <Column>{uiResultTime}</Column>
-          <Column col={6}>{uiDateWithDaysAfter}</Column>
+          <Column col={3} alignItems={"center"}>
+            <Tag>{week.company}</Tag>
+          </Column>
+          <Column alignItems={"center"}>{uiResultTime}</Column>
+          <Column col={6} alignItems={"center"}>{uiDateWithDaysAfter}</Column>
         </Row>
       </OlListItem>
-    </div>
+    </BlockWithShadow>
   )
 }

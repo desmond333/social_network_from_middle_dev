@@ -1,0 +1,11 @@
+.tag {
+  background: none;
+  color: var(--inverted-bg-color);
+  border: 1px solid var(--inverted-bg-color);
+  border-radius: var(--tag-border-radius);
+  padding: 2px 15px;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

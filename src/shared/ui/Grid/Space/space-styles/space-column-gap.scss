@@ -14,6 +14,10 @@
   @include space(column-gap, all, column-gap-level4);
 }
 
+.space--column-gap-level5 {
+  @include space(column-gap, all, column-gap-level5);
+}
+
 .space--column-gap-const-level1 {
   @include space(column-gap, all, column-gap-constancy-level1);
 }

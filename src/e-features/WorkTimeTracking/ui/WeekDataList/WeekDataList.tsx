@@ -3,7 +3,7 @@ import { classNames as cn } from "shared/lib/classNames/classNames"
 import "./WeekDataList.scss"
 import { useDispatch, useSelector } from "react-redux"
 import { getWorkTimeState } from "e-features/WorkTimeTracking/model/selectors/getWorkTimeState"
-import { Button, Column, OlList, Row, VerticalOffset } from "shared/ui"
+import { BlockWithShadow, Button, OlList, Space, VerticalOffset } from "shared/ui"
 import { workTimeActions } from "e-features/WorkTimeTracking/model/slice/workTimeSlice"
 import { WeekDataListItem } from "e-features/WorkTimeTracking/ui/WeekDataList/WeekDataListItem"
 import { BtnVariant } from "shared/ui/Button/types"
@@ -31,6 +31,7 @@ export const WeekDataList: FC<WeekDataListProps> = (props) => {
       dispatch(workTimeActions.sortWeeksByHours("up"))
       setSortByHoursDirection("up")
     }
+    setSortByDateDirection(false)
   }, [dispatch, sortByHoursDirection])
 
   const onSortWeeksByDate = useCallback(() => {
@@ -42,6 +43,7 @@ export const WeekDataList: FC<WeekDataListProps> = (props) => {
       dispatch(workTimeActions.sortWeeksByDate("up"))
       setSortByDateDirection("up")
     }
+    setSortByHoursDirection(false)
   }, [dispatch, sortByDateDirection])
 
   const onFilterByIsWorking = useCallback(() => {
@@ -52,17 +54,30 @@ export const WeekDataList: FC<WeekDataListProps> = (props) => {
   return (
     <div className={cn("weeks-list", {}, [className])}>
       <VerticalOffset offset={"level5"}>
-        <Row justify={"space-between"}>
-          <Column col={3}>
-            <Button variant={BtnVariant.OUTLINE} onClick={onFilterByIsWorking}>Working weeks</Button>
-          </Column>
-          <Column col={3}>
-            <Button variant={BtnVariant.OUTLINE} onClick={onSortWeeksByHours}>Sort by hours </Button>
-          </Column>
-          <Column col={3}>
-            <Button variant={BtnVariant.OUTLINE} onClick={onSortWeeksByDate}>Sort by date</Button>
-          </Column>
-        </Row>
+        <BlockWithShadow>
+          <Space columnGap={"level2"}>
+            <Button
+              variant={BtnVariant.BACKGROUND}
+              onClick={onFilterByIsWorking}>
+              Only working weeks
+            </Button>
+            <Button
+              variant={BtnVariant.BACKGROUND}
+              onClick={onSortWeeksByHours}>
+              {`Sort by hours `}
+              {sortByHoursDirection === "up" && "↑"}
+              {sortByHoursDirection === "down" && "↓"}
+            </Button>
+            <Button
+              variant={BtnVariant.BACKGROUND}
+              onClick={onSortWeeksByDate}>
+              {`Sort by date `}
+              {sortByDateDirection === "up" && "↓"}
+              {sortByDateDirection === "down" && "↑"}
+            </Button>
+          </Space>
+        </BlockWithShadow>
+
         <OlList rowGap={"level3"}>
           {weeks.map((week) => (
             <WeekDataListItem week={week} />

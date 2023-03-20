@@ -1,0 +1,54 @@
+@mixin flex() {
+  display: flex;
+  white-space: nowrap;
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    .column-#{$infix}-align-items-normal {
+      @include flex;
+      align-items: normal;
+    }
+    .column-#{$infix}-align-items-center {
+      @include flex;
+      align-items: center;
+    }
+    .column-#{$infix}-align-items-start {
+      @include flex;
+      align-items: start;
+    }
+    .column-#{$infix}-align-items-end {
+      @include flex;
+      align-items: end;
+    }
+    .column-#{$infix}-align-items-start {
+      @include flex;
+      align-items: self-start;
+    }
+    .column-#{$infix}-align-items-end {
+      @include flex;
+      align-items: self-end;
+    }
+    .column-#{$infix}-align-items-baseline {
+      @include flex;
+      align-items: baseline;
+    }
+    .column-#{$infix}-align-items-stretch {
+      @include flex;
+      align-items: stretch;
+    }
+    .column-#{$infix}-align-items-inherit {
+      @include flex;
+      align-items: inherit;
+    }
+    .column-#{$infix}-align-items-initial {
+      @include flex;
+      align-items: inherit;
+    }
+    .column-#{$infix}-align-items-unset {
+      @include flex;
+      align-items: unset;
+    }
+  }
+}

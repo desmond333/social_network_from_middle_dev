@@ -1,12 +1,13 @@
 import React from "react"
 import { classNames as cn } from "shared/lib/classNames"
-import { AlignSelf, Col, Order } from "shared/ui/Grid/Column/types"
+import { AlignItems, AlignSelf, Col, Order } from "shared/ui/Grid/Column/types"
 
 type ColumnProps = {
   children: React.ReactNode
   col?: Col
   order?: Order
-  alignSelf?: AlignSelf
+  alignItems?: AlignSelf
+  alignSelf?: AlignItems
   isFlexNone?: boolean
   isDisplayFlex?: boolean
   breakpoints?: {
@@ -17,21 +18,18 @@ type ColumnProps = {
   }
 }
 
-type ColumnTypes = {
-  col?: Col
-  order?: Order
-  alignSelf?: AlignSelf
-}
+type ColumnTypes = Pick<ColumnProps, "col" | "order" | "alignSelf" | "alignItems">
 
 export const Column: React.FC<ColumnProps> = (props) => {
   const {
     children,
     col,
     alignSelf,
+    alignItems,
     order,
     breakpoints,
     isDisplayFlex,
-    isFlexNone
+    isFlexNone,
   } = props
 
   let breakpointsValue = ""
@@ -41,15 +39,17 @@ export const Column: React.FC<ColumnProps> = (props) => {
     const isKeyCorrected =
       key === "md" || key === "lg" || key === "xl" || key === "xxl"
 
-    if (isKeyCorrected && breakpoints[key]?.alignSelf) {
-      breakpointsValue += `column--${key}-align-self-${breakpoints[key]?.alignSelf} `
-    }
     if (isKeyCorrected && breakpoints[key]?.col) {
       breakpointsValue += `column--${key}-col-${breakpoints[key]?.col} `
     }
-
     if (isKeyCorrected && breakpoints[key]?.order) {
       breakpointsValue += `column--${key}-order-${breakpoints[key]?.order} `
+    }
+    if (isKeyCorrected && breakpoints[key]?.alignSelf) {
+      breakpointsValue += `column--${key}-align-self-${breakpoints[key]?.alignSelf} `
+    }
+    if (isKeyCorrected && breakpoints[key]?.alignItems) {
+      breakpointsValue += `column--${key}-align-self-${breakpoints[key]?.alignItems} `
     }
   })
 
@@ -61,6 +61,7 @@ export const Column: React.FC<ColumnProps> = (props) => {
           [`column--col-${col}`]: col,
           [`column--order-${order}`]: order,
           [`column--align-self-${alignSelf}`]: alignSelf,
+          [`column--align-items-${alignItems}`]: alignItems,
           [`column--display-flex`]: isDisplayFlex,
           [`column--display-flex-none`]: isFlexNone,
         },

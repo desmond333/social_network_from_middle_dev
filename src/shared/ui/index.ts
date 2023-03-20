@@ -1,9 +1,11 @@
 export { AppLink } from "./AppLink/AppLink"
 export { BlockAlignText } from "./BlockAlignText/BlockAlignText"
 export { BlockText } from "./BlockText/BlockText"
+export { BlockWithShadow } from "./BlockWithShadow/BlockWithShadow"
 export { BugButton } from "./BugButton/BugButton"
 export { Button } from "./Button/Button"
 export { Checkbox } from "./Checkbox/Checkbox"
+export { Tag } from "./Tag/Tag"
 export { ErrorFallback } from "./ErrorFallback/ErrorFallback"
 
 export { Column } from "./Grid/Column/Column"

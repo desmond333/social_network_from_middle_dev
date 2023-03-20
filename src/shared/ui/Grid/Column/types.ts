@@ -15,3 +15,5 @@ export type AlignSelf =
   | "inherit"
   | "initial"
   | "unset"
+
+export type AlignItems = Exclude<AlignSelf, "auto">
