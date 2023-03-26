@@ -8,6 +8,8 @@ import { Menu, MenuItem } from "shared/ui"
 import { useTheme, Theme } from "app/providers/ThemeProvider"
 import { BtnSize, BtnVariant } from "shared/ui/Button/types"
 import { AppRoutes, RoutePath, TAppRoutes } from "shared/config/routeConfig/routes"
+import { IconText } from "shared/ui/IconText/IconText"
+import { IconHome } from "shared/ui/Icon/Icons"
 
 interface SidebarProps {
   className?: string
@@ -27,20 +29,28 @@ export const Sidebar: FC<SidebarProps> = (props) => {
     "sidebar--dark": theme === Theme.DARK,
   }
 
+  // todo: сделать иконки независимыми от сворачивания
   return (
     <aside className={cn("sidebar", mods, [className])}>
       <Row direction="column" justify="space-between" isFullHeight>
         <Column isFlexNone>
           <Menu direction="column" rowGap="level1">
             {Object.keys(RoutePath).map((key: TAppRoutes) => {
-              if (key === AppRoutes.NOT_FOUND) return
+              if (key === AppRoutes.NOT_FOUND) return null
 
               else {
                 return (
                   <MenuItem key={key}>
-                    <AppLink to={RoutePath[key]}>
-                      {t(`${key.toUpperCase()}_PAGE_LINK`)}
-                    </AppLink>
+                    <div style={{ paddingLeft: "15px" }}>
+                      <AppLink to={RoutePath[key]}>
+                        <IconText columnGap={"level1"}>
+                          <IconHome />
+                          <span className={"sidebar__link"}>
+                            {t(`${key.toUpperCase()}_PAGE_LINK`)}
+                          </span>
+                        </IconText>
+                      </AppLink>
+                    </div>
                   </MenuItem>
                 )
               }

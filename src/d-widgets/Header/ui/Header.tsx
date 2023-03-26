@@ -15,9 +15,11 @@ export const Header = ({ className }: HeaderProps) => {
 
   return (
     <header className={cn("header", {}, [className])}>
-      <Row justify="space-between">
-        <Column col={5} alignSelf="center">
-          <H2>{t("PROJECT_NAME")}</H2>
+      <Row justify="space-between" isFullHeight>
+        <Column col={7} alignSelf="center">
+          <div style={{ paddingLeft: "10px" }}>
+            <H2 color={"secondary"}>{t("PROJECT_NAME")}{` by Desmond333`}</H2>
+          </div>
         </Column>
         <Column col={2} alignSelf="center">
           <Space columnGap="level3">

@@ -15,7 +15,8 @@ export const WeekDataListItem: FC<WeekDataListItemProps> = (props) => {
   const endDateArr = week.date.end.toString().split(" ")
   const displayDate = `${startDateArr[2]} ${startDateArr[1]} ${startDateArr[3]} - ${endDateArr[2]} ${endDateArr[1]} ${endDateArr[3]}`
   const timeAfterThisDate = daysSince(week.date.end)
-
+  // const timeAfterThisDate = 111
+  
   const uiResultTime = `${week.resultTime.hours} h ${week.resultTime.minutes} m`
   const uiDateWithDaysAfter = `${displayDate} (${timeAfterThisDate})`
 

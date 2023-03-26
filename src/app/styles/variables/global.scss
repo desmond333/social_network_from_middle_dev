@@ -1,5 +1,5 @@
 :root {
-  --font-family-main: Consolas, "Times New Roman", Serif;
+  --font-family-main: 'Roboto', sans-serif;
 
   --font-size-s: 10px;
   --font-line-s: 18px;
@@ -50,7 +50,9 @@
 
   //Themes
   //light theme
-  --primary-color-light: #0232c2;
+  // --primary-color-light: #0232c2;
+  // --secondary-color-light: #0452ff;
+  --primary-color-light: #19a5e3;
   --secondary-color-light: #0452ff;
   --inverted-primary-color-light: var(--primary-color-dark);
   --inverted-secondary-color-light: var(--secondary-color-dark);

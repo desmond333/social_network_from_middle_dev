@@ -8,6 +8,7 @@ import { workTimeActions } from "e-features/WorkTimeTracking/model/slice/workTim
 import { WeekDataListItem } from "e-features/WorkTimeTracking/ui/WeekDataList/WeekDataListItem"
 import { BtnVariant } from "shared/ui/Button/types"
 import { TSort } from "e-features/WorkTimeTracking/model/types/workTimeSchema"
+import { useLocalStorage } from "shared/hooks"
 
 interface WeekDataListProps {
   className?: string;
@@ -51,6 +52,8 @@ export const WeekDataList: FC<WeekDataListProps> = (props) => {
     dispatch(workTimeActions.filterByIsWorking())
   }, [dispatch])
 
+  // const [storedValue, setValue] = useLocalStorage("workingWeeks", [])
+  // console.log(storedValue)
   return (
     <div className={cn("weeks-list", {}, [className])}>
       <VerticalOffset offset={"level5"}>
@@ -75,6 +78,7 @@ export const WeekDataList: FC<WeekDataListProps> = (props) => {
               {sortByDateDirection === "up" && "↓"}
               {sortByDateDirection === "down" && "↑"}
             </Button>
+            {/*<Button onClick={() => setValue(weeks)}>ff</Button>*/}
           </Space>
         </BlockWithShadow>
 
