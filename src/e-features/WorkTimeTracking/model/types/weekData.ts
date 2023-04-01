@@ -1,4 +1,4 @@
-export type Company = "Hashbon" | "Outlines & DG" | "Self Education"
+export type Company = "SimbirSoft" | "Hashbon" | "Outlines & DG" | "Self Education"
 
 export interface ResultTime {
   hours: number,

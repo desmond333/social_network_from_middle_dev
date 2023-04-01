@@ -2,10 +2,22 @@ import { WeekData } from "./types/weekData"
 
 export const WEEKS: WeekData[] = [
   {
+    company: "SimbirSoft",
+    isWorking: true,
+    resultTime: {
+      hours: 10,
+      minutes: 0,
+    },
+    date: {
+      start: new Date("2023-04-10"),
+      end: new Date("2023-04-16"),
+    },
+  },
+  {
     company: "Hashbon",
     isWorking: true,
     resultTime: {
-      hours: 35,
+      hours: 45,
       minutes: 42,
     },
     date: {
@@ -17,7 +29,7 @@ export const WEEKS: WeekData[] = [
     company: "Hashbon",
     isWorking: true,
     resultTime: {
-      hours: 35,
+      hours: 45,
       minutes: 0,
     },
     date: {
@@ -29,7 +41,7 @@ export const WEEKS: WeekData[] = [
     company: "Self Education",
     isWorking: true,
     resultTime: {
-      hours: 32,
+      hours: 42,
       minutes: 0,
     },
     date: {
@@ -41,7 +53,7 @@ export const WEEKS: WeekData[] = [
     company: "Hashbon",
     isWorking: true,
     resultTime: {
-      hours: 31,
+      hours: 41,
       minutes: 0,
     },
     date: {
@@ -53,7 +65,7 @@ export const WEEKS: WeekData[] = [
     company: "Self Education",
     isWorking: true,
     resultTime: {
-      hours: 20,
+      hours: 40,
       minutes: 0,
     },
     date: {
@@ -65,7 +77,7 @@ export const WEEKS: WeekData[] = [
     company: "Outlines & DG",
     isWorking: false,
     resultTime: {
-      hours: 0,
+      hours: 10,
       minutes: 0,
     },
     date: {
