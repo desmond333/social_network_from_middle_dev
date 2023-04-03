@@ -1,7 +1,10 @@
 export const AppRoutes = {
   MAIN: "main",
-  ABOUT: "about",
+  PROFILE: "profile",
   EFFICIENCY: "efficiency",
+  SKILLS: "skills",
+  ABOUT: "about",
+
   // если верхние маршруты не отработали, то
   NOT_FOUND: "not_found",
 } as const
@@ -12,11 +15,11 @@ export type TAppRoutes = typeof AppRoutes[keyof typeof AppRoutes]
 export type ValueOf<T> = T[keyof T]
 export type TAppRoutes2 = ValueOf<typeof AppRoutes>
 
-// todo: new page
-
 export const RoutePath: Record<TAppRoutes, string> = {
   [AppRoutes.MAIN]: "/",
-  [AppRoutes.ABOUT]: "/about",
+  [AppRoutes.PROFILE]: "/profile",
   [AppRoutes.EFFICIENCY]: "/efficiency",
+  [AppRoutes.SKILLS]: "/skills",
+  [AppRoutes.ABOUT]: "/about",
   [AppRoutes.NOT_FOUND]: "*",
 }

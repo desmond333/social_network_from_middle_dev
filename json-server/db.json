@@ -24,6 +24,13 @@
     }
   ],
   "profile": {
-    "name": "typicode"
+    "firstName": "Вячеслав",
+    "lastName": "Воробьев",
+    "age": "24",
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "Saint-Petersburg",
+    "username": "admin",
+    "avatar": "https://pic.rutubelist.ru/user/3b/27/3b2758ad549a76b578f7ee072e4e894.jpg"
   }
 }

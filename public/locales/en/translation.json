@@ -5,8 +5,10 @@
   "AUTHORIZE_TITLE": "Sign in or sign up",
   "NOT_FOUND": "This page is unfortunately not found",
   "MAIN_PAGE_LINK": "Main",
-  "ABOUT_PAGE_LINK": "About us",
+  "PROFILE_PAGE_LINK": "My profile",
   "EFFICIENCY_PAGE_LINK": "Efficiency",
+  "SKILLS_PAGE_LINK": "Skills",
+  "ABOUT_PAGE_LINK": "About us",
   "ERROR_BLOCK_TITLE": "Something went wrong",
   "ERROR_BLOCK_BTN": "Reload app"
 }
