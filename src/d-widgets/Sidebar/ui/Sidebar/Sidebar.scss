@@ -7,17 +7,12 @@
   transition: width 0.4s;
 
   padding: 20px 0;
-
-  &__link {
-    opacity: 1;
-    transition: 0.3s opacity;
-  }
 }
 
 .sidebar--collapsed {
   width: var(--sidebar-width-collapsed);
 
-  .sidebar__link {
+  .sidebar-item__link {
     opacity: 0;
     transition: 0.3s opacity;
   }

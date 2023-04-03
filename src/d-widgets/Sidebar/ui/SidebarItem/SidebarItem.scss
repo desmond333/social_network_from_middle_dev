@@ -1,0 +1,8 @@
+.sidebar-item {
+  padding-left: 15px;
+
+  &__link {
+    opacity: 1;
+    transition: 0.3s opacity;
+  }
+}

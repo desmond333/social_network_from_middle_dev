@@ -1,3 +1,5 @@
+import { ValueOf, ValueOfWithoutSomeKeys } from "shared/model/types"
+
 export const AppRoutes = {
   MAIN: "main",
   PROFILE: "profile",
@@ -9,11 +11,8 @@ export const AppRoutes = {
   NOT_FOUND: "not_found",
 } as const
 
-export type TAppRoutes = typeof AppRoutes[keyof typeof AppRoutes]
-
-// up ts
-export type ValueOf<T> = T[keyof T]
-export type TAppRoutes2 = ValueOf<typeof AppRoutes>
+export type TAppRoutes = ValueOf<typeof AppRoutes>
+export type TAppRoutesWithoutNotFound = ValueOfWithoutSomeKeys<typeof AppRoutes, "NOT_FOUND">
 
 export const RoutePath: Record<TAppRoutes, string> = {
   [AppRoutes.MAIN]: "/",
@@ -22,4 +21,6 @@ export const RoutePath: Record<TAppRoutes, string> = {
   [AppRoutes.SKILLS]: "/skills",
   [AppRoutes.ABOUT]: "/about",
   [AppRoutes.NOT_FOUND]: "*",
-}
+} as const
+
+export type TRoutePath = typeof RoutePath[keyof typeof RoutePath]
