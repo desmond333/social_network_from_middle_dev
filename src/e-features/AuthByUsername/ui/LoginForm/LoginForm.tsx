@@ -1,23 +1,40 @@
-import { FC, memo, useCallback } from "react"
+import { FC, memo, useCallback, useEffect } from "react"
 import { useTranslation } from "react-i18next"
 import { classNames as cn } from "shared/lib/classNames/classNames"
 import "./LoginForm.scss"
 import { Button, Input, VerticalOffset } from "shared/ui"
 import { BtnVariant } from "shared/ui/Button/types"
-import { useDispatch, useSelector } from "react-redux"
-import { loginActions } from "../../model/slice/loginSlice"
-import { getLoginState } from "e-features/AuthByUsername/model/selectors/getLoginState"
+import { useDispatch, useSelector, useStore } from "react-redux"
+import { loginActions, loginReducer } from "../../model/slice/loginSlice"
+import { ReduxStoreWithManager } from "app/providers/StoreProvider/config/StateSchema"
+import { getLoginUsername } from "../../model/selectors/getLoginUsername"
+import { getLoginIsLoading } from "../../model/selectors/getLoginIsLoading"
+import { getLoginPassword } from "../../model/selectors/getLoginPassword"
 
 interface LoginFormProps {
   className?: string;
 }
 
-export const LoginForm: FC<LoginFormProps> = memo((props) => {
+const LoginForm: FC<LoginFormProps> = memo((props) => {
   const { className } = props
 
   const { t } = useTranslation()
   const dispatch = useDispatch()
-  const { username, password } = useSelector(getLoginState)
+
+  const store = useStore() as ReduxStoreWithManager
+  const username = useSelector(getLoginUsername)
+  const password = useSelector(getLoginPassword)
+  const isLoading = useSelector(getLoginIsLoading)
+
+  // для добавления и удаления асинхронного редюсера в store
+  useEffect(() => {
+    store.reducerManager.add("loginForm", loginReducer)
+
+    return () => {
+      store.reducerManager.remove("loginForm")
+    }
+  }, [])
+
 
   const onChangeUsername = useCallback((value: string) => {
     dispatch(loginActions.setUsername(value))
@@ -49,3 +66,5 @@ export const LoginForm: FC<LoginFormProps> = memo((props) => {
     </div>
   )
 })
+
+export default LoginForm

@@ -1,7 +1,7 @@
-import { FC } from "react"
+import { FC, Suspense } from "react"
 import "./LoginModal.scss"
-import { ModalWrapper } from "shared/ui"
-import { LoginForm } from "../LoginForm/LoginForm"
+import { Loader, ModalWrapper } from "shared/ui"
+import { LoginFormAsync } from "../LoginForm/LoginFormAsync"
 import { ModalWrapperProps } from "shared/ui/ModalWrapper/ModalWrapper"
 import { useTranslation } from "react-i18next"
 
@@ -14,7 +14,9 @@ export const LoginModal: FC<LoginModalProps> = (props) => {
 
   return (
     <ModalWrapper isLazy title={t("AUTHORIZE_TITLE")} {...rest}>
-      <LoginForm />
+      <Suspense fallback={<Loader />}>
+        <LoginFormAsync />
+      </Suspense>
     </ModalWrapper>
   )
 }
