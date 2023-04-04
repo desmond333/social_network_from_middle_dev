@@ -44,7 +44,7 @@ const workTimeSlice = createSlice({
       }
     },
     filterByIsWorking(state) {
-      state.weeks = state.weeks.filter((week) => week.isWorking)
+      state.weeks = state.weeks.filter((week) => week.isWorkingWeek)
       state.isWorkingAllWeeks = true
     },
   },

@@ -3,7 +3,9 @@ import { WeekData } from "./types/weekData"
 export const WEEKS: WeekData[] = [
   {
     company: "SimbirSoft",
-    isWorking: true,
+    isWorkingWeek: true,
+    isSeek: false,
+    myBackState: 4,
     resultTime: {
       hours: 10,
       minutes: 0,
@@ -15,9 +17,11 @@ export const WEEKS: WeekData[] = [
   },
   {
     company: "Hashbon",
-    isWorking: true,
+    isWorkingWeek: true,
+    isSeek: false,
+    myBackState: 9,
     resultTime: {
-      hours: 45,
+      hours: 35,
       minutes: 42,
     },
     date: {
@@ -27,9 +31,11 @@ export const WEEKS: WeekData[] = [
   },
   {
     company: "Hashbon",
-    isWorking: true,
+    isWorkingWeek: true,
+    isSeek: false,
+    myBackState: 9,
     resultTime: {
-      hours: 45,
+      hours: 35,
       minutes: 0,
     },
     date: {
@@ -39,9 +45,11 @@ export const WEEKS: WeekData[] = [
   },
   {
     company: "Self Education",
-    isWorking: true,
+    isWorkingWeek: true,
+    isSeek: false,
+    myBackState: 6,
     resultTime: {
-      hours: 42,
+      hours: 32,
       minutes: 0,
     },
     date: {
@@ -51,9 +59,11 @@ export const WEEKS: WeekData[] = [
   },
   {
     company: "Hashbon",
-    isWorking: true,
+    isWorkingWeek: true,
+    isSeek: false,
+    myBackState: 9,
     resultTime: {
-      hours: 41,
+      hours: 31,
       minutes: 0,
     },
     date: {
@@ -63,9 +73,11 @@ export const WEEKS: WeekData[] = [
   },
   {
     company: "Self Education",
-    isWorking: true,
+    isWorkingWeek: true,
+    isSeek: false,
+    myBackState: 10,
     resultTime: {
-      hours: 40,
+      hours: 25,
       minutes: 0,
     },
     date: {
@@ -75,9 +87,11 @@ export const WEEKS: WeekData[] = [
   },
   {
     company: "Outlines & DG",
-    isWorking: false,
+    isWorkingWeek: false,
+    isSeek: false,
+    myBackState: 5,
     resultTime: {
-      hours: 10,
+      hours: 0,
       minutes: 0,
     },
     date: {
