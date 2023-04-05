@@ -1,16 +1,14 @@
 import { FC } from "react"
-import { Container } from "shared/ui"
-import { useTranslation } from "react-i18next"
-import { ErrorFallback } from "shared/ui/ErrorFallback/ErrorFallback"
 import { ErrorBoundary } from "react-error-boundary"
+import { CurrentLevel } from "e-features/CurrentLevelDisplay"
+import { Container } from "shared/ui"
+import { ErrorFallback } from "shared/ui/ErrorFallback/ErrorFallback"
 
 const SkillsPage: FC = () => {
-  const { t } = useTranslation("main")
-
   return (
     <ErrorBoundary FallbackComponent={ErrorFallback}>
       <Container size="fluid">
-        SkillsPage
+        <CurrentLevel />
       </Container>
     </ErrorBoundary>
   )

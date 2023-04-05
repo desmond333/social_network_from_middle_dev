@@ -4,11 +4,12 @@
   "AUTHORIZE_BTN": "Авторизоваться",
   "AUTHORIZE_TITLE": "Авторизация",
   "NOT_FOUND": "Такой страницы не найдено :(",
+  "ERROR_BLOCK_TITLE": "Что-то пошло не так",
+  "ERROR_BLOCK_BTN": "Перезапустить приложение",
+  "CURRENT_LEVEL": "Мой текущий уровень во frontend разработке: ",
   "MAIN_PAGE_LINK": "Главная",
   "PROFILE_PAGE_LINK": "Мой профиль",
   "EFFICIENCY_PAGE_LINK": "Продуктивность",
   "SKILLS_PAGE_LINK": "Способности",
-  "ABOUT_PAGE_LINK": "Страница о нас",
-  "ERROR_BLOCK_TITLE": "Что-то пошло не так",
-  "ERROR_BLOCK_BTN": "Перезапустить приложение"
+  "ABOUT_PAGE_LINK": "Страница о нас"
 }

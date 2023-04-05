@@ -3,11 +3,13 @@ import { StateSchema } from "./StateSchema"
 import { userReducer } from "entities/User"
 import { workTimeReducer } from "e-features/WorkTimeTracking"
 import { createReducerManager } from "./reducerManager"
+import { currentLevelReducer } from "e-features/CurrentLevelDisplay/model/slice/currentLevelSlice"
 
 export function createReduxStore(initialState?: StateSchema) {
   const rootReducers: ReducersMapObject<StateSchema> = {
     user: userReducer,
     workTime: workTimeReducer,
+    currentLevel: currentLevelReducer,
   }
 
   const reducerManager = createReducerManager(rootReducers)
