@@ -6,6 +6,7 @@
   "NOT_FOUND": "This page is unfortunately not found",
   "ERROR_BLOCK_TITLE": "Something went wrong",
   "ERROR_BLOCK_BTN": "Reload app",
+  "ERROR_LOGIN": "Wrong username or password",
   "CURRENT_LEVEL": "My current level in frontend: ",
   "MAIN_PAGE_LINK": "Main",
   "PROFILE_PAGE_LINK": "My profile",

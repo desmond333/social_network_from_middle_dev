@@ -6,6 +6,7 @@
   "NOT_FOUND": "Такой страницы не найдено :(",
   "ERROR_BLOCK_TITLE": "Что-то пошло не так",
   "ERROR_BLOCK_BTN": "Перезапустить приложение",
+  "ERROR_LOGIN": "Вы ввели неверный логин или пароль",
   "CURRENT_LEVEL": "Мой текущий уровень во frontend разработке: ",
   "MAIN_PAGE_LINK": "Главная",
   "PROFILE_PAGE_LINK": "Мой профиль",
