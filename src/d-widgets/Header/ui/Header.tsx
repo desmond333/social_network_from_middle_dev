@@ -12,6 +12,7 @@ interface HeaderProps {
 
 export const Header = ({ className }: HeaderProps) => {
   const { t } = useTranslation()
+  
 
   return (
     <header className={cn("header", {}, [className])}>

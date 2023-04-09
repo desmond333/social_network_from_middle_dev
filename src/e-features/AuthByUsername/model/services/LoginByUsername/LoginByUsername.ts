@@ -1,7 +1,8 @@
 import { createAsyncThunk } from "@reduxjs/toolkit"
-import { User } from "entities/User"
+import { User, userActions } from "entities/User"
 import axios from "axios"
 import i18n from "shared/config/internalization/i18n"
+import { USER_LS_KEY } from "shared/const/localstorage"
 
 interface LoginByUsernameProps {
   username: string;
@@ -16,6 +17,9 @@ export const loginByUsername = createAsyncThunk<User, LoginByUsernameProps>("log
 
       // считаем пустые данные с сервера за ошибку
       if (!response.data) throw new Error()
+
+      localStorage.setItem(USER_LS_KEY, JSON.stringify(response.data))
+      thunkAPI.dispatch(userActions.setAuthData(response.data))
 
       return response.data
     } catch (e) {
