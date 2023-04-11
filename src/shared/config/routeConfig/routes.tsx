@@ -1,4 +1,4 @@
-import { ValueOf, ValueOfWithoutSomeKeys } from "shared/model/types"
+import { ValueOf, ValueOfWithoutSomeKeys } from "shared/lib/types/types"
 
 export const AppRoutes = {
   MAIN: "main",
