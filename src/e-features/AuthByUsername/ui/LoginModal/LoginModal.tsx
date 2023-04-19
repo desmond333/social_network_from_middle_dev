@@ -9,13 +9,17 @@ import { useTranslation } from "react-i18next"
 type LoginModalProps = Omit<ModalWrapperProps, "title" | "children">
 
 export const LoginModal: FC<LoginModalProps> = (props) => {
-  const { ...rest } = props
+  const { onClose, ...rest } = props
   const { t } = useTranslation()
 
   return (
-    <ModalWrapper isLazy title={t("AUTHORIZE_TITLE")} {...rest}>
+    <ModalWrapper
+      isLazy
+      title={t("AUTHORIZE_TITLE")}
+      {...rest}
+    >
       <Suspense fallback={<Loader />}>
-        <LoginFormAsync />
+        <LoginFormAsync onSuccess={onClose} />
       </Suspense>
     </ModalWrapper>
   )

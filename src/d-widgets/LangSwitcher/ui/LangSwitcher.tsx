@@ -1,4 +1,4 @@
-import { FC } from "react"
+import { FC, memo } from "react"
 import { classNames as cn } from "@/g-shared/lib/classNames/classNames"
 import "./LangSwitcher.scss"
 import { Button } from "@/g-shared/ui"
@@ -9,7 +9,7 @@ interface LangSwitcherProps {
   className?: string;
 }
 
-export const LangSwitcher: FC<LangSwitcherProps> = (props) => {
+export const LangSwitcher: FC<LangSwitcherProps> = memo((props) => {
   const { className } = props
   const { t, i18n } = useTranslation()
 
@@ -28,4 +28,4 @@ export const LangSwitcher: FC<LangSwitcherProps> = (props) => {
       {t("CURRENT_LANGUAGE")}
     </Button>
   )
-}
+})

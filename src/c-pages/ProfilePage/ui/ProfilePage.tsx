@@ -1,18 +1,25 @@
 import { FC } from "react"
-import { Container } from "@/g-shared/ui"
-import { useTranslation } from "react-i18next"
-import { ErrorFallback } from "@/g-shared/ui/ErrorFallback/ErrorFallback"
 import { ErrorBoundary } from "react-error-boundary"
+import { profileReducer } from "@/f-entities/Profile"
+import { Container } from "@/g-shared/ui"
+import { ErrorFallback } from "@/g-shared/ui/ErrorFallback/ErrorFallback"
+import { DynamicModuleLoader } from "@/g-shared/lib/components/DynamicModuleLoader"
+import { ReducersList } from "@/g-shared/lib/components/DynamicModuleLoader/DynamicModuleLoader"
+
+const reducers: ReducersList = {
+  profile: profileReducer,
+}
 
 const ProfilePage: FC = () => {
-  const { t } = useTranslation("main")
 
   return (
-    <ErrorBoundary FallbackComponent={ErrorFallback}>
-      <Container size="fluid">
-        ProfilePage
-      </Container>
-    </ErrorBoundary>
+    <DynamicModuleLoader reducers={reducers} isRemoveAfterUnmount>
+      <ErrorBoundary FallbackComponent={ErrorFallback}>
+        <Container size="fluid">
+          ProfilePage
+        </Container>
+      </ErrorBoundary>
+    </DynamicModuleLoader>
   )
 }
 

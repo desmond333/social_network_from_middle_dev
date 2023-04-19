@@ -1,4 +1,4 @@
-import { FC, useCallback, useState } from "react"
+import { FC, memo, useCallback, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useSelector } from "react-redux"
 import { Button } from "@/g-shared/ui"
@@ -9,7 +9,7 @@ import { getUserAuthData, userActions } from "@/f-entities/User"
 interface AuthProps {
 }
 
-export const Authentication: FC<AuthProps> = () => {
+export const Authentication: FC<AuthProps> = memo(() => {
   const [isAuthModal, setIsAuthModal] = useState(false)
 
   const { t } = useTranslation()
@@ -40,4 +40,4 @@ export const Authentication: FC<AuthProps> = () => {
       <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
     </>
   )
-}
+})

@@ -1,4 +1,4 @@
-import { FC, useState } from "react"
+import { FC, memo, useState } from "react"
 import { ThemeSwitcher } from "../../../ThemeSwitcher"
 import { SidebarItemsList } from "../../model/items"
 import { SidebarItem } from "../SidebarItem/SidebarItem"
@@ -13,7 +13,7 @@ interface SidebarProps {
   className?: string
 }
 
-export const Sidebar: FC<SidebarProps> = (props) => {
+export const Sidebar: FC<SidebarProps> = memo((props) => {
   const { className } = props
 
   const { theme } = useTheme()
@@ -54,4 +54,4 @@ export const Sidebar: FC<SidebarProps> = (props) => {
       </Row>
     </aside>
   )
-}
+})

@@ -1,16 +1,15 @@
-import { ButtonHTMLAttributes, FC } from "react"
+import { ButtonHTMLAttributes, FC, memo } from "react"
 import { classNames as cn } from "@/g-shared/lib/classNames"
 import "./Button.scss"
 import { TBtnSize, TBtnVariant } from "@/g-shared/ui/Button/types"
 
-// up ts
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string
   variant?: TBtnVariant
   btnSquareSize?: TBtnSize
 }
 
-export const Button: FC<ButtonProps> = (props) => {
+export const Button: FC<ButtonProps> = memo((props) => {
   const {
     className,
     variant,
@@ -32,4 +31,4 @@ export const Button: FC<ButtonProps> = (props) => {
       {children}
     </button>
   )
-}
+})

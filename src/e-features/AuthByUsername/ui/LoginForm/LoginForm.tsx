@@ -16,6 +16,7 @@ import { ReducersList } from "@/g-shared/lib/components/DynamicModuleLoader/Dyna
 import { useAppDispatch } from "@/g-shared/lib/hooks/UseAppDispatch"
 
 interface LoginFormProps {
+  onSuccess: () => void;
   className?: string;
 }
 
@@ -24,7 +25,7 @@ const initialReducers: ReducersList = {
 }
 
 const LoginForm: FC<LoginFormProps> = memo((props) => {
-  const { className } = props
+  const { onSuccess, className } = props
 
   const { t } = useTranslation()
   const dispatch = useAppDispatch()
@@ -42,9 +43,12 @@ const LoginForm: FC<LoginFormProps> = memo((props) => {
     dispatch(loginActions.setPassword(value))
   }, [dispatch])
 
-  const onLoginClick = useCallback(() => {
-    dispatch(loginByUsername({ username, password }))
-  }, [dispatch, username, password])
+  const onLoginClick = useCallback(async () => {
+    const result = await dispatch(loginByUsername({ username, password }))
+    if (result.meta.requestStatus === "fulfilled") {
+      onSuccess()
+    }
+  }, [dispatch, onSuccess, username, password])
 
   return (
     <DynamicModuleLoader
@@ -72,6 +76,9 @@ const LoginForm: FC<LoginFormProps> = memo((props) => {
             onClick={onLoginClick}
           >
             {t("AUTHORIZE_BTN")}
+            <button></button>
+
+
           </Button>
         </VerticalOffset>
       </div>

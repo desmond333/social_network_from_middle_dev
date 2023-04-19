@@ -6,6 +6,7 @@ import { Button } from "@/g-shared/ui"
 import Logo from "@/g-shared/assets/icons/icon--theme.svg"
 import { Theme, TTheme } from "@/app/providers/ThemeProvider/lib/ThemeContext"
 import { BtnVariant } from "@/g-shared/ui/Button/types"
+import { memo } from "react"
 
 // up ts
 export const LogoColor: Record<TTheme, string> = {
@@ -17,7 +18,7 @@ interface ThemeSwitcherProps {
   className?: string
 }
 
-export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
+export const ThemeSwitcher = memo(({ className }: ThemeSwitcherProps) => {
   const { theme, toggleTheme } = useTheme()
 
   return (
@@ -29,4 +30,4 @@ export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
       <Logo fill={LogoColor[theme]} />
     </Button>
   )
-}
+})

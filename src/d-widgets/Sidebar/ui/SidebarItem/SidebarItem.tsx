@@ -1,24 +1,23 @@
-import { FC } from "react"
+import { FC, memo } from "react"
 import { useTranslation } from "react-i18next"
+import { ISidebarItem } from "../../model/items"
 import { classNames as cn } from "@/g-shared/lib/classNames/classNames"
 import "./SidebarItem.scss"
 import { AppLink } from "@/g-shared/ui"
 import { IconText } from "@/g-shared/ui/IconText/IconText"
-import { ISidebarItem } from "../../model/items"
 
 interface SidebarItemProps {
   item: ISidebarItem
-  className?: string;
 }
 
-export const SidebarItem: FC<SidebarItemProps> = (props) => {
-  const { item, className } = props
+export const SidebarItem: FC<SidebarItemProps> = memo((props) => {
+  const { item } = props
 
   const { t } = useTranslation()
 
   // todo: сделать иконки независимыми от сворачивания
   return (
-    <div className={cn("sidebar-item", {}, [className])}>
+    <div className={cn("sidebar-item", {}, [])}>
       <AppLink to={item.path}>
         <IconText columnGap={"level1"}>
           {item.icon}
@@ -29,4 +28,4 @@ export const SidebarItem: FC<SidebarItemProps> = (props) => {
       </AppLink>
     </div>
   )
-}
+})
