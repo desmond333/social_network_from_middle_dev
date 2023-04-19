@@ -1,15 +1,15 @@
 import { FC, useCallback, useState } from "react"
-import { classNames as cn } from "shared/lib/classNames/classNames"
+import { classNames as cn } from "@/g-shared/lib/classNames/classNames"
 import "./WeekDataList.scss"
 import { useDispatch, useSelector } from "react-redux"
-import { getWorkTimeState } from "e-features/WorkTimeTracking/model/selectors/getWorkTimeState"
-import { BlockWithShadow, Button, OlList, Space, VerticalOffset } from "shared/ui"
-import { workTimeActions } from "e-features/WorkTimeTracking/model/slice/workTimeSlice"
-import { WeekDataListItem } from "e-features/WorkTimeTracking/ui/WeekDataList/WeekDataListItem"
-import { BtnVariant } from "shared/ui/Button/types"
-import { TSort } from "e-features/WorkTimeTracking/model/types/workTimeSchema"
+import { getWorkTimeState } from "@/e-features/WorkTimeTracking/model/selectors/getWorkTimeState"
+import { BlockWithShadow, Button, OlList, Space, VerticalOffset } from "@/g-shared/ui"
+import { workTimeActions } from "@/e-features/WorkTimeTracking/model/slice/workTimeSlice"
+import { WeekDataListItem } from "@/e-features/WorkTimeTracking/ui/WeekDataList/WeekDataListItem"
+import { BtnVariant } from "@/g-shared/ui/Button/types"
+import { TSort } from "@/e-features/WorkTimeTracking/model/types/workTimeSchema"
 
-// import { useLocalStorage } from "shared/lib/hooks/useLocalStorage"
+// import { useLocalStorage } from "@/g-shared/lib/hooks/useLocalStorage"
 
 interface WeekDataListProps {
   className?: string;

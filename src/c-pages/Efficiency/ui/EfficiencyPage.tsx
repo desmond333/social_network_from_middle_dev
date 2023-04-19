@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next"
-import { Column, Container, ErrorFallback, Row } from "shared/ui"
+import { Column, Container, ErrorFallback, Row } from "@/g-shared/ui"
 import { ErrorBoundary } from "react-error-boundary"
-import { WeekDataList } from "e-features/WorkTimeTracking"
+import { WeekDataList } from "@/e-features/WorkTimeTracking"
 
 const EfficiencyPage = () => {
   const { t } = useTranslation("efficiency")

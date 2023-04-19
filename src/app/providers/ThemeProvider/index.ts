@@ -1,5 +1,6 @@
 export { useTheme } from "./lib/useTheme"
-export { ThemeContext, Theme, TTheme } from "./lib/ThemeContext"
+export { ThemeContext, Theme } from "./lib/ThemeContext"
+export type { TTheme } from "./lib/ThemeContext"
 
 import ThemeProvider from "./ui/ThemeProvider"
 

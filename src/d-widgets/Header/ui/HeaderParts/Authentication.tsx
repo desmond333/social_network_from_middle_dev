@@ -1,10 +1,10 @@
 import { FC, useCallback, useState } from "react"
 import { useTranslation } from "react-i18next"
-import { Button } from "shared/ui"
-import { LoginModal } from "e-features/AuthByUsername"
-import { useAppDispatch } from "shared/lib/hooks/UseAppDispatch"
 import { useSelector } from "react-redux"
-import { getUserAuthData, userActions } from "entities/User"
+import { Button } from "@/g-shared/ui"
+import { LoginModal } from "@/e-features/AuthByUsername"
+import { useAppDispatch } from "@/g-shared/lib/hooks/UseAppDispatch"
+import { getUserAuthData, userActions } from "@/f-entities/User"
 
 interface AuthProps {
 }

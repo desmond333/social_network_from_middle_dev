@@ -2,12 +2,12 @@ import { FC, Suspense, useEffect } from "react"
 import "./styles/index.scss"
 import { useTheme } from "./providers/ThemeProvider"
 import AppRouter from "./providers/Router/ui/AppRouter"
-import { Header } from "d-widgets/Header"
-import { Sidebar } from "d-widgets/Sidebar"
-import { classNames as cn } from "shared/lib/classNames"
-import { Column, Row } from "shared/ui"
-import { useAppDispatch } from "shared/lib/hooks/UseAppDispatch"
-import { userActions } from "entities/User"
+import { Header } from "@/d-widgets/Header"
+import { Sidebar } from "@/d-widgets/Sidebar"
+import { userActions } from "@/f-entities/User"
+import { Column, Row } from "@/g-shared/ui"
+import { classNames as cn } from "@/g-shared/lib/classNames"
+import { useAppDispatch } from "@/g-shared/lib/hooks/UseAppDispatch"
 
 const App: FC = () => {
   const { theme } = useTheme()
@@ -16,7 +16,7 @@ const App: FC = () => {
   useEffect(() => {
     dispatch(userActions.initAuthData())
   }, [dispatch])
-  
+
   return (
     <div className={cn("app", {}, [theme])}>
       <Suspense fallback="">

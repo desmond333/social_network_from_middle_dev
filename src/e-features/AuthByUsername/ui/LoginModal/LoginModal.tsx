@@ -1,8 +1,8 @@
 import { FC, Suspense } from "react"
 import "./LoginModal.scss"
-import { Loader, ModalWrapper } from "shared/ui"
+import { Loader, ModalWrapper } from "@/g-shared/ui"
 import { LoginFormAsync } from "../LoginForm/LoginFormAsync"
-import { ModalWrapperProps } from "shared/ui/ModalWrapper/ModalWrapper"
+import { ModalWrapperProps } from "@/g-shared/ui/ModalWrapper/ModalWrapper"
 import { useTranslation } from "react-i18next"
 
 // up ts

@@ -1,11 +1,11 @@
 import { FC, useEffect } from "react"
 import { useTranslation } from "react-i18next"
-import { classNames as cn } from "shared/lib/classNames/classNames"
+import { classNames as cn } from "@/g-shared/lib/classNames/classNames"
 import "./CurrentLevel.scss"
 import { useDispatch, useSelector } from "react-redux"
 import { getCurrentLevelState } from "../../model/selectors/getCurrentLevelState"
 import { currentLevelActions } from "../../model/slice/currentLevelSlice"
-import { BlockText, VerticalOffset } from "shared/ui"
+import { BlockText, VerticalOffset } from "@/g-shared/ui"
 
 interface CurrentLevelProps {
   className?: string;

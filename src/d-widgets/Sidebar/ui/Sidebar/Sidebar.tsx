@@ -1,14 +1,13 @@
 import { FC, useState } from "react"
-import { classNames as cn } from "shared/lib/classNames"
-import "./Sidebar.scss"
-import { Button, Column, Row } from "shared/ui"
-import { useTranslation } from "react-i18next"
 import { ThemeSwitcher } from "../../../ThemeSwitcher"
-import { Menu } from "shared/ui"
-import { useTheme, Theme } from "app/providers/ThemeProvider"
-import { BtnSize, BtnVariant } from "shared/ui/Button/types"
-import { SidebarItem } from "d-widgets/Sidebar/ui/SidebarItem/SidebarItem"
-import { SidebarItemsList } from "d-widgets/Sidebar/model/items"
+import { SidebarItemsList } from "../../model/items"
+import { SidebarItem } from "../SidebarItem/SidebarItem"
+import "./Sidebar.scss"
+import { useTheme, Theme } from "@/app/providers/ThemeProvider"
+import { classNames as cn } from "@/g-shared/lib/classNames"
+import { Button, Column, Row } from "@/g-shared/ui"
+import { Menu } from "@/g-shared/ui"
+import { BtnSize, BtnVariant } from "@/g-shared/ui/Button/types"
 
 interface SidebarProps {
   className?: string
@@ -17,7 +16,6 @@ interface SidebarProps {
 export const Sidebar: FC<SidebarProps> = (props) => {
   const { className } = props
 
-  const { t } = useTranslation()
   const { theme } = useTheme()
 
   const [isCollapsed, setIsCollapsed] = useState(false)

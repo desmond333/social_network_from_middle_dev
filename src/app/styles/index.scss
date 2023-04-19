@@ -2,7 +2,7 @@
 @import "./variables/global";
 @import "./themes/light";
 @import "./themes/dark";
-@import "shared/ui/ui.scss";
+@import "@/g-shared/ui/ui.scss";
 
 // настройка глобальных параметров
 body, .app {

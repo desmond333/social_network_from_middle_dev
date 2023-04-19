@@ -1,11 +1,11 @@
-import { classNames as cn } from "shared/lib/classNames"
+import { classNames as cn } from "@/g-shared/lib/classNames"
 import "./ThemeSwitcher.scss"
-import { useTheme } from "app/providers/ThemeProvider"
-import { Button } from "shared/ui"
+import { useTheme } from "@/app/providers/ThemeProvider"
+import { Button } from "@/g-shared/ui"
 // todo: сделать компонент Лого по канону
-import Logo from "shared/assets/icons/icon--theme.svg"
-import { Theme, TTheme } from "app/providers/ThemeProvider/lib/ThemeContext"
-import { BtnVariant } from "shared/ui/Button/types"
+import Logo from "@/g-shared/assets/icons/icon--theme.svg"
+import { Theme, TTheme } from "@/app/providers/ThemeProvider/lib/ThemeContext"
+import { BtnVariant } from "@/g-shared/ui/Button/types"
 
 // up ts
 export const LogoColor: Record<TTheme, string> = {

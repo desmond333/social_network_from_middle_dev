@@ -1,8 +1,8 @@
-import { UserSchema } from "entities/User"
-import { LoginSchema } from "e-features/AuthByUsername"
-import { WorkTimeSchema } from "e-features/WorkTimeTracking"
 import { AnyAction, CombinedState, EnhancedStore, Reducer, ReducersMapObject } from "@reduxjs/toolkit"
-import { CurrentLevelSchema } from "e-features/CurrentLevelDisplay"
+import { UserSchema } from "@/f-entities/User"
+import { LoginSchema } from "@/e-features/AuthByUsername"
+import { WorkTimeSchema } from "@/e-features/WorkTimeTracking"
+import { CurrentLevelSchema } from "@/e-features/CurrentLevelDisplay"
 
 export interface StateSchema {
   user: UserSchema

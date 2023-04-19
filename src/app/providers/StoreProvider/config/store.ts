@@ -1,9 +1,9 @@
 import { configureStore, ReducersMapObject } from "@reduxjs/toolkit"
 import { StateSchema } from "./StateSchema"
-import { userReducer } from "entities/User"
-import { workTimeReducer } from "e-features/WorkTimeTracking"
+import { userReducer } from "@/f-entities/User"
+import { workTimeReducer } from "@/e-features/WorkTimeTracking"
 import { createReducerManager } from "./reducerManager"
-import { currentLevelReducer } from "e-features/CurrentLevelDisplay/model/slice/currentLevelSlice"
+import { currentLevelReducer } from "@/e-features/CurrentLevelDisplay/model/slice/currentLevelSlice"
 
 export function createReduxStore(initialState?: StateSchema) {
   const rootReducers: ReducersMapObject<StateSchema> = {

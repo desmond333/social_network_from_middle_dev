@@ -1,9 +1,9 @@
 import { FC } from "react"
 import { useTranslation } from "react-i18next"
-import { classNames as cn } from "shared/lib/classNames/classNames"
+import { classNames as cn } from "@/g-shared/lib/classNames/classNames"
 import "./SidebarItem.scss"
-import { AppLink } from "shared/ui"
-import { IconText } from "shared/ui/IconText/IconText"
+import { AppLink } from "@/g-shared/ui"
+import { IconText } from "@/g-shared/ui/IconText/IconText"
 import { ISidebarItem } from "../../model/items"
 
 interface SidebarItemProps {

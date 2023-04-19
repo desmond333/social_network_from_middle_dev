@@ -1,6 +1,6 @@
 import { FC } from "react"
 import { useTranslation } from "react-i18next"
-import { classNames as cn } from "shared/lib/classNames/classNames"
+import { classNames as cn } from "@/g-shared/lib/classNames/classNames"
 import "./WeekDataForm.scss"
 
 interface WeekDataFormProps {

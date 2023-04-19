@@ -1,9 +1,9 @@
-import { classNames as cn } from "shared/lib/classNames"
+import { classNames as cn } from "@/g-shared/lib/classNames"
 import "./Header.scss"
-import { Column, Row, Space } from "shared/ui"
+import { Column, Row, Space } from "@/g-shared/ui"
 import { LangSwitcher } from "../../LangSwitcher"
-import { Authentication } from "d-widgets/Header/ui/HeaderParts/Authentication"
-import { H2 } from "shared/ui/Text"
+import { Authentication } from "@/d-widgets/Header/ui/HeaderParts/Authentication"
+import { H2 } from "@/g-shared/ui/Text"
 import { useTranslation } from "react-i18next"
 
 interface HeaderProps {
@@ -12,7 +12,7 @@ interface HeaderProps {
 
 export const Header = ({ className }: HeaderProps) => {
   const { t } = useTranslation()
-  
+
 
   return (
     <header className={cn("header", {}, [className])}>

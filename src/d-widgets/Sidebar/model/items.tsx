@@ -3,8 +3,8 @@ import {
   RoutePath,
   TAppRoutesWithoutNotFound,
   TRoutePath,
-} from "shared/config/routeConfig/routes"
-import { IconHome } from "shared/ui/Icon/Icons"
+} from "@/g-shared/config/routeConfig/routes"
+import { IconHome } from "@/g-shared/ui/Icon/Icons"
 
 export interface ISidebarItem {
   path: TRoutePath;

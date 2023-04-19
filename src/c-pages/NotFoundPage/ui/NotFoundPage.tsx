@@ -1,8 +1,8 @@
 import { FC } from "react"
-import { classNames as cn } from "shared/lib/classNames/classNames"
+import { classNames as cn } from "@/g-shared/lib/classNames/classNames"
 import "./NotFoundPage.scss"
 import { useTranslation } from "react-i18next"
-import { ErrorFallback } from "shared/ui/ErrorFallback/ErrorFallback"
+import { ErrorFallback } from "@/g-shared/ui/ErrorFallback/ErrorFallback"
 import { ErrorBoundary } from "react-error-boundary"
 
 interface NotFoundPageProps {

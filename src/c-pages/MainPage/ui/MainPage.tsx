@@ -1,7 +1,7 @@
 import { FC } from "react"
-import { Column, Container, Row } from "shared/ui"
+import { Column, Container, Row } from "@/g-shared/ui"
 import { useTranslation } from "react-i18next"
-import { ErrorFallback } from "shared/ui/ErrorFallback/ErrorFallback"
+import { ErrorFallback } from "@/g-shared/ui/ErrorFallback/ErrorFallback"
 import { ErrorBoundary } from "react-error-boundary"
 
 const MainPage: FC = () => {

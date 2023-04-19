@@ -1,7 +1,7 @@
 import { FC } from "react"
-import { Container } from "shared/ui"
+import { Container } from "@/g-shared/ui"
 import { useTranslation } from "react-i18next"
-import { ErrorFallback } from "shared/ui/ErrorFallback/ErrorFallback"
+import { ErrorFallback } from "@/g-shared/ui/ErrorFallback/ErrorFallback"
 import { ErrorBoundary } from "react-error-boundary"
 
 const ProfilePage: FC = () => {

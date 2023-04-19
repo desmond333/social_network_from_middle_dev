@@ -1,9 +1,9 @@
 import { FC } from "react"
-import { Container } from "shared/ui"
 import { useTranslation } from "react-i18next"
-import { ErrorFallback } from "shared/ui/ErrorFallback/ErrorFallback"
 import { ErrorBoundary } from "react-error-boundary"
-import { BugButton } from "shared/ui/BugButton/BugButton"
+import { Container } from "@/g-shared/ui"
+import { ErrorFallback } from "@/g-shared/ui/ErrorFallback/ErrorFallback"
+import { BugButton } from "@/g-shared/ui/BugButton/BugButton"
 
 const AboutPage: FC = () => {
   const { t } = useTranslation("about")
