@@ -10,9 +10,12 @@ import { ErrorFallback } from "@/g-shared/ui/ErrorFallback/ErrorFallback"
 import "@/g-shared/config/internalization/i18n"
 import { ComponentPreviews, useInitial } from "@/g-shared/lib/dev"
 
+// сначала идет BrowserRouter так как
+// в StoreProvider используется useNavigate()
+
 render(
-  <StoreProvider>
-    <BrowserRouter>
+  <BrowserRouter>
+    <StoreProvider>
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         <ThemeProvider initialTheme={Theme.LIGHT}>
           <DevSupport
@@ -23,7 +26,7 @@ render(
           </DevSupport>
         </ThemeProvider>
       </ErrorBoundary>
-    </BrowserRouter>
-  </StoreProvider>,
+    </StoreProvider>
+  </BrowserRouter>,
   document.getElementById("root"),
 )

@@ -1,12 +1,19 @@
 import { configureStore, ReducersMapObject } from "@reduxjs/toolkit"
+import { NavigateOptions, To } from "react-router"
 import { StateSchema } from "./StateSchema"
-import { userReducer } from "@/f-entities/User"
-import { workTimeReducer } from "@/e-features/WorkTimeTracking"
 import { createReducerManager } from "./reducerManager"
+import { workTimeReducer } from "@/e-features/WorkTimeTracking"
 import { currentLevelReducer } from "@/e-features/CurrentLevelDisplay/model/slice/currentLevelSlice"
+import { userReducer } from "@/f-entities/User"
+import { $api } from "@/g-shared/api/api"
 
-export function createReduxStore(initialState?: StateSchema) {
+export function createReduxStore(
+  initialState?: StateSchema,
+  asyncReducers?: ReducersMapObject<StateSchema>,
+  navigate?: (to: To, options?: NavigateOptions) => void,
+) {
   const rootReducers: ReducersMapObject<StateSchema> = {
+    ...asyncReducers,
     user: userReducer,
     workTime: workTimeReducer,
     currentLevel: currentLevelReducer,
@@ -18,6 +25,14 @@ export function createReduxStore(initialState?: StateSchema) {
     reducer: reducerManager.reduce,
     devTools: __IS_DEV__,
     preloadedState: initialState,
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware({
+      thunk: {
+        extraArgument: {
+          api: $api,
+          navigate,
+        },
+      },
+    }),
   })
 
   // @ts-ignore

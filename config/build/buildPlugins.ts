@@ -9,7 +9,7 @@ import ReactRefreshPlugin from "@pmmmwh/react-refresh-webpack-plugin"
 export const buildPlugins = (
   options: BuildOptions,
 ): webpack.WebpackPluginInstance[] => {
-  const { isDev, paths, analyze } = options
+  const { isDev, paths, analyze, apiUrl } = options
 
   const plugins = [
     new HTMLWebpackPlugin({
@@ -25,6 +25,8 @@ export const buildPlugins = (
     }),
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),
+      __API__: JSON.stringify(apiUrl),
+      __PROJECT__: JSON.stringify("frontend"),
     }),
   ]
 
