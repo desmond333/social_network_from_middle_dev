@@ -1,5 +1,6 @@
 // up ts
-type Mods = Record<string, boolean | string | number>
+// type number for ui Column
+export type Mods = Record<string, boolean | string | number | undefined>
 
 export const classNames = (
   cls: string,

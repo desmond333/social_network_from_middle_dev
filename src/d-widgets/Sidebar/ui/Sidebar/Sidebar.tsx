@@ -8,6 +8,7 @@ import { classNames as cn } from "@/g-shared/lib/classNames"
 import { Button, Column, Row } from "@/g-shared/ui"
 import { Menu } from "@/g-shared/ui"
 import { BtnSize, BtnVariant } from "@/g-shared/ui/Button/types"
+import { Mods } from "@/g-shared/lib/classNames/classNames"
 
 interface SidebarProps {
   className?: string
@@ -20,7 +21,7 @@ export const Sidebar: FC<SidebarProps> = memo((props) => {
 
   const [isCollapsed, setIsCollapsed] = useState(false)
 
-  const mods = {
+  const mods: Mods = {
     "sidebar--collapsed": isCollapsed,
     "sidebar--light": theme === Theme.LIGHT,
     "sidebar--dark": theme === Theme.DARK,

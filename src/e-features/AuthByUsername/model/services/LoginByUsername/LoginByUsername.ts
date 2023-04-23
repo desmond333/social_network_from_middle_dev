@@ -1,4 +1,3 @@
-import axios from "axios"
 import { createAsyncThunk } from "@reduxjs/toolkit"
 import { ThunkConfig, ThunkExtraArg } from "@/app/providers/StoreProvider"
 import { User, userActions } from "@/f-entities/User"
@@ -20,7 +19,7 @@ export const loginByUsername = createAsyncThunk<
     const { extra, dispatch, rejectWithValue } = thunkAPI
 
     try {
-      const response = await extra.api.post("/login", authData)
+      const response = await extra.api.post<User>("/login", authData)
 
       // считаем пустые данные с сервера за ошибку
       if (!response.data) throw new Error()
