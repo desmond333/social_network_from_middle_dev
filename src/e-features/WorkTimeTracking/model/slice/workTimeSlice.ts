@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit"
 import { WorkTimeSchema, TSort } from "../types/workTimeSchema"
 import { WeekData } from "../types/weekData"
-import { WEEKS } from "../mock"
+import { WEEKS } from "../const/mock"
 
 const initialState: WorkTimeSchema = {
   weeks: WEEKS,

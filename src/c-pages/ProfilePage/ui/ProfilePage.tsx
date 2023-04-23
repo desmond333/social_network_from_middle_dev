@@ -1,6 +1,7 @@
-import { FC } from "react"
+import { FC, useEffect } from "react"
 import { ErrorBoundary } from "react-error-boundary"
-import { profileReducer } from "@/f-entities/Profile"
+import { useDispatch } from "react-redux"
+import { fetchProfileData, profileReducer, ProfileCard } from "@/f-entities/Profile"
 import { Container } from "@/g-shared/ui"
 import { ErrorFallback } from "@/g-shared/ui/ErrorFallback/ErrorFallback"
 import { DynamicModuleLoader } from "@/g-shared/lib/components/DynamicModuleLoader"
@@ -11,12 +12,17 @@ const reducers: ReducersList = {
 }
 
 const ProfilePage: FC = () => {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(fetchProfileData())
+  }, [])
 
   return (
     <DynamicModuleLoader reducers={reducers} isRemoveAfterUnmount>
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         <Container size="fluid">
-          ProfilePage
+          <ProfileCard />
         </Container>
       </ErrorBoundary>
     </DynamicModuleLoader>

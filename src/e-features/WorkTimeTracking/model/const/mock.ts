@@ -1,4 +1,4 @@
-import { WeekData } from "./types/weekData"
+import { WeekData } from "../types/weekData"
 
 export const WEEKS: WeekData[] = [
   {
@@ -7,8 +7,8 @@ export const WEEKS: WeekData[] = [
     isSeek: false,
     myBackState: 4,
     resultTime: {
-      hours: 10,
-      minutes: 0,
+      hours: 25,
+      minutes: 30,
     },
     date: {
       start: new Date("2023-04-10"),
