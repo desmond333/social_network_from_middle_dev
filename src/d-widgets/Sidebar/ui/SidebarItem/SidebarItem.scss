@@ -6,3 +6,9 @@
     transition: 0.3s opacity;
   }
 }
+
+.sidebar--collapsed {
+  .sidebar-item {
+    padding-left: calc(var(--sidebar-width-collapsed) / 2 - 12px);
+  }
+}

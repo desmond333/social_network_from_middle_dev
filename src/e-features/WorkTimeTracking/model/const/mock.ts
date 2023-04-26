@@ -7,7 +7,7 @@ export const WEEKS: WeekData[] = [
     isSeek: false,
     myBackState: 4,
     resultTime: {
-      hours: 25,
+      hours: 25 + 10,
       minutes: 30,
     },
     date: {
@@ -21,7 +21,7 @@ export const WEEKS: WeekData[] = [
     isSeek: false,
     myBackState: 9,
     resultTime: {
-      hours: 35,
+      hours: 35 + 10,
       minutes: 42,
     },
     date: {
@@ -35,7 +35,7 @@ export const WEEKS: WeekData[] = [
     isSeek: false,
     myBackState: 9,
     resultTime: {
-      hours: 35,
+      hours: 35 + 10,
       minutes: 0,
     },
     date: {
@@ -49,7 +49,7 @@ export const WEEKS: WeekData[] = [
     isSeek: false,
     myBackState: 6,
     resultTime: {
-      hours: 32,
+      hours: 32 + 10,
       minutes: 0,
     },
     date: {
@@ -63,7 +63,7 @@ export const WEEKS: WeekData[] = [
     isSeek: false,
     myBackState: 9,
     resultTime: {
-      hours: 31,
+      hours: 31 + 10,
       minutes: 0,
     },
     date: {
@@ -77,7 +77,7 @@ export const WEEKS: WeekData[] = [
     isSeek: false,
     myBackState: 10,
     resultTime: {
-      hours: 25,
+      hours: 25 + 10,
       minutes: 0,
     },
     date: {

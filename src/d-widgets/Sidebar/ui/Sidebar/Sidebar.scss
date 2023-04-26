@@ -1,20 +1,24 @@
 .sidebar {
   background: var(--sidebar-bg-color);
-  // up css
   height: var(--inverted-header-height);
   width: var(--sidebar-width);
   position: relative;
   transition: width 0.4s;
-
   padding: 20px 0;
+
+  .sidebar-item__link {
+    height: 20px;
+    transition: height 0.4s;
+  }
 }
 
 .sidebar--collapsed {
   width: var(--sidebar-width-collapsed);
 
   .sidebar-item__link {
+    height: 0;
     opacity: 0;
-    transition: 0.3s opacity;
+    transition: 0.3s opacity, height 4s;
   }
 }
 

@@ -14,3 +14,12 @@ body, .app {
   background: var(--bg-color);
   min-height: 100vh;
 }
+
+.body {
+  display: flex;
+}
+
+.main {
+  padding: 10px;
+  width: 100%;
+}

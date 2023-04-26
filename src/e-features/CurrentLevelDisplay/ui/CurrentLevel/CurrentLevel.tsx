@@ -28,7 +28,7 @@ export const CurrentLevel: FC<CurrentLevelProps> = (props) => {
         <BlockText>Дата начала в
           разработке: лето 2020</BlockText>
         <BlockText>{t("CURRENT_LEVEL")}{level} из 80</BlockText>
-        <BlockText>Статус: pre-middle</BlockText>
+        <BlockText>Статус: middle</BlockText>
       </VerticalOffset>
     </div>
   )

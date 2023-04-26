@@ -1,4 +1,4 @@
-// up ts
+// up ts custom types
 export type ValueOf<T> = T[keyof T]
 //для export type TAppRoutes = typeof AppRoutes[keyof typeof AppRoutes]
 
