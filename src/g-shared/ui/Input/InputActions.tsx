@@ -1,16 +1,16 @@
-import { ChangeEvent, FC, useState } from "react"
-import { classNames as cn } from "@/g-shared/lib/classNames"
-import { FormInputText } from "@/g-shared/ui/Text"
-import { IconDanger } from "@/g-shared/ui"
-import { InputProps } from "./types"
+import { ChangeEvent, FC, useState } from 'react'
+import { classNames as cn } from '@/g-shared/lib/classNames'
+import { FormInputText } from '@/g-shared/ui/Text'
+import { IconDanger } from '@/g-shared/ui'
+import { InputProps } from './types'
 
 export const InputActions: FC<InputProps> = (props) => {
   const {
     variant,
     name,
-    type = "text",
-    value = "",
-    placeholder = "Поле ввода",
+    type = 'text',
+    value = '',
+    placeholder = 'Поле ввода',
     disabled = false,
     label,
     error = false,
@@ -18,8 +18,8 @@ export const InputActions: FC<InputProps> = (props) => {
     icon,
     onChange,
     required,
-    autoComplete = "off",
-    inputMode = "none",
+    autoComplete = 'off',
+    inputMode = 'none',
     noti,
   } = props
 
@@ -42,10 +42,10 @@ export const InputActions: FC<InputProps> = (props) => {
 
   return (
     <div
-      className={cn("input", {
-        "input--error": error,
+      className={cn('input', {
+        'input--error': error,
         [`input--${variant}`]: variant,
-        "input--icon-left": Boolean(icon?.left),
+        'input--icon-left': Boolean(icon?.left),
       })}
     >
       {label && (
@@ -56,7 +56,7 @@ export const InputActions: FC<InputProps> = (props) => {
       )}
 
       <div
-        className={cn("input__body", { "input__body--disabled": disabled })}
+        className={cn('input__body', { 'input__body--disabled': disabled })}
         tabIndex={1}
         onFocus={handleFocusPlaceholder}
         onBlur={handleBlurPlaceholder}
@@ -77,8 +77,8 @@ export const InputActions: FC<InputProps> = (props) => {
           inputMode={inputMode}
         />
         <div
-          className={cn("input__placeholder", {
-            "input__placeholder--focus": isPlaceholderTop,
+          className={cn('input__placeholder', {
+            'input__placeholder--focus': isPlaceholderTop,
           })}
         >
           <FormInputText tag="span">{placeholder}</FormInputText>
@@ -86,7 +86,7 @@ export const InputActions: FC<InputProps> = (props) => {
 
         {icon?.right && <div className="input__icon">{icon.right}</div>}
         {error && (
-          <div className={cn("input__icon", { "input__icon--error": error })}>
+          <div className={cn('input__icon', { 'input__icon--error': error })}>
             {/*<IconDanger className="icon icon--danger icon--size-sm" />*/}
             <IconDanger />
           </div>

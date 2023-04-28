@@ -1,16 +1,16 @@
-import { ChangeEvent, FC, memo, useState } from "react"
-import { classNames as cn } from "@/g-shared/lib/classNames"
-import { FormInputText } from "../Text"
-import { InputProps } from "@/g-shared/ui/Input/types"
-import { IconDanger } from "@/g-shared/ui"
+import { ChangeEvent, FC, memo, useState } from 'react'
+import { classNames as cn } from '@/g-shared/lib/classNames'
+import { FormInputText } from '../Text'
+import { InputProps } from '@/g-shared/ui/Input/types'
+import { IconDanger } from '@/g-shared/ui'
 
 export const Input: FC<InputProps> = memo((props) => {
   const {
     variant,
     name,
-    type = "text",
-    value = "",
-    placeholder = "Поле ввода",
+    type = 'text',
+    value = '',
+    placeholder = 'Поле ввода',
     disabled = false,
     label,
     error = false,
@@ -18,8 +18,8 @@ export const Input: FC<InputProps> = memo((props) => {
     icon,
     onChange,
     required,
-    inputMode = "none",
-    autoComplete = "off",
+    inputMode = 'none',
+    autoComplete = 'off',
     noti,
   } = props
 
@@ -31,8 +31,8 @@ export const Input: FC<InputProps> = memo((props) => {
 
   return (
     <div
-      className={cn("input", {
-        "input--error": error,
+      className={cn('input', {
+        'input--error': error,
         [`input--${variant}`]: variant,
       })}
     >
@@ -44,7 +44,7 @@ export const Input: FC<InputProps> = memo((props) => {
       )}
 
       <div
-        className={cn("input__body", { "input__body--disabled": disabled })}
+        className={cn('input__body', { 'input__body--disabled': disabled })}
         tabIndex={1}
       >
         {icon?.left && <div className="input__icon">{icon.left}</div>}
@@ -66,7 +66,7 @@ export const Input: FC<InputProps> = memo((props) => {
 
         {icon?.right && <div className="input__icon">{icon.right}</div>}
         {error && (
-          <div className={cn("input__icon", { "input__icon--error": error })}>
+          <div className={cn('input__icon', { 'input__icon--error': error })}>
             {/*<IconDanger className="icon icon--danger icon--size-sm" />*/}
             <IconDanger />
           </div>
@@ -81,5 +81,3 @@ export const Input: FC<InputProps> = memo((props) => {
     </div>
   )
 })
-
-

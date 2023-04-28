@@ -1,3 +1,1 @@
-export {
-  EfficiencyPageAsync as EfficiencyPage,
-} from "./ui/EfficiencyPage.async"
+export { EfficiencyPageAsync as EfficiencyPage } from './ui/EfficiencyPage.async'

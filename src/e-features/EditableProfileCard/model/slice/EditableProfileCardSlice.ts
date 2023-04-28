@@ -1,12 +1,12 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit"
-import { EditableProfileCardSchema } from "../types/editableProfileCardSchema"
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { EditableProfileCardSchema } from '../types/editableProfileCardSchema'
 
 const initialState: EditableProfileCardSchema = {
   readonly: true,
 }
 
 const editableProfileCardSlice = createSlice({
-  name: "editableProfileCard",
+  name: 'editableProfileCard',
   initialState,
   reducers: {
     setReadonly: (state, action: PayloadAction<boolean>) => {

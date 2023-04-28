@@ -1,8 +1,8 @@
-import { WeekData } from "./weekData"
+import { WeekData } from './weekData'
 
-export type TSort = "up" | "down"
+export type TSort = 'up' | 'down'
 
 export interface WorkTimeSchema {
-  weeks: WeekData[];
-  isWorkingAllWeeks: boolean;
+  weeks: WeekData[]
+  isWorkingAllWeeks: boolean
 }

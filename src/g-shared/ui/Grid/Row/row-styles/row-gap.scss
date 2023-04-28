@@ -1,61 +1,61 @@
-@import "src/app/styles/mixins.scss";
+@import "src/app/styles/mixins";
 
 .row--row-gap-level1 {
-  @include space(row-gap, all, level1);
+    @include space(row-gap, all, level1);
 }
 
 .row--row-gap-level2 {
-  @include space(row-gap, all, level2);
+    @include space(row-gap, all, level2);
 }
 
 .row--row-gap-level3 {
-  @include space(row-gap, all, level3);
+    @include space(row-gap, all, level3);
 }
 
 .row--row-gap-level4 {
-  @include space(row-gap, all, level4);
+    @include space(row-gap, all, level4);
 }
 
 .row--row-gap-level5 {
-  @include space(row-gap, all, level5);
+    @include space(row-gap, all, level5);
 }
 
 .row--row-gap-level6 {
-  @include space(row-gap, all, level6);
+    @include space(row-gap, all, level6);
 }
 
 .row--row-gap-level7 {
-  @include space(row-gap, all, level7);
+    @include space(row-gap, all, level7);
 }
 
 .row--row-gap-level8 {
-  @include space(row-gap, all, level8);
+    @include space(row-gap, all, level8);
 }
 
 .row--row-gap-level9 {
-  @include space(row-gap, all, level9);
+    @include space(row-gap, all, level9);
 }
 
 .row--row-gap-level10 {
-  @include space(row-gap, all, level10);
+    @include space(row-gap, all, level10);
 }
 
 .row--row-gap-constancy-level1 {
-  @include space(row-gap, all, row-gap-constancy-level1);
+    @include space(row-gap, all, row-gap-constancy-level1);
 }
 
 .row--row-gap-constancy-level2 {
-  @include space(row-gap, all, row-gap-constancy-level1);
+    @include space(row-gap, all, row-gap-constancy-level1);
 }
 
 .row--row-gap-constancy-level3 {
-  @include space(row-gap, all, row-gap-constancy-level1);
+    @include space(row-gap, all, row-gap-constancy-level1);
 }
 
 .row--row-gap-constancy-level4 {
-  @include space(row-gap, all, row-gap-constancy-level1);
+    @include space(row-gap, all, row-gap-constancy-level1);
 }
 
 .row--row-gap-constancy-level5 {
-  @include space(row-gap, all, row-gap-constancy-level5);
+    @include space(row-gap, all, row-gap-constancy-level5);
 }

@@ -1,133 +1,133 @@
-@import "src/app/styles/mixins.scss";
+@import "src/app/styles/mixins";
 
 .icon-text {
-  display: flex;
+    display: flex;
 }
 
 .icon-text--row {
-  flex-direction: row;
+    flex-direction: row;
 }
 
 .icon-text--column {
-  flex-direction: column;
+    flex-direction: column;
 }
 
 /* Row Gap */
 .icon-text--row-gap-level1 {
-  @include space(row-gap, all, level1);
+    @include space(row-gap, all, level1);
 }
 
 .icon-text--row-gap-level2 {
-  @include space(row-gap, all, level2);
+    @include space(row-gap, all, level2);
 }
 
 .icon-text--row-gap-level3 {
-  @include space(row-gap, all, level3);
+    @include space(row-gap, all, level3);
 }
 
 .icon-text--row-gap-level4 {
-  @include space(row-gap, all, level4);
+    @include space(row-gap, all, level4);
 }
 
 .icon-text--row-gap-level5 {
-  @include space(row-gap, all, level5);
+    @include space(row-gap, all, level5);
 }
 
 .icon-text--row-gap-level6 {
-  @include space(row-gap, all, level6);
+    @include space(row-gap, all, level6);
 }
 
 .icon-text--row-gap-level7 {
-  @include space(row-gap, all, level7);
+    @include space(row-gap, all, level7);
 }
 
 .icon-text--row-gap-level8 {
-  @include space(row-gap, all, level8);
+    @include space(row-gap, all, level8);
 }
 
 .icon-text--row-gap-level9 {
-  @include space(row-gap, all, level9);
+    @include space(row-gap, all, level9);
 }
 
 .icon-text--row-gap-level10 {
-  @include space(row-gap, all, level10);
+    @include space(row-gap, all, level10);
 }
 
 /* Const Row Gap */
 .icon-text--row-gap-const-level1 {
-  @include space(row-gap, all, row-gap-constancy-level1);
+    @include space(row-gap, all, row-gap-constancy-level1);
 }
 
 .icon-text--row-gap-const-level2 {
-  @include space(row-gap, all, row-gap-constancy-level2);
+    @include space(row-gap, all, row-gap-constancy-level2);
 }
 
 .icon-text--row-gap-const-level3 {
-  @include space(row-gap, all, row-gap-constancy-level3);
+    @include space(row-gap, all, row-gap-constancy-level3);
 }
 
 .icon-text--row-gap-const-level4 {
-  @include space(row-gap, all, row-gap-constancy-level4);
+    @include space(row-gap, all, row-gap-constancy-level4);
 }
 
 .icon-text--row-gap-const-level5 {
-  @include space(row-gap, all, row-gap-constancy-level5);
+    @include space(row-gap, all, row-gap-constancy-level5);
 }
 
 /* Column Gap */
 .icon-text--column-gap-level1 {
-  @include space(column-gap, all, column-gap-level1);
+    @include space(column-gap, all, column-gap-level1);
 }
 
 .icon-text--column-gap-level2 {
-  @include space(column-gap, all, column-gap-level2);
+    @include space(column-gap, all, column-gap-level2);
 }
 
 .icon-text--column-gap-level3 {
-  @include space(column-gap, all, column-gap-level3);
+    @include space(column-gap, all, column-gap-level3);
 }
 
 .icon-text--column-gap-level4 {
-  @include space(column-gap, all, column-gap-level4);
+    @include space(column-gap, all, column-gap-level4);
 }
 
 .icon-text--column-gap-level5 {
-  @include space(column-gap, all, column-gap-level5);
+    @include space(column-gap, all, column-gap-level5);
 }
 
 /* Const Column Gap */
 .icon-text--column-gap-const-level1 {
-  @include space(column-gap, all, column-gap-constancy-level1);
+    @include space(column-gap, all, column-gap-constancy-level1);
 }
 
 .icon-text--column-gap-const-level2 {
-  @include space(column-gap, all, column-gap-constancy-level2);
+    @include space(column-gap, all, column-gap-constancy-level2);
 }
 
 .icon-text--column-gap-const-level3 {
-  @include space(column-gap, all, column-gap-constancy-level3);
+    @include space(column-gap, all, column-gap-constancy-level3);
 }
 
 .icon-text--column-gap-const-level4 {
-  @include space(column-gap, all, column-gap-constancy-level4);
+    @include space(column-gap, all, column-gap-constancy-level4);
 }
 
 .icon-text--column-gap-const-level5 {
-  @include space(column-gap, all, column-gap-constancy-level5);
+    @include space(column-gap, all, column-gap-constancy-level5);
 }
 
 .icon-text--center {
-  align-items: center;
+    align-items: center;
 }
 
 .icon-text--flex-end {
-  align-items: flex-end;
+    align-items: flex-end;
 }
 
 .icon-text--flex-start {
-  align-items: flex-start;
+    align-items: flex-start;
 }
 
 .icon-text--stretch {
-  align-items: stretch;
+    align-items: stretch;
 }

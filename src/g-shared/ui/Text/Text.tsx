@@ -1,22 +1,27 @@
-import { FC, ReactNode } from "react"
-import { classNames as cn } from "@/g-shared/lib/classNames"
-import { TextAlign, TextTag, TextVariant, TextWeight } from "@/g-shared/ui/Text/types"
-import { TextColors } from "@/g-shared/ui/types"
+import { FC, ReactNode } from 'react'
+import { classNames as cn } from '@/g-shared/lib/classNames'
+import {
+  TextAlign,
+  TextTag,
+  TextVariant,
+  TextWeight,
+} from '@/g-shared/ui/Text/types'
+import { TextColors } from '@/g-shared/ui/types'
 
 type TextUIProps = {
-  color?: TextColors;
-  children: ReactNode;
-  align?: TextAlign;
-  id?: string;
-};
+  color?: TextColors
+  children: ReactNode
+  align?: TextAlign
+  id?: string
+}
 
 type TextIProps = {
-  color?: TextColors;
-  children: ReactNode;
-  tag?: "div" | "p" | "span";
-  weight?: TextWeight;
-  align?: TextAlign;
-};
+  color?: TextColors
+  children: ReactNode
+  tag?: 'div' | 'p' | 'span'
+  weight?: TextWeight
+  align?: TextAlign
+}
 
 export const H1: FC<TextUIProps> = ({ color, children, align, id }) => (
   <Text
@@ -51,67 +56,67 @@ export const H5: FC<TextIProps> = ({ color, children, align, tag }) => (
   </Text>
 )
 export const BodyXl: FC<TextIProps> = ({
-                                         color,
-                                         children,
-                                         tag,
-                                         weight,
-                                         align,
-                                       }) => (
+  color,
+  children,
+  tag,
+  weight,
+  align,
+}) => (
   <Text variant="body-xl" color={color} tag={tag} weight={weight} align={align}>
     {children}
   </Text>
 )
 export const BodyL: FC<TextIProps> = ({
-                                        color,
-                                        children,
-                                        tag,
-                                        weight,
-                                        align,
-                                      }) => (
+  color,
+  children,
+  tag,
+  weight,
+  align,
+}) => (
   <Text variant="body-l" color={color} tag={tag} weight={weight} align={align}>
     {children}
   </Text>
 )
 export const BodyM: FC<TextIProps> = ({
-                                        color,
-                                        children,
-                                        tag,
-                                        weight,
-                                        align,
-                                      }) => (
+  color,
+  children,
+  tag,
+  weight,
+  align,
+}) => (
   <Text variant="body-m" color={color} tag={tag} weight={weight} align={align}>
     {children}
   </Text>
 )
 export const BodyS: FC<TextIProps> = ({
-                                        color,
-                                        children,
-                                        tag,
-                                        weight,
-                                        align,
-                                      }) => (
+  color,
+  children,
+  tag,
+  weight,
+  align,
+}) => (
   <Text variant="body-s" color={color} tag={tag} weight={weight} align={align}>
     {children}
   </Text>
 )
 export const TextButton: FC<TextIProps> = ({
-                                             color,
-                                             children,
-                                             tag,
-                                             weight = "regular",
-                                             align,
-                                           }) => (
+  color,
+  children,
+  tag,
+  weight = 'regular',
+  align,
+}) => (
   <Text variant="button" color={color} tag={tag} weight={weight} align={align}>
     {children}
   </Text>
 )
 export const FormInputText: FC<TextIProps> = ({
-                                                color,
-                                                children,
-                                                tag,
-                                                weight,
-                                                align,
-                                              }) => (
+  color,
+  children,
+  tag,
+  weight,
+  align,
+}) => (
   <Text
     variant="form-input-text"
     color={color}
@@ -123,12 +128,12 @@ export const FormInputText: FC<TextIProps> = ({
   </Text>
 )
 export const FormPlaceholder: FC<TextIProps> = ({
-                                                  color,
-                                                  children,
-                                                  tag,
-                                                  weight,
-                                                  align,
-                                                }) => (
+  color,
+  children,
+  tag,
+  weight,
+  align,
+}) => (
   <Text
     variant="form-placeholder"
     color={color}
@@ -140,12 +145,12 @@ export const FormPlaceholder: FC<TextIProps> = ({
   </Text>
 )
 export const ModalTitle: FC<TextIProps> = ({
-                                             color,
-                                             children,
-                                             tag,
-                                             weight,
-                                             align,
-                                           }) => (
+  color,
+  children,
+  tag,
+  weight,
+  align,
+}) => (
   <Text
     variant="modal-title"
     color={color}
@@ -157,12 +162,12 @@ export const ModalTitle: FC<TextIProps> = ({
   </Text>
 )
 export const PageError: FC<TextIProps> = ({
-                                            color,
-                                            children,
-                                            tag,
-                                            weight,
-                                            align,
-                                          }) => (
+  color,
+  children,
+  tag,
+  weight,
+  align,
+}) => (
   <Text
     variant="page-error"
     color={color}
@@ -174,12 +179,12 @@ export const PageError: FC<TextIProps> = ({
   </Text>
 )
 export const TextPagination: FC<TextIProps> = ({
-                                                 color,
-                                                 children,
-                                                 tag,
-                                                 weight = "bold",
-                                                 align,
-                                               }) => (
+  color,
+  children,
+  tag,
+  weight = 'bold',
+  align,
+}) => (
   <Text
     variant="pagination"
     color={color}
@@ -191,12 +196,12 @@ export const TextPagination: FC<TextIProps> = ({
   </Text>
 )
 export const SliderUrl: FC<TextIProps> = ({
-                                            color,
-                                            children,
-                                            tag,
-                                            weight,
-                                            align,
-                                          }) => (
+  color,
+  children,
+  tag,
+  weight,
+  align,
+}) => (
   <Text
     variant="slider-url"
     color={color}
@@ -208,12 +213,12 @@ export const SliderUrl: FC<TextIProps> = ({
   </Text>
 )
 export const UrlsMenu: FC<TextIProps> = ({
-                                           color,
-                                           children,
-                                           tag,
-                                           weight,
-                                           align,
-                                         }) => (
+  color,
+  children,
+  tag,
+  weight,
+  align,
+}) => (
   <Text
     variant="urls-menu"
     color={color}
@@ -225,12 +230,12 @@ export const UrlsMenu: FC<TextIProps> = ({
   </Text>
 )
 export const SliderHeadline: FC<TextIProps> = ({
-                                                 color,
-                                                 children,
-                                                 tag,
-                                                 weight = "extra-bold",
-                                                 align,
-                                               }) => (
+  color,
+  children,
+  tag,
+  weight = 'extra-bold',
+  align,
+}) => (
   <Text
     variant="slider-headline"
     color={color}
@@ -243,28 +248,28 @@ export const SliderHeadline: FC<TextIProps> = ({
 )
 
 type TextProps = {
-  variant?: TextVariant;
-  color?: TextColors;
-  children: ReactNode;
-  tag?: TextTag;
-  weight?: TextWeight;
-  align?: TextAlign;
-  id?: string;
-};
+  variant?: TextVariant
+  color?: TextColors
+  children: ReactNode
+  tag?: TextTag
+  weight?: TextWeight
+  align?: TextAlign
+  id?: string
+}
 
 const Text: FC<TextProps> = ({
-                               variant,
-                               color = "primary",
-                               tag = "p",
-                               children,
-                               weight = "regular",
-                               align,
-                               id,
-                             }) => (
+  variant,
+  color = 'primary',
+  tag = 'p',
+  children,
+  weight = 'regular',
+  align,
+  id,
+}) => (
   <>
-    {tag === "H1" && (
+    {tag === 'H1' && (
       <h1
-        className={cn("text", {
+        className={cn('text', {
           [`text--size-${variant}`]: variant,
           [`text--color-${color}`]: color,
           [`text--weight-${weight}`]: weight,
@@ -275,9 +280,9 @@ const Text: FC<TextProps> = ({
         {children}
       </h1>
     )}
-    {tag === "H2" && (
+    {tag === 'H2' && (
       <h2
-        className={cn("text", {
+        className={cn('text', {
           [`text--size-${variant}`]: variant,
           [`text--color-${color}`]: color,
           [`text--weight-${weight}`]: weight,
@@ -288,9 +293,9 @@ const Text: FC<TextProps> = ({
         {children}
       </h2>
     )}
-    {tag === "H3" && (
+    {tag === 'H3' && (
       <h3
-        className={cn("text", {
+        className={cn('text', {
           [`text--size-${variant}`]: variant,
           [`text--color-${color}`]: color,
           [`text--weight-${weight}`]: weight,
@@ -301,9 +306,9 @@ const Text: FC<TextProps> = ({
         {children}
       </h3>
     )}
-    {tag === "H4" && (
+    {tag === 'H4' && (
       <h4
-        className={cn("text", {
+        className={cn('text', {
           [`text--size-${variant}`]: variant,
           [`text--color-${color}`]: color,
           [`text--weight-${weight}`]: weight,
@@ -314,9 +319,9 @@ const Text: FC<TextProps> = ({
         {children}
       </h4>
     )}
-    {tag === "H5" && (
+    {tag === 'H5' && (
       <h5
-        className={cn("text", {
+        className={cn('text', {
           [`text--size-${variant}`]: variant,
           [`text--color-${color}`]: color,
           [`text--weight-${weight}`]: weight,
@@ -327,9 +332,9 @@ const Text: FC<TextProps> = ({
         {children}
       </h5>
     )}
-    {tag === "div" && (
+    {tag === 'div' && (
       <div
-        className={cn("text", {
+        className={cn('text', {
           [`text--size-${variant}`]: variant,
           [`text--color-${color}`]: color,
           [`text--weight-${weight}`]: weight,
@@ -340,9 +345,9 @@ const Text: FC<TextProps> = ({
         {children}
       </div>
     )}
-    {tag === "p" && (
+    {tag === 'p' && (
       <p
-        className={cn("text", {
+        className={cn('text', {
           [`text--size-${variant}`]: variant,
           [`text--color-${color}`]: color,
           [`text--weight-${weight}`]: weight,
@@ -353,9 +358,9 @@ const Text: FC<TextProps> = ({
         {children}
       </p>
     )}
-    {tag === "span" && (
+    {tag === 'span' && (
       <span
-        className={cn("text", {
+        className={cn('text', {
           [`text--size-${variant}`]: variant,
           [`text--color-${color}`]: color,
           [`text--weight-${weight}`]: weight,

@@ -1,6 +1,6 @@
-import React from "react"
-import { classNames as cn } from "@/g-shared/lib/classNames"
-import { AlignItems, AlignSelf, Col, Order } from "@/g-shared/ui/Grid/Column/types"
+import React from 'react'
+import { AlignItems, AlignSelf, Col, Order } from './types'
+import { classNames as cn } from '@/g-shared/lib/classNames'
 
 type ColumnProps = {
   children: React.ReactNode
@@ -18,7 +18,10 @@ type ColumnProps = {
   }
 }
 
-type ColumnTypes = Pick<ColumnProps, "col" | "order" | "alignSelf" | "alignItems">
+type ColumnTypes = Pick<
+  ColumnProps,
+  'col' | 'order' | 'alignSelf' | 'alignItems'
+>
 
 export const Column: React.FC<ColumnProps> = (props) => {
   const {
@@ -32,31 +35,31 @@ export const Column: React.FC<ColumnProps> = (props) => {
     isFlexNone,
   } = props
 
-  let breakpointsValue = ""
+  let breakpointsValue = ''
 
   breakpoints &&
-  Object.keys(breakpoints).forEach((key) => {
-    const isKeyCorrected =
-      key === "md" || key === "lg" || key === "xl" || key === "xxl"
+    Object.keys(breakpoints).forEach((key) => {
+      const isKeyCorrected =
+        key === 'md' || key === 'lg' || key === 'xl' || key === 'xxl'
 
-    if (isKeyCorrected && breakpoints[key]?.col) {
-      breakpointsValue += `column--${key}-col-${breakpoints[key]?.col} `
-    }
-    if (isKeyCorrected && breakpoints[key]?.order) {
-      breakpointsValue += `column--${key}-order-${breakpoints[key]?.order} `
-    }
-    if (isKeyCorrected && breakpoints[key]?.alignSelf) {
-      breakpointsValue += `column--${key}-align-self-${breakpoints[key]?.alignSelf} `
-    }
-    if (isKeyCorrected && breakpoints[key]?.alignItems) {
-      breakpointsValue += `column--${key}-align-self-${breakpoints[key]?.alignItems} `
-    }
-  })
+      if (isKeyCorrected && breakpoints[key]?.col) {
+        breakpointsValue += `column--${key}-col-${breakpoints[key]?.col} `
+      }
+      if (isKeyCorrected && breakpoints[key]?.order) {
+        breakpointsValue += `column--${key}-order-${breakpoints[key]?.order} `
+      }
+      if (isKeyCorrected && breakpoints[key]?.alignSelf) {
+        breakpointsValue += `column--${key}-align-self-${breakpoints[key]?.alignSelf} `
+      }
+      if (isKeyCorrected && breakpoints[key]?.alignItems) {
+        breakpointsValue += `column--${key}-align-self-${breakpoints[key]?.alignItems} `
+      }
+    })
 
   return (
     <div
       className={cn(
-        "column",
+        'column',
         {
           [`column--col-${col}`]: col,
           [`column--order-${order}`]: order,
@@ -65,7 +68,7 @@ export const Column: React.FC<ColumnProps> = (props) => {
           [`column--display-flex`]: isDisplayFlex,
           [`column--display-flex-none`]: isFlexNone,
         },
-        [breakpointsValue],
+        [breakpointsValue]
       )}
     >
       {children}

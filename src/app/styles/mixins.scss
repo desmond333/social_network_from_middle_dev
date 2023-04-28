@@ -1,80 +1,82 @@
 $grid-breakpoints: (
-        xs: 0,
-        esm: 375px,
-        sm: 576px,
-        md: 768px,
-        lg: 992px,
-        xl: 1200px,
-        xxl: 1400px,
+    xs: 0,
+    esm: 375px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
 );
 
 @function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
-  $min: map-get($breakpoints, $name);
-  @return if($min != 0, $min, null);
+    $min: map-get($breakpoints, $name);
+
+    @return if($min != 0, $min, null);
 }
 
 @function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
-  @return if(breakpoint-min($name, $breakpoints) == null, "", "-#{$name}");
+    @return if(breakpoint-min($name, $breakpoints) == null, "", "-#{$name}");
 }
 
 @mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
-  $min: breakpoint-min($name, $breakpoints);
-  @if $min {
-    @media (min-width: $min) {
-      @content;
+    $min: breakpoint-min($name, $breakpoints);
+
+    @if $min {
+        @media (min-width: $min) {
+            @content;
+        }
+    } @else {
+        @content;
     }
-  } @else {
-    @content;
-  }
 }
 
 @mixin screen($size) {
-  $xxl: "(min-width: 1400px)";
-  $xl: "(min-width: 1200px)";
-  $lg: "(min-width: 992px)";
-  $md: "(min-width: 768px)";
-  $sm: "(min-width: 576px)";
-  $esm: "(min-width: 375px)";
-  $mobile: "(max-width: 575px)";
-  $mobileLong: "(max-width: 991px)";
+    $xxl: "(min-width: 1400px)";
+    $xl: "(min-width: 1200px)";
+    $lg: "(min-width: 992px)";
+    $md: "(min-width: 768px)";
+    $sm: "(min-width: 576px)";
+    $esm: "(min-width: 375px)";
+    $mobile: "(max-width: 575px)";
+    $mobileLong: "(max-width: 991px)";
 
-  @if $size == lg {
-    @media only screen and #{$lg} {
-      @content;
+    @if $size == lg {
+        @media only screen and #{$lg} {
+            @content;
+        }
+    } @else if $size == md {
+        @media only screen and #{$md} {
+            @content;
+        }
+    } @else if $size == esm {
+        @media only screen and #{$esm} {
+            @content;
+        }
+    } @else if $size == sm {
+        @media only screen and #{$sm} {
+            @content;
+        }
+    } @else if $size == mobile {
+        @media only screen and #{$mobile} {
+            @content;
+        }
+    } @else if $size == mobileLong {
+        @media only screen and #{$mobileLong} {
+            @content;
+        }
+    } @else if $size == xl {
+        @media only screen and #{$xl} {
+            @content;
+        }
+    } @else if $size == xxl {
+        @media only screen and #{$xxl} {
+            @content;
+        }
+    } @else {
+        @media only screen and #{$size} {
+            @content;
+        }
     }
-  } @else if $size == md {
-    @media only screen and #{$md} {
-      @content;
-    }
-  } @else if $size == esm {
-    @media only screen and #{$esm} {
-      @content;
-    }
-  } @else if $size == sm {
-    @media only screen and #{$sm} {
-      @content;
-    }
-  } @else if $size == mobile {
-    @media only screen and #{$mobile} {
-      @content;
-    }
-  } @else if $size == mobileLong {
-    @media only screen and #{$mobileLong} {
-      @content;
-    }
-  } @else if $size == xl {
-    @media only screen and #{$xl} {
-      @content;
-    }
-  } @else if $size == xxl {
-    @media only screen and #{$xxl} {
-      @content;
-    }
-  } @else {
-    @media only screen and #{$size} {
-      @content;
-    }
-  }
 }
 
 /*
@@ -92,209 +94,218 @@ $grid-breakpoints: (
 // @include space(column-gap, all, level1);
 
 $space_breakpoints: (
-        null: 320px,
-        sm: 576px,
-        md: 768px,
-        lg: 992px,
-        xl: 1200px,
-        xll: 1400px,
+    null: 320px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xll: 1400px,
 );
-
 $space: (
-        level1: (
-                null: 8px,
-                md: 12px,
-                xl: 16px,
-        ),
-        level2: (
-                null: 16px,
-                md: 18px,
-                xl: 24px,
-        ),
-        level3: (
-                null: 24px,
-                md: 28px,
-                xl: 34px,
-        ),
-        level4: (
-                null: 32px,
-                md: 38px,
-                xl: 42px,
-        ),
-        level5: (
-                null: 40px,
-                md: 46px,
-                xl: 52px,
-        ),
-        level6: (
-                null: 48px,
-                md: 54px,
-                xl: 64px,
-        ),
-        level7: (
-                null: 56px,
-                md: 64px,
-                xl: 72px,
-        ),
-        level8: (
-                null: 64px,
-                md: 74px,
-                xl: 84px,
-        ),
-        level9: (
-                null: 80px,
-                md: 88px,
-                xl: 92px,
-        ),
-        level10: (
-                null: 140px,
-                md: 160px,
-                xl: 180px,
-        ),
-        column-gap-level1: (
-                null: 8px,
-                md: 10px,
-                xl: 10px,
-        ),
-        column-gap-level2: (
-                null: 12px,
-                md: 14px,
-                xl: 14px,
-        ),
-        column-gap-level3: (
-                null: 18px,
-                md: 16px,
-                xl: 24px,
-        ),
-        column-gap-level4: (
-                null: 26px,
-                md: 28px,
-                xl: 32px,
-        ),
-        column-gap-level5: (
-                null: 40px,
-                md: 40px,
-                xl: 85px,
-        ),
-        column-gap-constancy-level1: (
-                null: 8px,
-        ),
-        column-gap-constancy-level2: (
-                null: 10px,
-        ),
-        column-gap-constancy-level3: (
-                null: 12px,
-        ),
-        column-gap-constancy-level4: (
-                null: 14px,
-        ),
-        column-gap-constancy-level5: (
-                null: 24px,
-        ),
-        row-gap-constancy-level1: (
-                null: 8px,
-        ),
-        row-gap-constancy-level2: (
-                null: 10px,
-        ),
-        row-gap-constancy-level3: (
-                null: 12px,
-        ),
-        row-gap-constancy-level4: (
-                null: 14px,
-        ),
-        row-gap-constancy-level5: (
-                null: 24px,
-        ),
+    level1: (
+        null: 8px,
+        md: 12px,
+        xl: 16px,
+    ),
+    level2: (
+        null: 16px,
+        md: 18px,
+        xl: 24px,
+    ),
+    level3: (
+        null: 24px,
+        md: 28px,
+        xl: 34px,
+    ),
+    level4: (
+        null: 32px,
+        md: 38px,
+        xl: 42px,
+    ),
+    level5: (
+        null: 40px,
+        md: 46px,
+        xl: 52px,
+    ),
+    level6: (
+        null: 48px,
+        md: 54px,
+        xl: 64px,
+    ),
+    level7: (
+        null: 56px,
+        md: 64px,
+        xl: 72px,
+    ),
+    level8: (
+        null: 64px,
+        md: 74px,
+        xl: 84px,
+    ),
+    level9: (
+        null: 80px,
+        md: 88px,
+        xl: 92px,
+    ),
+    level10: (
+        null: 140px,
+        md: 160px,
+        xl: 180px,
+    ),
+    column-gap-level1: (
+        null: 8px,
+        md: 10px,
+        xl: 10px,
+    ),
+    column-gap-level2: (
+        null: 12px,
+        md: 14px,
+        xl: 14px,
+    ),
+    column-gap-level3: (
+        null: 18px,
+        md: 16px,
+        xl: 24px,
+    ),
+    column-gap-level4: (
+        null: 26px,
+        md: 28px,
+        xl: 32px,
+    ),
+    column-gap-level5: (
+        null: 40px,
+        md: 40px,
+        xl: 85px,
+    ),
+    column-gap-constancy-level1: (
+        null: 8px,
+    ),
+    column-gap-constancy-level2: (
+        null: 10px,
+    ),
+    column-gap-constancy-level3: (
+        null: 12px,
+    ),
+    column-gap-constancy-level4: (
+        null: 14px,
+    ),
+    column-gap-constancy-level5: (
+        null: 24px,
+    ),
+    row-gap-constancy-level1: (
+        null: 8px,
+    ),
+    row-gap-constancy-level2: (
+        null: 10px,
+    ),
+    row-gap-constancy-level3: (
+        null: 12px,
+    ),
+    row-gap-constancy-level4: (
+        null: 14px,
+    ),
+    row-gap-constancy-level5: (
+        null: 24px,
+    ),
 );
 
 /* Space */
 @mixin space(
-  $type,
-  $direction,
+    $type,
+    $direction,
   $amountColor,
   $breakpoints: $space_breakpoints,
   $space: $space
 ) {
-  $amountArr: map-get($space, $amountColor);
-  @each $breakpoint, $amount in $amountArr {
-    @if $breakpoint == null {
-      @if $type == margin {
-        @include margin($direction, $amount);
-      }
-      @if $type == padding {
-        @include padding($direction, $amount);
-      }
-      @if $type == gap {
-        @include gap($amount);
-      }
-      @if $type == row-gap {
-        @include row-gap($amount);
-      }
-      @if $type == column-gap {
-        @include column-gap($amount);
-      }
-    } @else {
-      @if map-has-key($breakpoints, $breakpoint) {
-        $breakpoint: map-get($breakpoints, $breakpoint);
-      }
-      @media (min-width: $breakpoint) {
-        @if $type == margin {
-          @include margin($direction, $amount);
+    $amountArr: map-get($space, $amountColor);
+
+    @each $breakpoint, $amount in $amountArr {
+        @if $breakpoint == null {
+            @if $type == margin {
+                @include margin($direction, $amount);
+            }
+
+            @if $type == padding {
+                @include padding($direction, $amount);
+            }
+
+            @if $type == gap {
+                @include gap($amount);
+            }
+
+            @if $type == row-gap {
+                @include row-gap($amount);
+            }
+
+            @if $type == column-gap {
+                @include column-gap($amount);
+            }
+        } @else {
+            @if map-has-key($breakpoints, $breakpoint) {
+                $breakpoint: map-get($breakpoints, $breakpoint);
+            }
+
+            @media (min-width: $breakpoint) {
+                @if $type == margin {
+                    @include margin($direction, $amount);
+                }
+
+                @if $type == padding {
+                    @include padding($direction, $amount);
+                }
+
+                @if $type == gap {
+                    @include gap($amount);
+                }
+
+                @if $type == row-gap {
+                    @include row-gap($amount);
+                }
+
+                @if $type == column-gap {
+                    @include column-gap($amount);
+                }
+            }
         }
-        @if $type == padding {
-          @include padding($direction, $amount);
-        }
-        @if $type == gap {
-          @include gap($amount);
-        }
-        @if $type == row-gap {
-          @include row-gap($amount);
-        }
-        @if $type == column-gap {
-          @include column-gap($amount);
-        }
-      }
     }
-  }
 }
 
 @mixin margin($direction, $amount) {
-  @if $direction == all {
-    margin: $amount;
-  } @else if $direction == top {
-    margin-top: $amount;
-  } @else if $direction == left {
-    margin-left: $amount;
-  } @else if $direction == right {
-    margin-right: $amount;
-  } @else {
-    margin-bottom: $amount;
-  }
+    @if $direction == all {
+        margin: $amount;
+    } @else if $direction == top {
+        margin-top: $amount;
+    } @else if $direction == left {
+        margin-left: $amount;
+    } @else if $direction == right {
+        margin-right: $amount;
+    } @else {
+        margin-bottom: $amount;
+    }
 }
 
 @mixin padding($direction, $amount) {
-  @if $direction == all {
-    padding: $amount;
-  } @else if $direction == top {
-    padding-top: $amount;
-  } @else if $direction == left {
-    padding-left: $amount;
-  } @else if $direction == right {
-    padding-right: $amount;
-  } @else {
-    padding-bottom: $amount;
-  }
+    @if $direction == all {
+        padding: $amount;
+    } @else if $direction == top {
+        padding-top: $amount;
+    } @else if $direction == left {
+        padding-left: $amount;
+    } @else if $direction == right {
+        padding-right: $amount;
+    } @else {
+        padding-bottom: $amount;
+    }
 }
 
 @mixin gap($amount) {
-  gap: $amount;
+    gap: $amount;
 }
 
 @mixin row-gap($amount) {
-  row-gap: $amount;
+    row-gap: $amount;
 }
 
 @mixin column-gap($amount) {
-  column-gap: $amount;
+    column-gap: $amount;
 }

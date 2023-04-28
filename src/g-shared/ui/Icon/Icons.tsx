@@ -1,18 +1,18 @@
-import { FC } from "react"
-import IconArrowDownBase from "../../assets/icons/icon--arrow-down.svg"
-import IconCloseBase from "../../assets/icons//icon--close.svg"
-import IconDangerBase from "../../assets/icons//icon--danger.svg"
-import IconHomeBase from "../../assets/icons/icon--home.svg"
-import IconMenuBase from "../../assets/icons/icon--menu.svg"
-import IconQuoteBase from "../../assets/icons/icon--quote.svg"
+import { FC } from 'react'
+import IconArrowDownBase from '../../assets/icons/icon--arrow-down.svg'
+import IconCloseBase from '../../assets/icons//icon--close.svg'
+import IconDangerBase from '../../assets/icons//icon--danger.svg'
+import IconHomeBase from '../../assets/icons/icon--home.svg'
+import IconMenuBase from '../../assets/icons/icon--menu.svg'
+import IconQuoteBase from '../../assets/icons/icon--quote.svg'
 
-import { IconSize, Stroke } from "@/g-shared/ui/types"
-import { Icon } from "./Icon"
+import { IconSize, Stroke } from '@/g-shared/ui/types'
+import { Icon } from './Icon'
 
 type IconUIFillProps = {
-  size?: IconSize;
-  fill?: Stroke;
-};
+  size?: IconSize
+  fill?: Stroke
+}
 
 // type IconUIStrokeProps = {
 //   size?: Size;
@@ -45,4 +45,3 @@ export const IconHome: FC<IconUIFillProps> = ({ size, fill }) => (
 export const IconMenu: FC<IconUIFillProps> = ({ size, fill }) => (
   <Icon icons={IconMenuBase} name="icon--menu" size={size} fill={fill} />
 )
-

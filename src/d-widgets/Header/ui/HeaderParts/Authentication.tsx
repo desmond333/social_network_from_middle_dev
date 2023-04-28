@@ -1,13 +1,12 @@
-import { FC, memo, useCallback, useState } from "react"
-import { useTranslation } from "react-i18next"
-import { useSelector } from "react-redux"
-import { Button } from "@/g-shared/ui"
-import { LoginModal } from "@/e-features/AuthByUsername"
-import { useAppDispatch } from "@/g-shared/lib/hooks/UseAppDispatch"
-import { getUserAuthData, userActions } from "@/f-entities/User"
+import { FC, memo, useCallback, useState } from 'react'
+import { useTranslation } from 'react-i18next'
+import { useSelector } from 'react-redux'
+import { Button } from '@/g-shared/ui'
+import { LoginModal } from '@/e-features/AuthByUsername'
+import { useAppDispatch } from '@/g-shared/lib/hooks/UseAppDispatch'
+import { getUserAuthData, userActions } from '@/f-entities/User'
 
-interface AuthProps {
-}
+interface AuthProps {}
 
 export const Authentication: FC<AuthProps> = memo(() => {
   const [isAuthModal, setIsAuthModal] = useState(false)
@@ -29,14 +28,12 @@ export const Authentication: FC<AuthProps> = memo(() => {
   }, [])
 
   if (isAuthData) {
-    return (
-      <Button onClick={onLogout}>ВЫЙТИ</Button>
-    )
+    return <Button onClick={onLogout}>ВЫЙТИ</Button>
   }
 
   return (
     <>
-      <Button onClick={onShowModal}>{t("AUTHORIZE_BTN")}</Button>
+      <Button onClick={onShowModal}>{t('AUTHORIZE_BTN')}</Button>
       <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
     </>
   )

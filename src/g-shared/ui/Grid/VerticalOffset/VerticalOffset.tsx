@@ -1,23 +1,23 @@
-import { FC, ReactNode } from "react"
-import { classNames as cn } from "@/g-shared/lib/classNames"
-import { RowGap } from "@/g-shared/ui/Grid/Row/types"
+import { FC, ReactNode } from 'react'
+import { classNames as cn } from '@/g-shared/lib/classNames'
+import { RowGap } from '../Row/types'
 
 type VerticalOffsetProps = {
   offset?: RowGap
-  variant?: "row-gap" | "margin"
+  variant?: 'row-gap' | 'margin'
   children?: ReactNode
 }
 
 export const VerticalOffset: FC<VerticalOffsetProps> = ({
-                                                          offset,
-                                                          children,
-                                                          variant = "row-gap",
-                                                        }) => {
+  offset,
+  children,
+  variant = 'row-gap',
+}) => {
   return (
     <>
-      {variant === "row-gap" && (
+      {variant === 'row-gap' && (
         <div
-          className={cn("vertical-offset", {
+          className={cn('vertical-offset', {
             [`vertical-offset--${offset}`]: offset,
           })}
         >
@@ -25,9 +25,9 @@ export const VerticalOffset: FC<VerticalOffsetProps> = ({
         </div>
       )}
 
-      {variant === "margin" && (
+      {variant === 'margin' && (
         <div
-          className={cn("vertical-offset-margin", {
+          className={cn('vertical-offset-margin', {
             [`vertical-offset-margin--${offset}`]: offset,
           })}
         >

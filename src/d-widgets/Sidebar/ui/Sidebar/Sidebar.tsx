@@ -1,14 +1,14 @@
-import { FC, memo, useState } from "react"
-import { ThemeSwitcher } from "../../../ThemeSwitcher"
-import { SidebarItemsList } from "../../model/items"
-import { SidebarItem } from "../SidebarItem/SidebarItem"
-import "./Sidebar.scss"
-import { useTheme, Theme } from "@/app/providers/ThemeProvider"
-import { classNames as cn } from "@/g-shared/lib/classNames"
-import { Button, Column, Row } from "@/g-shared/ui"
-import { Menu } from "@/g-shared/ui"
-import { BtnSize, BtnVariant } from "@/g-shared/ui/Button/types"
-import { Mods } from "@/g-shared/lib/classNames/classNames"
+import { FC, memo, useState } from 'react'
+import { ThemeSwitcher } from '../../../ThemeSwitcher'
+import { SidebarItemsList } from '../../model/items'
+import { SidebarItem } from '../SidebarItem/SidebarItem'
+import './Sidebar.scss'
+import { useTheme, Theme } from '@/app/providers/ThemeProvider'
+import { classNames as cn } from '@/g-shared/lib/classNames'
+import { Button, Column, Row } from '@/g-shared/ui'
+import { Menu } from '@/g-shared/ui'
+import { BtnSize, BtnVariant } from '@/g-shared/ui/Button/types'
+import { Mods } from '@/g-shared/lib/classNames/classNames'
 
 interface SidebarProps {
   className?: string
@@ -22,18 +22,19 @@ export const Sidebar: FC<SidebarProps> = memo((props) => {
   const [isCollapsed, setIsCollapsed] = useState(false)
 
   const mods: Mods = {
-    "sidebar--collapsed": isCollapsed,
-    "sidebar--light": theme === Theme.LIGHT,
-    "sidebar--dark": theme === Theme.DARK,
+    'sidebar--collapsed': isCollapsed,
+    'sidebar--light': theme === Theme.LIGHT,
+    'sidebar--dark': theme === Theme.DARK,
   }
 
   return (
-    <aside className={cn("sidebar", mods, [className])}>
+    <aside className={cn('sidebar', mods, [className])}>
       <Row direction="column" justify="space-between" isFullHeight>
         <Column isFlexNone>
           <Menu direction="column" rowGap="level1">
-            {SidebarItemsList.map((item) =>
-              <SidebarItem item={item} key={item.path} />)}
+            {SidebarItemsList.map((item) => (
+              <SidebarItem item={item} key={item.path} />
+            ))}
           </Menu>
         </Column>
         <Column isFlexNone>
@@ -43,11 +44,11 @@ export const Sidebar: FC<SidebarProps> = memo((props) => {
             </Column>
             <Column>
               <Button
-                onClick={() => setIsCollapsed(prev => !prev)}
+                onClick={() => setIsCollapsed((prev) => !prev)}
                 variant={BtnVariant.BACKGROUND}
                 btnSquareSize={BtnSize.XL}
               >
-                {isCollapsed ? ">" : "<"}
+                {isCollapsed ? '>' : '<'}
               </Button>
             </Column>
           </Row>

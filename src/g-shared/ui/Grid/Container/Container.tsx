@@ -1,6 +1,6 @@
-import { FC, ReactNode } from "react"
-import { classNames as cn } from "@/g-shared/lib/classNames"
-import { ContainerSize } from "@/g-shared/ui/types"
+import { FC, ReactNode } from 'react'
+import { ContainerSize } from '../../types'
+import { classNames as cn } from '@/g-shared/lib/classNames'
 
 type ContainerProps = {
   children: ReactNode
@@ -9,7 +9,7 @@ type ContainerProps = {
 
 export const Container: FC<ContainerProps> = ({ children, size }) => {
   return (
-    <div className={cn("container", { [`container--${size}`]: size })}>
+    <div className={cn('container', { [`container--${size}`]: size })}>
       {children}
     </div>
   )

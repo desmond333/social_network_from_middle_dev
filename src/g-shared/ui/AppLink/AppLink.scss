@@ -1,13 +1,13 @@
-@import "src/app/styles/mixins.scss";
+@import "src/app/styles/mixins";
 
 .app-link {
-  text-decoration: none;
+    text-decoration: none;
 
-  &--primary {
-    color: var(--primary-color);
-  }
+    &--primary {
+        color: var(--primary-color);
+    }
 
-  &--secondary {
-    color: var(--inverted-primary-color);
-  }
+    &--secondary {
+        color: var(--inverted-primary-color);
+    }
 }

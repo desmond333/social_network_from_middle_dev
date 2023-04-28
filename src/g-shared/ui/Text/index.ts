@@ -17,4 +17,4 @@ export {
   SliderUrl,
   UrlsMenu,
   SliderHeadline,
-} from "./Text";
+} from './Text'

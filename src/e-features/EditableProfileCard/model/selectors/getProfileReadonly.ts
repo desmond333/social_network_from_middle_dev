@@ -1,3 +1,4 @@
-import { StateSchema } from "@/app/providers/StoreProvider"
+import { StateSchema } from '@/app/providers/StoreProvider'
 
-export const getProfileReadonly = (state: StateSchema) => state.editableProfileCard?.readonly
+export const getProfileReadonly = (state: StateSchema) =>
+  state.editableProfileCard?.readonly

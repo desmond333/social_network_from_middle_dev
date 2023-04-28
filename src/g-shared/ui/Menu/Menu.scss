@@ -1,126 +1,126 @@
-@import "src/app/styles/mixins.scss";
+@import "src/app/styles/mixins";
 
 .menu {
-  &__list {
-    display: flex;
-  }
+    &__list {
+        display: flex;
+    }
 }
 
 .menu__list--row {
-  flex-direction: row;
-  flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .menu__list--column {
-  flex-direction: column;
+    flex-direction: column;
 }
 
 /* Row Gap */
 .menu__list--row-gap-level1 {
-  @include space(row-gap, all, level1);
+    @include space(row-gap, all, level1);
 }
 
 .menu__list--row-gap-level2 {
-  @include space(row-gap, all, level2);
+    @include space(row-gap, all, level2);
 }
 
 .menu__list--row-gap-level3 {
-  @include space(row-gap, all, level3);
+    @include space(row-gap, all, level3);
 }
 
 .menu__list--row-gap-level4 {
-  @include space(row-gap, all, level4);
+    @include space(row-gap, all, level4);
 }
 
 .menu__list--row-gap-level5 {
-  @include space(row-gap, all, level5);
+    @include space(row-gap, all, level5);
 }
 
 .menu__list--row-gap-level6 {
-  @include space(row-gap, all, level6);
+    @include space(row-gap, all, level6);
 }
 
 .menu__list--row-gap-level7 {
-  @include space(row-gap, all, level7);
+    @include space(row-gap, all, level7);
 }
 
 .menu__list--row-gap-level8 {
-  @include space(row-gap, all, level8);
+    @include space(row-gap, all, level8);
 }
 
 .menu__list--row-gap-level9 {
-  @include space(row-gap, all, level9);
+    @include space(row-gap, all, level9);
 }
 
 .menu__list--row-gap-level10 {
-  @include space(row-gap, all, level10);
+    @include space(row-gap, all, level10);
 }
 
 .menu__list--row-gap-constancy-level1 {
-  @include space(row-gap, all, row-gap-constancy-level1);
+    @include space(row-gap, all, row-gap-constancy-level1);
 }
 
 .menu__list--row-gap-constancy-level2 {
-  @include space(row-gap, all, row-gap-constancy-level2);
+    @include space(row-gap, all, row-gap-constancy-level2);
 }
 
 .menu__list--row-gap-constancy-level3 {
-  @include space(row-gap, all, row-gap-constancy-level3);
+    @include space(row-gap, all, row-gap-constancy-level3);
 }
 
 .menu__list--row-gap-constancy-level4 {
-  @include space(row-gap, all, row-gap-constancy-level4);
+    @include space(row-gap, all, row-gap-constancy-level4);
 }
 
 /* Column Gap */
 .menu__list--column-gap-level1 {
-  @include space(column-gap, all, column-gap-level1);
+    @include space(column-gap, all, column-gap-level1);
 }
 
 .menu__list--column-gap-level2 {
-  @include space(column-gap, all, column-gap-level2);
+    @include space(column-gap, all, column-gap-level2);
 }
 
 .menu__list--column-gap-level3 {
-  @include space(column-gap, all, column-gap-level3);
+    @include space(column-gap, all, column-gap-level3);
 }
 
 .menu__list--column-gap-level4 {
-  @include space(column-gap, all, column-gap-level4);
+    @include space(column-gap, all, column-gap-level4);
 }
 
 .menu__list--column-gap-level5 {
-  @include space(column-gap, all, column-gap-level5);
+    @include space(column-gap, all, column-gap-level5);
 }
 
 .menu__list--column-gap-const-level1 {
-  @include space(column-gap, all, column-gap-constancy-level1);
+    @include space(column-gap, all, column-gap-constancy-level1);
 }
 
 .menu__list--column-gap-const-level2 {
-  @include space(column-gap, all, column-gap-constancy-level2);
+    @include space(column-gap, all, column-gap-constancy-level2);
 }
 
 .menu__list--column-gap-const-level3 {
-  @include space(column-gap, all, column-gap-constancy-level3);
+    @include space(column-gap, all, column-gap-constancy-level3);
 }
 
 .menu__list--column-gap-const-level4 {
-  @include space(column-gap, all, column-gap-constancy-level4);
+    @include space(column-gap, all, column-gap-constancy-level4);
 }
 
 .menu__list--center {
-  align-items: center;
+    align-items: center;
 }
 
 .menu__list--flex-end {
-  align-items: flex-end;
+    align-items: flex-end;
 }
 
 .menu__list--flex-start {
-  align-items: flex-start;
+    align-items: flex-start;
 }
 
 .menu__list--stretch {
-  align-items: stretch;
+    align-items: stretch;
 }

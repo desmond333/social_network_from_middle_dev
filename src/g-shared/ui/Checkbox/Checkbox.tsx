@@ -1,19 +1,19 @@
-import { FC, ReactNode, useState } from "react"
-import { BodyXl } from "../Text"
+import { FC, ReactNode, useState } from 'react'
+import { BodyXl } from '../Text'
 
 type CheckboxProps = {
-  name: string;
-  value: string;
-  checked?: boolean;
-  disabled?: boolean;
-  label?: string;
-  children?: ReactNode;
-};
+  name: string
+  value: string
+  checked?: boolean
+  disabled?: boolean
+  label?: string
+  children?: ReactNode
+}
 
 export const Checkbox: FC<CheckboxProps> = (props) => {
   const {
-    name = " ",
-    value = " ",
+    name = ' ',
+    value = ' ',
     checked = false,
     disabled = false,
     label,

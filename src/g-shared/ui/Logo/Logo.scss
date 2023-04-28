@@ -1,46 +1,43 @@
-@import "src/app/styles/mixins.scss";
+@import "src/app/styles/mixins";
 
 .logo {
-  display: inline-flex;
-
-  &__content {
     display: inline-flex;
-    width: 100%;
-    max-width: var(--logo-width-mob);
 
-    text-decoration: none;
+    &__content {
+        display: inline-flex;
+        width: 100%;
+        max-width: var(--logo-width-mob);
+        text-decoration: none;
+        cursor: pointer;
+        transition: all var(--transition) ease 0s;
 
-    cursor: pointer;
+        @include screen(md) {
+            max-width: var(--logo-width-tablet);
+        }
 
-    transition: all var(--transition) ease 0s;
+        @include screen(md) {
+            max-width: var(--logo-width-desctop);
+        }
 
-    @include screen(md) {
-      max-width: var(--logo-width-tablet);
+        &:hover {
+            opacity: 0.4;
+        }
+
+        svg {
+            display: block;
+            width: 100%;
+        }
     }
-
-    @include screen(md) {
-      max-width: var(--logo-width-desctop);
-    }
-
-    &:hover {
-      opacity: 0.4;
-    }
-
-    svg {
-      display: block;
-      width: 100%;
-    }
-  }
 }
 
 .logo__content--size-lg {
-  max-width: var(--logo-width-lg-mob);
+    max-width: var(--logo-width-lg-mob);
 
-  @include screen(md) {
-    max-width: var(--logo-width-lg-tablet);
-  }
+    @include screen(md) {
+        max-width: var(--logo-width-lg-tablet);
+    }
 
-  @include screen(xl) {
-    max-width: var(--logo-width-lg-desctop);
-  }
+    @include screen(xl) {
+        max-width: var(--logo-width-lg-desctop);
+    }
 }

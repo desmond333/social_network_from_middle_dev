@@ -2,24 +2,25 @@
 @import "./variables/global";
 @import "./themes/light";
 @import "./themes/dark";
-@import "@/g-shared/ui/ui.scss";
+@import "@/g-shared/ui/ui";
 
 // настройка глобальных параметров
-body, .app {
-  font: var(--font-m);
-  color: var(--primary-color);
+body,
+.app {
+    font: var(--font-m);
+    color: var(--primary-color);
 }
 
 .app {
-  background: var(--bg-color);
-  min-height: 100vh;
+    background: var(--bg-color);
+    min-height: 100vh;
 }
 
 .body {
-  display: flex;
+    display: flex;
 }
 
 .main {
-  padding: 10px;
-  width: 100%;
+    padding: 10px;
+    width: 100%;
 }

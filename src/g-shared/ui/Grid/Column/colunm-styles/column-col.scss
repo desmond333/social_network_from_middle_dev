@@ -1,58 +1,58 @@
 @each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
-    .column-#{$infix}-col-auto {
-      flex: 0 0 auto;
-      width: auto;
-      max-width: none;
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+        .column-#{$infix}-col-auto {
+            flex: 0 0 auto;
+            width: auto;
+            max-width: none;
+        }
+        .column-#{$infix}-col-1 {
+            flex: 0 0 auto;
+            width: 8.3%;
+        }
+        .column-#{$infix}-col-2 {
+            flex: 0 0 auto;
+            width: 16.6%;
+        }
+        .column-#{$infix}-col-3 {
+            flex: 0 0 auto;
+            width: 25%;
+        }
+        .column-#{$infix}-col-4 {
+            flex: 0 0 auto;
+            width: 33.3%;
+        }
+        .column-#{$infix}-col-5 {
+            flex: 0 0 auto;
+            width: 41.6%;
+        }
+        .column-#{$infix}-col-6 {
+            flex: 0 0 auto;
+            width: 50%;
+        }
+        .column-#{$infix}-col-7 {
+            flex: 0 0 auto;
+            width: 58.3%;
+        }
+        .column-#{$infix}-col-8 {
+            flex: 0 0 auto;
+            width: 66.6%;
+        }
+        .column-#{$infix}-col-9 {
+            flex: 0 0 auto;
+            width: 75%;
+        }
+        .column-#{$infix}-col-10 {
+            flex: 0 0 auto;
+            width: 83.3%;
+        }
+        .column-#{$infix}-col-11 {
+            flex: 0 0 auto;
+            width: 91.6%;
+        }
+        .column-#{$infix}-col-12 {
+            flex: 0 0 auto;
+            width: 100%;
+        }
     }
-    .column-#{$infix}-col-1 {
-      flex: 0 0 auto;
-      width: 8.333333%;
-    }
-    .column-#{$infix}-col-2 {
-      flex: 0 0 auto;
-      width: 16.666667%;
-    }
-    .column-#{$infix}-col-3 {
-      flex: 0 0 auto;
-      width: 25%;
-    }
-    .column-#{$infix}-col-4 {
-      flex: 0 0 auto;
-      width: 33.333333%;
-    }
-    .column-#{$infix}-col-5 {
-      flex: 0 0 auto;
-      width: 41.666667%;
-    }
-    .column-#{$infix}-col-6 {
-      flex: 0 0 auto;
-      width: 50%;
-    }
-    .column-#{$infix}-col-7 {
-      flex: 0 0 auto;
-      width: 58.333333%;
-    }
-    .column-#{$infix}-col-8 {
-      flex: 0 0 auto;
-      width: 66.666667%;
-    }
-    .column-#{$infix}-col-9 {
-      flex: 0 0 auto;
-      width: 75%;
-    }
-    .column-#{$infix}-col-10 {
-      flex: 0 0 auto;
-      width: 83.333333%;
-    }
-    .column-#{$infix}-col-11 {
-      flex: 0 0 auto;
-      width: 91.666667%;
-    }
-    .column-#{$infix}-col-12 {
-      flex: 0 0 auto;
-      width: 100%;
-    }
-  }
 }

@@ -1,8 +1,8 @@
 .button {
-  padding: var(--button-padding);
-  cursor: pointer;
-  color: var(--primary-color);
+    padding: var(--button-padding);
+    cursor: pointer;
+    color: var(--primary-color);
 }
 
-@import "./styles/BtnSize.scss";
-@import "./styles/BtnVariant.scss";
+@import "./styles/BtnSize";
+@import "./styles/BtnVariant";

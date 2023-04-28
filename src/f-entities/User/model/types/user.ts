@@ -5,5 +5,5 @@ export interface User {
 
 export interface UserSchema {
   // пользователь авторизован если здесь есть данные
-  authData?: User;
+  authData?: User
 }

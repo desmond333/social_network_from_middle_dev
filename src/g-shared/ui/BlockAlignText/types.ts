@@ -1,1 +1,1 @@
-export type BlockAlign = "left" | "center" | "right";
+export type BlockAlign = 'left' | 'center' | 'right'

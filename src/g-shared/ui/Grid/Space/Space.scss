@@ -1,19 +1,19 @@
-@import "src/app/styles/mixins.scss";
+@import "src/app/styles/mixins";
 
 .space {
-  display: inline-flex;
+    display: inline-flex;
 }
 
 .space--display-flex {
-  display: flex;
+    display: flex;
 }
 
 .space--wrap {
-  flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .space--wrap-reverse {
-  flex-wrap: wrap-reverse;
+    flex-wrap: wrap-reverse;
 }
 
 @import "space-styles/space-align";

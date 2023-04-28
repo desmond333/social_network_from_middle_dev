@@ -1,0 +1,14 @@
+{
+  "extends": "stylelint-config-standard-scss",
+  "rules": {
+    "indentation": [
+      4
+    ],
+    "selector-class-pattern": null,
+    "no-invalid-position-at-import-rule": null,
+    "no-descending-specificity": null,
+    "no-duplicate-selectors": null,
+    "block-no-empty": null,
+    "declaration-block-no-redundant-longhand-properties": null
+  }
+}

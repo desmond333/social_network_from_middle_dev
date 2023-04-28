@@ -1,1 +1,1 @@
-export type UiListVariant = "base" | "decimal" | "circle" | "no-variant";
+export type UiListVariant = 'base' | 'decimal' | 'circle' | 'no-variant'

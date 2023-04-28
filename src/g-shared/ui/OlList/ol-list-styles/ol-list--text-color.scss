@@ -1,25 +1,25 @@
 @import "../../Text/Text";
 
 .ol-list--text-color-primary {
-  @extend .text--color-primary;
+    @extend .text--color-primary;
 }
 
 .ol-list--text-color-secondary {
-  @extend .text--color-secondary;
+    @extend .text--color-secondary;
 }
 
 .ol-list--text-color-third {
-  @extend .text--color-third;
+    @extend .text--color-third;
 }
 
 .ol-list--text-color-four {
-  @extend .text--color-four;
+    @extend .text--color-four;
 }
 
 .ol-list--text-color-five {
-  @extend .text--color-five;
+    @extend .text--color-five;
 }
 
 .ol-list--text-color-danger {
-  @extend .text--color-danger;
+    @extend .text--color-danger;
 }

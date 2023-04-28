@@ -1,82 +1,92 @@
-@import "src/app/styles/mixins.scss";
+@import "src/app/styles/mixins";
 
 .container {
-  width: 100%;
-  padding-left: var(--bases-gutter-mob-x);
-  padding-right: var(--bases-gutter-mob-x);
-  margin-right: auto;
-  margin-left: auto;
-  box-sizing: border-box;
+    width: 100%;
+    padding-left: var(--bases-gutter-mob-x);
+    padding-right: var(--bases-gutter-mob-x);
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
 
-  @include screen(sm) {
-    max-width: var(--container-width-media-sm);
-  }
-  @include screen(md) {
-    max-width: var(--container-width-media-md);
-  }
-  @include screen(lg) {
-    max-width: var(--container-width-media-lg);
-  }
-  @include screen(xl) {
-    max-width: var(--container-width-media-xl);
-    padding-left: var(--bases-gutter-x);
-    padding-right: var(--bases-gutter-x);
-  }
-  @include screen(xxl) {
-    max-width: var(--container-width);
-  }
+    @include screen(sm) {
+        max-width: var(--container-width-media-sm);
+    }
+
+    @include screen(md) {
+        max-width: var(--container-width-media-md);
+    }
+
+    @include screen(lg) {
+        max-width: var(--container-width-media-lg);
+    }
+
+    @include screen(xl) {
+        max-width: var(--container-width-media-xl);
+        padding-left: var(--bases-gutter-x);
+        padding-right: var(--bases-gutter-x);
+    }
+
+    @include screen(xxl) {
+        max-width: var(--container-width);
+    }
 }
 
 .container--fluid {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 .container--md {
-  max-width: 100%;
+    max-width: 100%;
 
-  @include screen(md) {
-    max-width: var(--container-width-media-md);
-  }
-  @include screen(lg) {
-    max-width: var(--container-width-media-lg);
-  }
-  @include screen(xl) {
-    max-width: var(--container-width-media-xl);
-  }
-  @include screen(xxl) {
-    max-width: var(--container-width);
-  }
+    @include screen(md) {
+        max-width: var(--container-width-media-md);
+    }
+
+    @include screen(lg) {
+        max-width: var(--container-width-media-lg);
+    }
+
+    @include screen(xl) {
+        max-width: var(--container-width-media-xl);
+    }
+
+    @include screen(xxl) {
+        max-width: var(--container-width);
+    }
 }
 
 .container--lg {
-  max-width: 100%;
+    max-width: 100%;
 
-  @include screen(lg) {
-    max-width: var(--container-width-media-lg);
-  }
-  @include screen(xl) {
-    max-width: var(--container-width-media-xl);
-  }
-  @include screen(xxl) {
-    max-width: var(--container-width);
-  }
+    @include screen(lg) {
+        max-width: var(--container-width-media-lg);
+    }
+
+    @include screen(xl) {
+        max-width: var(--container-width-media-xl);
+    }
+
+    @include screen(xxl) {
+        max-width: var(--container-width);
+    }
 }
 
 .container--xl {
-  max-width: 100%;
+    max-width: 100%;
 
-  @include screen(xl) {
-    max-width: var(--container-width-media-xl);
-  }
-  @include screen(xxl) {
-    max-width: var(--container-width);
-  }
+    @include screen(xl) {
+        max-width: var(--container-width-media-xl);
+    }
+
+    @include screen(xxl) {
+        max-width: var(--container-width);
+    }
 }
 
 .container--xxl {
-  max-width: 100%;
+    max-width: 100%;
 
-  @include screen(xxl) {
-    max-width: var(--container-width);
-  }
+    @include screen(xxl) {
+        max-width: var(--container-width);
+    }
 }

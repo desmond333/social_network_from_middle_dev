@@ -1,60 +1,60 @@
-@import "src/app/styles/mixins.scss";
+@import "src/app/styles/mixins";
 
 .block-text {
-  h2 {
-    &:not(:last-child) {
-      @include space(margin, bottom, level2);
+    h2 {
+        &:not(:last-child) {
+            @include space(margin, bottom, level2);
+        }
+
+        &:not(:first-child) {
+            @include space(margin, top, level3);
+        }
     }
 
-    &:not(:first-child) {
-      @include space(margin, top, level3);
-    }
-  }
+    h3 {
+        &:not(:last-child) {
+            @include space(margin, bottom, level1);
+        }
 
-  h3 {
-    &:not(:last-child) {
-      @include space(margin, bottom, level1);
-    }
-
-    &:not(:first-child) {
-      @include space(margin, top, level2);
-    }
-  }
-
-  h4 {
-    &:not(:last-child) {
-      @include space(margin, bottom, level1);
+        &:not(:first-child) {
+            @include space(margin, top, level2);
+        }
     }
 
-    &:not(:first-child) {
-      @include space(margin, top, level1);
-    }
-  }
+    h4 {
+        &:not(:last-child) {
+            @include space(margin, bottom, level1);
+        }
 
-  p {
-    &:not(:last-child) {
-      @include space(margin, bottom, level1);
-    }
-  }
-
-  ol,
-  ul {
-    &:not(:last-child) {
-      @include space(margin, bottom, level1);
-    }
-  }
-
-  .ol-list__item .text {
-    margin-bottom: 0;
-  }
-
-  .doc-table {
-    &:not(:first-child) {
-      @include space(margin, top, level1);
+        &:not(:first-child) {
+            @include space(margin, top, level1);
+        }
     }
 
-    &:not(:last-child) {
-      @include space(margin, bottom, level1);
+    p {
+        &:not(:last-child) {
+            @include space(margin, bottom, level1);
+        }
     }
-  }
+
+    ol,
+    ul {
+        &:not(:last-child) {
+            @include space(margin, bottom, level1);
+        }
+    }
+
+    .ol-list__item .text {
+        margin-bottom: 0;
+    }
+
+    .doc-table {
+        &:not(:first-child) {
+            @include space(margin, top, level1);
+        }
+
+        &:not(:last-child) {
+            @include space(margin, bottom, level1);
+        }
+    }
 }

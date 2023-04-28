@@ -1,10 +1,10 @@
-import { FC, useState } from "react"
+import { FC, useState } from 'react'
 import {
   LOCAL_STORAGE_THEME_KEY,
   Theme,
   ThemeContext,
   TTheme,
-} from "../lib/ThemeContext"
+} from '../lib/ThemeContext'
 
 const defaultTheme =
   (localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as TTheme) || Theme.LIGHT

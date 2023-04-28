@@ -1,12 +1,11 @@
-@import "src/app/styles/mixins.scss";
+@import "src/app/styles/mixins";
 
 .text {
-  margin: 0;
-
-  font-family: var(--font-main);
+    margin: 0;
+    font-family: var(--font-main);
 }
 
-@import "./text-styles.scss/text--colors.scss";
-@import "./text-styles.scss/text--size.scss";
-@import "./text-styles.scss/text--weight.scss";
-@import "./text-styles.scss/text--align.scss";
+@import "./text-styles.scss/text--colors";
+@import "./text-styles.scss/text--size";
+@import "./text-styles.scss/text--weight";
+@import "./text-styles.scss/text--align";

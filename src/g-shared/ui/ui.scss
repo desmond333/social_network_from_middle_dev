@@ -1,18 +1,16 @@
-@import "./AppLink/AppLink.scss";
+@import "./AppLink/AppLink";
 @import "./BlockAlignText/BlockAlignText";
 @import "./BlockText/BlockText";
 @import "./BlockWithShadow/BlockWithShadow";
 @import "./BugButton/BugButton";
-@import "./Button/Button.scss";
+@import "./Button/Button";
 @import "./Checkbox/Checkbox";
 @import "./ErrorFallback/ErrorFallback";
-
-@import "./Grid/Column/Column.scss";
-@import "./Grid/Container/Container.scss";
-@import "./Grid/Row/Row.scss";
+@import "./Grid/Column/Column";
+@import "./Grid/Container/Container";
+@import "./Grid/Row/Row";
 @import "./Grid/Space/Space";
-@import "./Grid/VerticalOffset/VerticalOffset.scss";
-
+@import "./Grid/VerticalOffset/VerticalOffset";
 @import "./Icon/Icon";
 @import "./IconText/IconText";
 @import "./Input/Input";

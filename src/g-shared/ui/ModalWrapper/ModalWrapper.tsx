@@ -1,39 +1,32 @@
-import { FC, ReactNode, useEffect, useState } from "react"
-import { classNames as cn } from "@/g-shared/lib/classNames"
-import Modal from "react-modal"
-import { Button } from "../Button/Button"
-import { ModalTitle } from "../Text"
-import IconCloseNew from "../../assets/icons/icon--close.svg"
-import { ModalWrapperSize } from "@/g-shared/ui/types"
-import { BtnVariant } from "@/g-shared/ui/Button/types"
+import { FC, ReactNode, useEffect, useState } from 'react'
+import { classNames as cn } from '@/g-shared/lib/classNames'
+import Modal from 'react-modal'
+import { Button } from '../Button/Button'
+import { ModalTitle } from '../Text'
+import IconCloseNew from '../../assets/icons/icon--close.svg'
+import { ModalWrapperSize } from '@/g-shared/ui/types'
+import { BtnVariant } from '@/g-shared/ui/Button/types'
 
 // todo: подтянуть стили
 
 export interface ModalWrapperProps {
-  children?: ReactNode;
-  isOpen: boolean;
+  children?: ReactNode
+  isOpen: boolean
 
   // isLazy === true => не рендерим до нажатия на isOpen
-  isLazy?: boolean;
-  onClose?: () => void;
-  size?: ModalWrapperSize;
-  title: string;
+  isLazy?: boolean
+  onClose?: () => void
+  size?: ModalWrapperSize
+  title: string
 }
 
 export const ModalWrapper: FC<ModalWrapperProps> = (props) => {
-  const {
-    isOpen,
-    onClose,
-    children,
-    size = "base",
-    title,
-    isLazy,
-  } = props
+  const { isOpen, onClose, children, size = 'base', title, isLazy } = props
 
   // up ts
   const ModalWrapperMods: Record<string, boolean> = {
     [`modal-wrapper--size-${size}`]: Boolean(size),
-    "modal-wrapper--no-close": typeof onClose !== "function",
+    'modal-wrapper--no-close': typeof onClose !== 'function',
   }
 
   const [isMounted, setIsMounted] = useState(false)
@@ -46,17 +39,17 @@ export const ModalWrapper: FC<ModalWrapperProps> = (props) => {
 
   return (
     <Modal
-      className={cn("modal-wrapper", ModalWrapperMods, [])}
+      className={cn('modal-wrapper', ModalWrapperMods, [])}
       shouldCloseOnOverlayClick={true}
       isOpen={isOpen}
       ariaHideApp={false}
       onRequestClose={onClose}
-      bodyOpenClassName={"modal-body"}
-      overlayClassName={"modal-overlay"}
+      bodyOpenClassName={'modal-body'}
+      overlayClassName={'modal-overlay'}
       preventScroll={true}
     >
       <div
-        className={cn("modal-wrapper__content", {
+        className={cn('modal-wrapper__content', {
           [`modal-wrapper__content--size-${size}`]: size,
         })}
       >

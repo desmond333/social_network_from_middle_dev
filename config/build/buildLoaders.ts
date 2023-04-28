@@ -1,10 +1,10 @@
-import webpack from "webpack"
-import MiniCssExtractPlugin from "mini-css-extract-plugin"
+import webpack from 'webpack'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 
 export const buildLoaders = (isDev: boolean): webpack.RuleSetRule[] => {
   const tsLoader = {
     test: /\.tsx?$/,
-    use: "ts-loader",
+    use: 'ts-loader',
     exclude: /node_modules/,
   }
 
@@ -13,24 +13,24 @@ export const buildLoaders = (isDev: boolean): webpack.RuleSetRule[] => {
     use: [
       //style-loader creates `style` nodes from JS strings
       // MiniCssExtractPlugin для создания css в отдельных файлах css в build
-      isDev ? "style-loader" : MiniCssExtractPlugin.loader,
+      isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
       // Translates CSS into CommonJS
-      "css-loader",
+      'css-loader',
       // Compiles Sass to CSS
-      "sass-loader",
+      'sass-loader',
     ],
   }
 
   const svgLoader = {
     test: /\.svg$/,
-    use: ["@svgr/webpack"],
+    use: ['@svgr/webpack'],
   }
 
   const fileLoader = {
     test: /\.(png|jpe?g|gif|woff2|woff)$/i,
     use: [
       {
-        loader: "file-loader",
+        loader: 'file-loader',
       },
     ],
   }

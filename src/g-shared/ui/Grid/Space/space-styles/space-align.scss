@@ -1,48 +1,48 @@
 @each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-    .space-#{$infix}-align-baseline {
-      align-items: baseline;
+        .space-#{$infix}-align-baseline {
+            align-items: baseline;
+        }
+        .space-#{$infix}-align-center {
+            align-items: center;
+        }
+        .space-#{$infix}-align-end {
+            align-items: end;
+        }
+        .space-#{$infix}-align-flex-end {
+            align-items: flex-end;
+        }
+        .space-#{$infix}-align-flex-start {
+            align-items: flex-start;
+        }
+        .space-#{$infix}-align-initial {
+            align-items: initial;
+        }
+        .space-#{$infix}-align-inherit {
+            align-items: inherit;
+        }
+        .space-#{$infix}-align-normal {
+            align-items: normal;
+        }
+        .space-#{$infix}-align-revert {
+            align-items: revert;
+        }
+        .space-#{$infix}-align-self-end {
+            align-items: self-end;
+        }
+        .space-#{$infix}-align-self-start {
+            align-items: self-start;
+        }
+        .space-#{$infix}-align-start {
+            align-items: start;
+        }
+        .space-#{$infix}-align-stretch {
+            align-items: stretch;
+        }
+        .space-#{$infix}-align-unset {
+            align-items: unset;
+        }
     }
-    .space-#{$infix}-align-center {
-      align-items: center;
-    }
-    .space-#{$infix}-align-end {
-      align-items: end;
-    }
-    .space-#{$infix}-align-flex-end {
-      align-items: flex-end;
-    }
-    .space-#{$infix}-align-flex-start {
-      align-items: flex-start;
-    }
-    .space-#{$infix}-align-initial {
-      align-items: initial;
-    }
-    .space-#{$infix}-align-inherit {
-      align-items: inherit;
-    }
-    .space-#{$infix}-align-normal {
-      align-items: normal;
-    }
-    .space-#{$infix}-align-revert {
-      align-items: revert;
-    }
-    .space-#{$infix}-align-self-end {
-      align-items: self-end;
-    }
-    .space-#{$infix}-align-self-start {
-      align-items: self-start;
-    }
-    .space-#{$infix}-align-start {
-      align-items: start;
-    }
-    .space-#{$infix}-align-stretch {
-      align-items: stretch;
-    }
-    .space-#{$infix}-align-unset {
-      align-items: unset;
-    }
-  }
 }

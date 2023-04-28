@@ -1,6 +1,6 @@
 export interface CurrentLevelSchema {
-  initialDate: Date;
+  initialDate: Date
 
   // todo: create type for only non-negative number
-  level: number;
+  level: number
 }

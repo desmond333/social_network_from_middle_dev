@@ -3,8 +3,8 @@ import {
   Theme,
   ThemeContext,
   TTheme,
-} from "./ThemeContext"
-import { useContext } from "react"
+} from './ThemeContext'
+import { useContext } from 'react'
 
 interface UseThemeResult {
   toggleTheme: () => void

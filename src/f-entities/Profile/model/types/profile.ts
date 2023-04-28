@@ -1,4 +1,4 @@
-import { TCountry, TCurrency } from "@/g-shared/const/common"
+import { TCountry, TCurrency } from '@/g-shared/const/common'
 
 export interface Profile {
   firstName: string
@@ -12,8 +12,8 @@ export interface Profile {
 }
 
 export interface ProfileSchema {
-  isLoading: boolean;
-  readonly: boolean;
-  data?: Profile;
-  error?: string;
+  isLoading: boolean
+  readonly: boolean
+  data?: Profile
+  error?: string
 }

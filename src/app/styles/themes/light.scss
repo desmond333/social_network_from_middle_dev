@@ -1,11 +1,9 @@
 .app--light-theme {
-  --bg-color: var(--color-background-light);
-  --inverted-bg-color: var(--color-background-dark);
-  --sidebar-bg-color: var(--color-background-second-light);
-
-  --primary-color: var(--primary-color-light);
-  --secondary-color: var(--secondary-color-light);
-
-  --inverted-primary-color: var(--inverted-primary-color-light);
-  --inverted-secondary-color: var(--inverted-secondary-color-light);
+    --bg-color: var(--color-background-light);
+    --inverted-bg-color: var(--color-background-dark);
+    --sidebar-bg-color: var(--color-background-second-light);
+    --primary-color: var(--primary-color-light);
+    --secondary-color: var(--secondary-color-light);
+    --inverted-primary-color: var(--inverted-primary-color-light);
+    --inverted-secondary-color: var(--inverted-secondary-color-light);
 }

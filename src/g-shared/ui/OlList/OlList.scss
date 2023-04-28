@@ -1,34 +1,31 @@
-@import "src/app/styles/mixins.scss";
+@import "src/app/styles/mixins";
 
 .ol-list {
-  display: flex;
-  flex-direction: column;
-
-  counter-reset: li;
-  list-style: none;
-
-  &__item {
     display: flex;
-    align-items: center;
-    column-gap: 4px;
+    flex-direction: column;
+    counter-reset: li;
+    list-style: none;
 
-    list-style-type: none;
-  }
+    &__item {
+        display: flex;
+        align-items: center;
+        column-gap: 4px;
+        list-style-type: none;
+    }
 
-  &__item:before {
-    font-family: var(--font-main);
-    color: var(--primary-color);
+    &__item::before {
+        font-family: var(--font-main);
+        color: var(--primary-color);
+        counter-increment: li;
+        content: counters(li, ".") ". ";
+    }
 
-    counter-increment: li;
-    content: counters(li, ".") ". ";
-  }
-
-  &__item-body {
-    width: 100%;
-    flex: 1 1 100%;
-  }
+    &__item-body {
+        width: 100%;
+        flex: 1 1 100%;
+    }
 }
 
-@import "./ol-list-styles/ol-list--gap.scss";
-@import "./ol-list-styles/ol-list--text-size.scss";
-@import "./ol-list-styles/ol-list--text-color.scss";
+@import "./ol-list-styles/ol-list--gap";
+@import "./ol-list-styles/ol-list--text-size";
+@import "./ol-list-styles/ol-list--text-color";

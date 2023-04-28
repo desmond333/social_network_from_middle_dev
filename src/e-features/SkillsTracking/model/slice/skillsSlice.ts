@@ -1,7 +1,7 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit"
-import { WorkTimeSchema } from "../types/workTimeSchema"
-import { WeekData } from "../types/weekData"
-import { WEEKS } from "../mock"
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { WorkTimeSchema } from '../types/workTimeSchema'
+import { WeekData } from '../types/weekData'
+import { WEEKS } from '../mock'
 
 const initialState: WorkTimeSchema = {
   weeks: WEEKS,
@@ -9,7 +9,7 @@ const initialState: WorkTimeSchema = {
 }
 
 const skillsSlice = createSlice({
-  name: "workTime",
+  name: 'workTime',
   initialState,
   reducers: {
     addWeek(state, action: PayloadAction<WeekData>) {

@@ -3,12 +3,12 @@ import {
   RoutePath,
   TAppRoutesWithoutNotFound,
   TRoutePath,
-} from "@/g-shared/config/routeConfig/routes"
-import { IconHome } from "@/g-shared/ui/Icon/Icons"
+} from '@/g-shared/config/routeConfig/routes'
+import { IconHome } from '@/g-shared/ui/Icon/Icons'
 
 export interface ISidebarItem {
-  path: TRoutePath;
-  text: TAppRoutesWithoutNotFound;
+  path: TRoutePath
+  text: TAppRoutesWithoutNotFound
   icon: JSX.Element
   // icon: VFC<SVGProps<SVGSVGElement>>
 }

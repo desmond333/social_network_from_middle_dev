@@ -1,14 +1,14 @@
 .sidebar-item {
-  padding-left: 15px;
+    padding-left: 15px;
 
-  &__link {
-    opacity: 1;
-    transition: 0.3s opacity;
-  }
+    &__link {
+        opacity: 1;
+        transition: 0.3s opacity;
+    }
 }
 
 .sidebar--collapsed {
-  .sidebar-item {
-    padding-left: calc(var(--sidebar-width-collapsed) / 2 - 12px);
-  }
+    .sidebar-item {
+        padding-left: calc(var(--sidebar-width-collapsed) / 2 - 12px);
+    }
 }

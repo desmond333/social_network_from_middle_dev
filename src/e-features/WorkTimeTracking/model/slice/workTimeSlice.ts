@@ -1,7 +1,7 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit"
-import { WorkTimeSchema, TSort } from "../types/workTimeSchema"
-import { WeekData } from "../types/weekData"
-import { WEEKS } from "../const/mock"
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { WorkTimeSchema, TSort } from '../types/workTimeSchema'
+import { WeekData } from '../types/weekData'
+import { WEEKS } from '../const/mock'
 
 const initialState: WorkTimeSchema = {
   weeks: WEEKS,
@@ -9,14 +9,14 @@ const initialState: WorkTimeSchema = {
 }
 
 const workTimeSlice = createSlice({
-  name: "workTime",
+  name: 'workTime',
   initialState,
   reducers: {
     addWeek(state, action: PayloadAction<WeekData>) {
       state.weeks.push(action.payload)
     },
     sortWeeksByHours(state, action: PayloadAction<TSort>) {
-      if (action.payload === "up") {
+      if (action.payload === 'up') {
         state.weeks.sort((a, b) => {
           if (b.resultTime.hours === a.resultTime.hours) {
             return b.resultTime.minutes - a.resultTime.minutes
@@ -24,7 +24,7 @@ const workTimeSlice = createSlice({
             return b.resultTime.hours - a.resultTime.hours
           }
         })
-      } else if (action.payload === "down") {
+      } else if (action.payload === 'down') {
         state.weeks.sort((a, b) => {
           if (a.resultTime.hours === b.resultTime.hours) {
             return a.resultTime.minutes - b.resultTime.minutes
@@ -35,12 +35,10 @@ const workTimeSlice = createSlice({
       }
     },
     sortWeeksByDate(state, action: PayloadAction<TSort>) {
-      if (action.payload === "up") {
-        state.weeks.sort((a, b) => a.date.end.getTime() - b.date.end.getTime(),
-        )
-      } else if (action.payload === "down") {
-        state.weeks.sort((a, b) => b.date.end.getTime() - a.date.end.getTime(),
-        )
+      if (action.payload === 'up') {
+        state.weeks.sort((a, b) => a.date.end.getTime() - b.date.end.getTime())
+      } else if (action.payload === 'down') {
+        state.weeks.sort((a, b) => b.date.end.getTime() - a.date.end.getTime())
       }
     },
     filterByIsWorking(state) {

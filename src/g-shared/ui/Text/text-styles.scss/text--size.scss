@@ -1,260 +1,280 @@
 /* Size */
 .text--size-h1 {
-  font-size: var(--font-size-h1-mob-esm);
-  line-height: var(--font-lh-h1-mob-esm);
+    font-size: var(--font-size-h1-mob-esm);
+    line-height: var(--font-lh-h1-mob-esm);
 
-  @include screen(esm) {
-    font-size: var(--font-size-h1-mob);
-    line-height: var(--font-lh-h1-mob);
-  }
-  @include screen(md) {
-    font-size: var(--font-size-h1-tablet);
-    line-height: var(--font-lh-h1-tablet);
-  }
-  @include screen(xl) {
-    font-size: var(--font-size-h1-desktop);
-    line-height: var(--font-lh-h1-desktop);
-  }
+    @include screen(esm) {
+        font-size: var(--font-size-h1-mob);
+        line-height: var(--font-lh-h1-mob);
+    }
+
+    @include screen(md) {
+        font-size: var(--font-size-h1-tablet);
+        line-height: var(--font-lh-h1-tablet);
+    }
+
+    @include screen(xl) {
+        font-size: var(--font-size-h1-desktop);
+        line-height: var(--font-lh-h1-desktop);
+    }
 }
 
 .text--size-h2 {
-  font-size: var(--font-size-h2-mob);
-  line-height: var(--font-lh-h2-mob);
+    font-size: var(--font-size-h2-mob);
+    line-height: var(--font-lh-h2-mob);
 
-  @include screen(md) {
-    font-size: var(--font-size-h2-tablet);
-    line-height: var(--font-lh-h2-tablet);
-  }
-  @include screen(xl) {
-    font-size: var(--font-size-h2-desktop);
-    line-height: var(--font-lh-h2-desktop);
-  }
+    @include screen(md) {
+        font-size: var(--font-size-h2-tablet);
+        line-height: var(--font-lh-h2-tablet);
+    }
+
+    @include screen(xl) {
+        font-size: var(--font-size-h2-desktop);
+        line-height: var(--font-lh-h2-desktop);
+    }
 }
 
 .text--size-h3 {
-  font-size: var(--font-size-h3-mob);
-  line-height: var(--font-lh-h3-mob);
+    font-size: var(--font-size-h3-mob);
+    line-height: var(--font-lh-h3-mob);
 
-  @include screen(md) {
-    font-size: var(--font-size-h3-tablet);
-    line-height: var(--font-lh-h3-tablet);
-  }
-  @include screen(xl) {
-    font-size: var(--font-size-h3-desktop);
-    line-height: var(--font-lh-h3-desktop);
-  }
+    @include screen(md) {
+        font-size: var(--font-size-h3-tablet);
+        line-height: var(--font-lh-h3-tablet);
+    }
+
+    @include screen(xl) {
+        font-size: var(--font-size-h3-desktop);
+        line-height: var(--font-lh-h3-desktop);
+    }
 }
 
 .text--size-h4 {
-  font-size: var(--font-size-h4-mob);
-  line-height: var(--font-lh-h4-mob);
+    font-size: var(--font-size-h4-mob);
+    line-height: var(--font-lh-h4-mob);
 
-  @include screen(md) {
-    font-size: var(--font-size-h4-tablet);
-    line-height: var(--font-lh-h4-tablet);
-  }
-  @include screen(xl) {
-    font-size: var(--font-size-h4-desktop);
-    line-height: var(--font-lh-h4-desktop);
-  }
+    @include screen(md) {
+        font-size: var(--font-size-h4-tablet);
+        line-height: var(--font-lh-h4-tablet);
+    }
+
+    @include screen(xl) {
+        font-size: var(--font-size-h4-desktop);
+        line-height: var(--font-lh-h4-desktop);
+    }
 }
 
 .text--size-h5 {
-  font-size: var(--font-size-h5-mob);
-  line-height: var(--font-lh-h5-mob);
+    font-size: var(--font-size-h5-mob);
+    line-height: var(--font-lh-h5-mob);
 
-  @include screen(md) {
-    font-size: var(--font-size-h5-tablet);
-    line-height: var(--font-lh-h5-tablet);
-  }
-  @include screen(xl) {
-    font-size: var(--font-size-h5-desktop);
-    line-height: var(--font-lh-h5-desktop);
-  }
+    @include screen(md) {
+        font-size: var(--font-size-h5-tablet);
+        line-height: var(--font-lh-h5-tablet);
+    }
+
+    @include screen(xl) {
+        font-size: var(--font-size-h5-desktop);
+        line-height: var(--font-lh-h5-desktop);
+    }
 }
 
 .text--size-body-xl {
-  font-size: var(--font-size-body-xl-mob);
-  line-height: var(--font-lh-body-xl-mob);
+    font-size: var(--font-size-body-xl-mob);
+    line-height: var(--font-lh-body-xl-mob);
 
-  @include screen(md) {
-    font-size: var(--font-size-body-xl-tablet);
-    line-height: var(--font-lh-body-xl-tablet);
-  }
-  @include screen(xl) {
-    font-size: var(--font-size-body-xl-desktop);
-    line-height: var(--font-lh-body-xl-desktop);
-  }
+    @include screen(md) {
+        font-size: var(--font-size-body-xl-tablet);
+        line-height: var(--font-lh-body-xl-tablet);
+    }
+
+    @include screen(xl) {
+        font-size: var(--font-size-body-xl-desktop);
+        line-height: var(--font-lh-body-xl-desktop);
+    }
 }
 
 .text--size-body-l {
-  font-size: var(--font-size-body-l-mob);
-  line-height: var(--font-lh-body-l-mob);
+    font-size: var(--font-size-body-l-mob);
+    line-height: var(--font-lh-body-l-mob);
 
-  @include screen(md) {
-    font-size: var(--font-size-body-l-tablet);
-    line-height: var(--font-lh-body-l-tablet);
-  }
-  @include screen(xl) {
-    font-size: var(--font-size-body-l-desktop);
-    line-height: var(--font-lh-body-l-desktop);
-  }
+    @include screen(md) {
+        font-size: var(--font-size-body-l-tablet);
+        line-height: var(--font-lh-body-l-tablet);
+    }
+
+    @include screen(xl) {
+        font-size: var(--font-size-body-l-desktop);
+        line-height: var(--font-lh-body-l-desktop);
+    }
 }
 
 .text--size-body-m {
-  font-size: var(--font-size-body-m-mob);
-  line-height: var(--font-lh-body-m-mob);
+    font-size: var(--font-size-body-m-mob);
+    line-height: var(--font-lh-body-m-mob);
 
-  @include screen(md) {
-    font-size: var(--font-size-body-m-tablet);
-    line-height: var(--font-lh-body-m-tablet);
-  }
-  @include screen(xl) {
-    font-size: var(--font-size-body-m-desktop);
-    line-height: var(--font-lh-body-m-desktop);
-  }
+    @include screen(md) {
+        font-size: var(--font-size-body-m-tablet);
+        line-height: var(--font-lh-body-m-tablet);
+    }
+
+    @include screen(xl) {
+        font-size: var(--font-size-body-m-desktop);
+        line-height: var(--font-lh-body-m-desktop);
+    }
 }
 
 .text--size-body-s {
-  font-size: var(--font-size-body-s-mob);
-  line-height: var(--font-lh-body-s-mob);
+    font-size: var(--font-size-body-s-mob);
+    line-height: var(--font-lh-body-s-mob);
 
-  @include screen(md) {
-    font-size: var(--font-size-body-s-tablet);
-    line-height: var(--font-lh-body-s-tablet);
-  }
-  @include screen(xl) {
-    font-size: var(--font-size-body-s-desktop);
-    line-height: var(--font-lh-body-s-desktop);
-  }
+    @include screen(md) {
+        font-size: var(--font-size-body-s-tablet);
+        line-height: var(--font-lh-body-s-tablet);
+    }
+
+    @include screen(xl) {
+        font-size: var(--font-size-body-s-desktop);
+        line-height: var(--font-lh-body-s-desktop);
+    }
 }
 
 .text--size-button {
-  font-size: var(--font-size-button-mob);
-  line-height: var(--font-lh-button-mob);
+    font-size: var(--font-size-button-mob);
+    line-height: var(--font-lh-button-mob);
 
-  @include screen(md) {
-    font-size: var(--font-size-button-tablet);
-    line-height: var(--font-lh-button-tablet);
-  }
-  @include screen(xl) {
-    font-size: var(--font-size-button-desktop);
-    line-height: var(--font-lh-button-desktop);
-  }
+    @include screen(md) {
+        font-size: var(--font-size-button-tablet);
+        line-height: var(--font-lh-button-tablet);
+    }
+
+    @include screen(xl) {
+        font-size: var(--font-size-button-desktop);
+        line-height: var(--font-lh-button-desktop);
+    }
 }
 
 .text--size-form-input-text {
-  font-size: var(--font-size-form-input-text-mob);
-  line-height: var(--font-lh-form-input-text-mob);
+    font-size: var(--font-size-form-input-text-mob);
+    line-height: var(--font-lh-form-input-text-mob);
 
-  @include screen(md) {
-    font-size: var(--font-size-form-input-text-tablet);
-    line-height: var(--font-lh-form-input-text-tablet);
-  }
-  @include screen(xl) {
-    font-size: var(--font-size-form-input-text-desktop);
-    line-height: var(--font-lh-form-input-text-desktop);
-  }
+    @include screen(md) {
+        font-size: var(--font-size-form-input-text-tablet);
+        line-height: var(--font-lh-form-input-text-tablet);
+    }
+
+    @include screen(xl) {
+        font-size: var(--font-size-form-input-text-desktop);
+        line-height: var(--font-lh-form-input-text-desktop);
+    }
 }
 
 .text--size-form-placeholder {
-  font-size: var(--font-size-form-placeholder-mob);
-  line-height: var(--font-lh-form-placeholder-mob);
+    font-size: var(--font-size-form-placeholder-mob);
+    line-height: var(--font-lh-form-placeholder-mob);
 
-  @include screen(md) {
-    font-size: var(--font-size-form-placeholder-tablet);
-    line-height: var(--font-lh-form-placeholder-tablet);
-  }
-  @include screen(xl) {
-    font-size: var(--font-size-form-placeholder-desktop);
-    line-height: var(--font-lh-form-placeholder-desktop);
-  }
+    @include screen(md) {
+        font-size: var(--font-size-form-placeholder-tablet);
+        line-height: var(--font-lh-form-placeholder-tablet);
+    }
+
+    @include screen(xl) {
+        font-size: var(--font-size-form-placeholder-desktop);
+        line-height: var(--font-lh-form-placeholder-desktop);
+    }
 }
 
 .text--size-modal-title {
-  font-size: var(--font-size-modal-title-mob);
-  line-height: var(--font-lh-modal-title-mob);
+    font-size: var(--font-size-modal-title-mob);
+    line-height: var(--font-lh-modal-title-mob);
 
-  @include screen(md) {
-    font-size: var(--font-size-modal-title-tablet);
-    line-height: var(--font-lh-modal-title-tablet);
-  }
-  @include screen(xl) {
-    font-size: var(--font-size-modal-title-desktop);
-    line-height: var(--font-lh-modal-title-desktop);
-  }
+    @include screen(md) {
+        font-size: var(--font-size-modal-title-tablet);
+        line-height: var(--font-lh-modal-title-tablet);
+    }
+
+    @include screen(xl) {
+        font-size: var(--font-size-modal-title-desktop);
+        line-height: var(--font-lh-modal-title-desktop);
+    }
 }
 
 .text--size-page-error {
-  font-size: var(--font-size-page-error-mob);
-  line-height: var(--font-lh-page-error-mob);
+    font-size: var(--font-size-page-error-mob);
+    line-height: var(--font-lh-page-error-mob);
 
-  @include screen(esm) {
-    font-size: var(--font-size-page-error-mob-esm);
-    line-height: var(--font-lh-page-error-mob-esm);
-  }
-  @include screen(md) {
-    font-size: var(--font-size-page-error-tablet);
-    line-height: var(--font-lh-page-error-tablet);
-  }
-  @include screen(xl) {
-    font-size: var(--font-size-page-error-desktop);
-    line-height: var(--font-lh-page-error-desktop);
-  }
+    @include screen(esm) {
+        font-size: var(--font-size-page-error-mob-esm);
+        line-height: var(--font-lh-page-error-mob-esm);
+    }
+
+    @include screen(md) {
+        font-size: var(--font-size-page-error-tablet);
+        line-height: var(--font-lh-page-error-tablet);
+    }
+
+    @include screen(xl) {
+        font-size: var(--font-size-page-error-desktop);
+        line-height: var(--font-lh-page-error-desktop);
+    }
 }
 
 .text--size-pagination {
-  font-size: var(--font-size-pagination-mob);
-  line-height: var(--font-lh-pagination-mob);
+    font-size: var(--font-size-pagination-mob);
+    line-height: var(--font-lh-pagination-mob);
 
-  @include screen(md) {
-    font-size: var(--font-size-pagination-tablet);
-    line-height: var(--font-lh-pagination-tablet);
-  }
-  @include screen(xl) {
-    font-size: var(--font-size-pagination-desktop);
-    line-height: var(--font-lh-pagination-desktop);
-  }
+    @include screen(md) {
+        font-size: var(--font-size-pagination-tablet);
+        line-height: var(--font-lh-pagination-tablet);
+    }
+
+    @include screen(xl) {
+        font-size: var(--font-size-pagination-desktop);
+        line-height: var(--font-lh-pagination-desktop);
+    }
 }
 
 .text--size-slider-url {
-  font-size: var(--font-size-slider-url-mob);
-  line-height: var(--font-lh-slider-url-mob);
+    font-size: var(--font-size-slider-url-mob);
+    line-height: var(--font-lh-slider-url-mob);
 
-  @include screen(md) {
-    font-size: var(--font-size-slider-url-tablet);
-    line-height: var(--font-lh-slider-url-tablet);
-  }
-  @include screen(xl) {
-    font-size: var(--font-size-slider-url-desktop);
-    line-height: var(--font-lh-slider-url-desktop);
-  }
+    @include screen(md) {
+        font-size: var(--font-size-slider-url-tablet);
+        line-height: var(--font-lh-slider-url-tablet);
+    }
+
+    @include screen(xl) {
+        font-size: var(--font-size-slider-url-desktop);
+        line-height: var(--font-lh-slider-url-desktop);
+    }
 }
 
 .text--size-urls-menu {
-  font-size: var(--font-size-urls-menu-mob);
-  line-height: var(--font-lh-urls-menu-mob);
+    font-size: var(--font-size-urls-menu-mob);
+    line-height: var(--font-lh-urls-menu-mob);
 
-  @include screen(md) {
-    font-size: var(--font-size-urls-menu-tablet);
-    line-height: var(--font-lh-urls-menu-tablet);
-  }
-  @include screen(xl) {
-    font-size: var(--font-size-urls-menu-desktop);
-    line-height: var(--font-lh-urls-menu-desktop);
-  }
+    @include screen(md) {
+        font-size: var(--font-size-urls-menu-tablet);
+        line-height: var(--font-lh-urls-menu-tablet);
+    }
+
+    @include screen(xl) {
+        font-size: var(--font-size-urls-menu-desktop);
+        line-height: var(--font-lh-urls-menu-desktop);
+    }
 }
 
 .text--size-slider-headline {
-  font-size: var(--font-size-slider-headline-mob);
-  line-height: var(--font-lh-slider-headline-mob);
+    font-size: var(--font-size-slider-headline-mob);
+    line-height: var(--font-lh-slider-headline-mob);
 
-  @include screen(md) {
-    font-size: var(--font-size-slider-headline-tablet);
-    line-height: var(--font-lh-slider-headline-tablet);
-  }
-  @include screen(xl) {
-    font-size: var(--font-size-slider-headline-desktop);
-    line-height: var(--font-lh-slider-headline-desktop);
-  }
+    @include screen(md) {
+        font-size: var(--font-size-slider-headline-tablet);
+        line-height: var(--font-lh-slider-headline-tablet);
+    }
+
+    @include screen(xl) {
+        font-size: var(--font-size-slider-headline-desktop);
+        line-height: var(--font-lh-slider-headline-desktop);
+    }
 }

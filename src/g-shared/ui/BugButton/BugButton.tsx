@@ -1,10 +1,10 @@
-import { FC, useEffect, useState } from "react"
-import { classNames as cn } from "@/g-shared/lib/classNames/classNames"
-import "./BugButton.scss"
-import { Button } from "@/g-shared/ui"
+import { FC, useEffect, useState } from 'react'
+import { classNames as cn } from '@/g-shared/lib/classNames/classNames'
+import './BugButton.scss'
+import { Button } from '@/g-shared/ui'
 
 interface BugButtonProps {
-  className?: string;
+  className?: string
 }
 
 export const BugButton: FC<BugButtonProps> = (props) => {
@@ -18,9 +18,7 @@ export const BugButton: FC<BugButtonProps> = (props) => {
   }, [error])
 
   return (
-    <Button className={cn("bug-button", {}, [className])}
-            onClick={onThrow}
-    >
+    <Button className={cn('bug-button', {}, [className])} onClick={onThrow}>
       BugButton
     </Button>
   )
