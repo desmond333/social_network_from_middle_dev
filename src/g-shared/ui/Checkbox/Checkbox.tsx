@@ -1,5 +1,5 @@
-import { FC, ReactNode, useState } from 'react'
-import { BodyXl } from '../Text'
+import { FC, ReactNode, useState } from 'react';
+import { BodyXl } from '../Text';
 
 type CheckboxProps = {
   name: string
@@ -11,40 +11,40 @@ type CheckboxProps = {
 }
 
 export const Checkbox: FC<CheckboxProps> = (props) => {
-  const {
-    name = ' ',
-    value = ' ',
-    checked = false,
-    disabled = false,
-    label,
-    children,
-  } = props
+    const {
+        name = ' ',
+        value = ' ',
+        checked = false,
+        disabled = false,
+        label,
+        children,
+    } = props;
 
-  const [checkboxChecked, setCheckboxChecked] = useState(checked)
+    const [checkboxChecked, setCheckboxChecked] = useState(checked);
 
-  return (
-    <div className="checkbox">
-      <label className="checkbox__label" htmlFor={name}>
-        <input
-          className="checkbox__input"
-          type="checkbox"
-          name={name}
-          id={name}
-          value={value}
-          onChange={() => setCheckboxChecked(!checkboxChecked)}
-          checked={checkboxChecked}
-          disabled={disabled}
-        />
-        <span className="checkbox__visual"></span>
+    return (
+        <div className="checkbox">
+            <label className="checkbox__label" htmlFor={name}>
+                <input
+                    className="checkbox__input"
+                    type="checkbox"
+                    name={name}
+                    id={name}
+                    value={value}
+                    onChange={() => setCheckboxChecked(!checkboxChecked)}
+                    checked={checkboxChecked}
+                    disabled={disabled}
+                />
+                <span className="checkbox__visual" />
 
-        {label && (
-          <div className="checkbox__content">
-            <BodyXl>{label}</BodyXl>
-          </div>
-        )}
-      </label>
+                {label && (
+                    <div className="checkbox__content">
+                        <BodyXl>{label}</BodyXl>
+                    </div>
+                )}
+            </label>
 
-      {children}
-    </div>
-  )
-}
+            {children}
+        </div>
+    );
+};

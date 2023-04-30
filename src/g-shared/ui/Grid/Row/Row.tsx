@@ -1,7 +1,7 @@
-import { FC, ReactNode } from 'react'
-import { classNames as cn } from '@/g-shared/lib/classNames'
-import { RowAlign, RowGap } from './types'
-import { Direction, Justify } from '../../types'
+import { FC, ReactNode } from 'react';
+import { classNames as cn } from '@/g-shared/lib/classNames';
+import { RowAlign, RowGap } from './types';
+import { Direction, Justify } from '../../types';
 
 type RowProps = {
   children?: ReactNode
@@ -27,53 +27,52 @@ type RowTypes = {
 }
 
 export const Row: FC<RowProps> = (props) => {
-  const {
-    align,
-    justify,
-    direction,
-    children,
-    rowGap,
-    noGutters = false,
-    breakpoints,
-    isFullHeight,
-  } = props
+    const {
+        align,
+        justify,
+        direction,
+        children,
+        rowGap,
+        noGutters = false,
+        breakpoints,
+        isFullHeight,
+    } = props;
 
-  let breakpointsValue = ''
+    let breakpointsValue = '';
 
-  breakpoints &&
-    Object.keys(breakpoints).forEach((key) => {
-      const isKeyCorrected =
-        key === 'md' || key === 'lg' || key === 'xl' || key === 'xxl'
+    breakpoints
+    && Object.keys(breakpoints).forEach((key) => {
+        const isKeyCorrected = key === 'md' || key === 'lg' || key === 'xl' || key === 'xxl';
 
-      if (isKeyCorrected && breakpoints[key]?.direction) {
-        breakpointsValue += `row--${key}-${breakpoints[key]?.direction} `
-      }
+        if (isKeyCorrected && breakpoints[key]?.direction) {
+            breakpointsValue += `row--${key}-${breakpoints[key]?.direction} `;
+        }
 
-      if (isKeyCorrected && breakpoints[key]?.align) {
-        breakpointsValue += `row--${key}-align-${breakpoints[key]?.align} `
-      }
+        if (isKeyCorrected && breakpoints[key]?.align) {
+            breakpointsValue += `row--${key}-align-${breakpoints[key]?.align} `;
+        }
 
-      if (isKeyCorrected && breakpoints[key]?.justify) {
-        breakpointsValue += `row--${key}-justify-${breakpoints[key]?.justify} `
-      }
-    })
+        if (isKeyCorrected && breakpoints[key]?.justify) {
+            breakpointsValue += `row--${key}-justify-${breakpoints[key]?.justify} `;
+        }
+    });
 
-  return (
-    <div
-      className={cn(
-        'row',
-        {
-          [`row--${direction}`]: direction,
-          'row--no-gutters': noGutters,
-          [`row--align-${align}`]: align,
-          [`row--justify-${justify}`]: justify,
-          [`row--row-gap-${rowGap}`]: rowGap,
-          [`row--row-full-height`]: isFullHeight,
-        },
-        [breakpointsValue]
-      )}
-    >
-      {children}
-    </div>
-  )
-}
+    return (
+        <div
+            className={cn(
+                'row',
+                {
+                    [`row--${direction}`]: direction,
+                    'row--no-gutters': noGutters,
+                    [`row--align-${align}`]: align,
+                    [`row--justify-${justify}`]: justify,
+                    [`row--row-gap-${rowGap}`]: rowGap,
+                    'row--row-full-height': isFullHeight,
+                },
+                [breakpointsValue],
+            )}
+        >
+            {children}
+        </div>
+    );
+};

@@ -1,1 +1,1 @@
-export { SkillsPageAsync as SkillsPage } from './ui/SkillsPage.async'
+export { SkillsPageAsync as SkillsPage } from './ui/SkillsPage.async';

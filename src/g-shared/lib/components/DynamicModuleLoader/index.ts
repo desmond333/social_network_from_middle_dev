@@ -1,1 +1,1 @@
-export { DynamicModuleLoader } from './DynamicModuleLoader'
+export { DynamicModuleLoader } from './DynamicModuleLoader';

@@ -1,1 +1,1 @@
-export { daysSince } from './daysSince'
+export { daysSince } from './daysSince';

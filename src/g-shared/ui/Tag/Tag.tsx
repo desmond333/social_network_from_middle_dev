@@ -1,6 +1,6 @@
-import { FC, ReactNode } from 'react'
-import { classNames as cn } from '@/g-shared/lib/classNames/classNames'
-import './Tag.scss'
+import { FC, ReactNode } from 'react';
+import { classNames as cn } from '@/g-shared/lib/classNames/classNames';
+import './Tag.scss';
 
 interface TagProps {
   className?: string
@@ -8,10 +8,10 @@ interface TagProps {
 }
 
 export const Tag: FC<TagProps> = (props) => {
-  const { className, children } = props
+    const { className, children } = props;
 
-  return <div className={cn('tag', {}, [className])}>{children}</div>
-}
+    return <div className={cn('tag', {}, [className])}>{children}</div>;
+};
 
 // interface CompanyProps {
 //   company: Company;

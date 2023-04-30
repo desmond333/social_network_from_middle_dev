@@ -1,10 +1,10 @@
 import {
-  AppRoutes,
-  RoutePath,
-  TAppRoutesWithoutNotFound,
-  TRoutePath,
-} from '@/g-shared/config/routeConfig/routes'
-import { IconHome } from '@/g-shared/ui/Icon/Icons'
+    AppRoutes,
+    RoutePath,
+    TAppRoutesWithoutNotFound,
+    TRoutePath,
+} from '@/g-shared/config/routeConfig/routes';
+import { IconHome } from '@/g-shared/ui/Icon/Icons';
 
 export interface ISidebarItem {
   path: TRoutePath
@@ -14,29 +14,29 @@ export interface ISidebarItem {
 }
 
 export const SidebarItemsList: ISidebarItem[] = [
-  {
-    path: RoutePath.main,
-    text: AppRoutes.MAIN,
-    icon: <IconHome />,
-  },
-  {
-    path: RoutePath.profile,
-    text: AppRoutes.PROFILE,
-    icon: <IconHome />,
-  },
-  {
-    path: RoutePath.efficiency,
-    text: AppRoutes.EFFICIENCY,
-    icon: <IconHome />,
-  },
-  {
-    path: RoutePath.skills,
-    text: AppRoutes.SKILLS,
-    icon: <IconHome />,
-  },
-  {
-    path: RoutePath.about,
-    text: AppRoutes.ABOUT,
-    icon: <IconHome />,
-  },
-]
+    {
+        path: RoutePath.main,
+        text: AppRoutes.MAIN,
+        icon: <IconHome />,
+    },
+    {
+        path: RoutePath.profile,
+        text: AppRoutes.PROFILE,
+        icon: <IconHome />,
+    },
+    {
+        path: RoutePath.efficiency,
+        text: AppRoutes.EFFICIENCY,
+        icon: <IconHome />,
+    },
+    {
+        path: RoutePath.skills,
+        text: AppRoutes.SKILLS,
+        icon: <IconHome />,
+    },
+    {
+        path: RoutePath.about,
+        text: AppRoutes.ABOUT,
+        icon: <IconHome />,
+    },
+];

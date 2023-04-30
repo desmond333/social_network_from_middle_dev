@@ -1,4 +1,4 @@
-import { WeekData } from './weekData'
+import { WeekData } from './weekData';
 
 export type TSort = 'up' | 'down'
 

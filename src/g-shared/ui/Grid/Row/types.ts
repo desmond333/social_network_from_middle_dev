@@ -1,4 +1,4 @@
-import { Align } from '../../types'
+import { Align } from '../../types';
 
 export type RowAlign = Exclude<
   Align,

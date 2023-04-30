@@ -1,4 +1,4 @@
-import { TCountry, TCurrency } from '@/g-shared/const/common'
+import { TCountry, TCurrency } from '@/g-shared/const/common';
 
 export interface Profile {
   firstName: string

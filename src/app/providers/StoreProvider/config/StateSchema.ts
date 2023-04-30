@@ -1,18 +1,18 @@
 import {
-  AnyAction,
-  CombinedState,
-  EnhancedStore,
-  Reducer,
-  ReducersMapObject,
-} from '@reduxjs/toolkit'
-import { NavigateOptions, To } from 'react-router'
-import { AxiosInstance } from 'axios'
-import { LoginSchema } from '@/e-features/AuthByUsername'
-import { WorkTimeSchema } from '@/e-features/WorkTimeTracking'
-import { CurrentLevelSchema } from '@/e-features/CurrentLevelDisplay'
-import { UserSchema } from '@/f-entities/User'
-import { ProfileSchema } from '@/f-entities/Profile'
-import { EditableProfileCardSchema } from '@/e-features/EditableProfileCard'
+    AnyAction,
+    CombinedState,
+    EnhancedStore,
+    Reducer,
+    ReducersMapObject,
+} from '@reduxjs/toolkit';
+import { NavigateOptions, To } from 'react-router';
+import { AxiosInstance } from 'axios';
+import { LoginSchema } from '@/e-features/AuthByUsername';
+import { WorkTimeSchema } from '@/e-features/WorkTimeTracking';
+import { CurrentLevelSchema } from '@/e-features/CurrentLevelDisplay';
+import { UserSchema } from '@/f-entities/User';
+import { ProfileSchema } from '@/f-entities/Profile';
+import { EditableProfileCardSchema } from '@/e-features/EditableProfileCard';
 
 export interface StateSchema {
   user: UserSchema

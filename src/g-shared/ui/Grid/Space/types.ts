@@ -1,4 +1,4 @@
-import { RowGap } from '../Row/types'
+import { RowGap } from '../Row/types';
 
 export type SpaceRowGap = Exclude<
   RowGap,
