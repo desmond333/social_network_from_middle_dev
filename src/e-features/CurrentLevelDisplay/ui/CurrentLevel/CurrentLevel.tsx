@@ -1,10 +1,10 @@
 import { FC, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { classNames as cn } from '@/g-shared/lib/classNames/classNames';
+import { useDispatch } from 'react-redux';
 import './CurrentLevel.scss';
-import { useDispatch, useSelector } from 'react-redux';
-import { getCurrentLevelState } from '../../model/selectors/getCurrentLevelState';
+import { useCurrentLevel } from '../../model/selectors/getCurrentLevelState';
 import { currentLevelActions } from '../../model/slice/currentLevelSlice';
+import { classNames as cn } from '@/g-shared/lib/classNames/classNames';
 import { BlockText, VerticalOffset } from '@/g-shared/ui';
 
 interface CurrentLevelProps {
@@ -16,7 +16,7 @@ export const CurrentLevel: FC<CurrentLevelProps> = (props) => {
     const { t } = useTranslation();
 
     const dispatch = useDispatch();
-    const { level } = useSelector(getCurrentLevelState);
+    const { level } = useCurrentLevel();
 
     useEffect(() => {
         dispatch(currentLevelActions.transformDateInLevel());
@@ -29,7 +29,6 @@ export const CurrentLevel: FC<CurrentLevelProps> = (props) => {
                 <BlockText>
                     {t('CURRENT_LEVEL')}
                     {level}
-                    {' '}
                     из 80
                 </BlockText>
                 <BlockText>Статус: middle</BlockText>
