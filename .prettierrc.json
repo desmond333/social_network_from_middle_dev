@@ -3,8 +3,19 @@
   "singleQuote": true,
   "trailingComma": "es5",
   "printWidth": 80,
-  "tabWidth": 2,
+  "tabWidth": 4,
   "useTabs": false,
   "bracketSpacing": true,
-  "endOfLine": "auto"
+  "endOfLine": "auto",
+  "importOrder": [
+    "<THIRD_PARTY_MODULES>",
+    "^../(.*)",
+    "^@/app/(.*)$",
+    "^@/b-processes/(.*)$",
+    "^@/c-pages/(.*)$",
+    "^@/d-widgets/(.*)$",
+    "^@/e-features/(.*)$",
+    "^@/f-entities/(.*)$",
+    "^@/g-shared/(.*)$"
+  ]
 }
