@@ -11,13 +11,9 @@ import {
 } from '@/g-shared/ui'
 import { BtnSize, BtnVariant } from '@/g-shared/ui/Button/types'
 
-interface SidebarProps {
-    className?: string
-}
+interface SidebarProps {}
 
-export const Sidebar: FC<SidebarProps> = memo((props) => {
-    const { className } = props
-
+export const Sidebar: FC<SidebarProps> = memo(() => {
     const { theme } = useTheme()
 
     const [isCollapsed, setIsCollapsed] = useState(false)
@@ -29,10 +25,7 @@ export const Sidebar: FC<SidebarProps> = memo((props) => {
     }
 
     return (
-        <aside
-            className={cn('sidebar', mods, [className])}
-            data-testid="sidebar"
-        >
+        <aside className={cn('sidebar', mods, [])} data-testid="sidebar">
             <Row direction="column" justify="space-between" isFullHeight>
                 <Column isFlexNone>
                     <Menu direction="column" rowGap="level1">

@@ -1,39 +1,37 @@
-import { FC, MouseEvent, useCallback } from 'react';
-import { useTranslation } from 'react-i18next';
-import { useSelector } from 'react-redux';
-import { classNames as cn } from '@/g-shared/lib/classNames';
-import { Button, Row } from '@/g-shared/ui';
-import { H3 } from '@/g-shared/ui/Text';
-import { BtnVariant } from '@/g-shared/ui/Button/types';
-import { editableProfileCardActions } from '@/e-features/EditableProfileCard/model/slice/EditableProfileCardSlice';
-import { useAppDispatch } from '@/g-shared/lib/hooks/UseAppDispatch';
-import { getProfileReadonly } from '@/e-features/EditableProfileCard/model/selectors/getProfileReadonly';
+import { FC, MouseEvent, useCallback } from 'react'
+import { useTranslation } from 'react-i18next'
+import { editableProfileCardActions } from '@/e-features/EditableProfileCard/model/slice/EditableProfileCardSlice'
+import { classNames as cn } from '@/g-shared/lib/classNames'
+import { useAppDispatch } from '@/g-shared/lib/hooks/UseAppDispatch'
+import { Button, Row } from '@/g-shared/ui'
+import { BtnVariant } from '@/g-shared/ui/Button/types'
+import { H3 } from '@/g-shared/ui/Text'
 
 interface EditableProfileCardHeaderProps {}
 
 export const EditableProfileCardHeader: FC<EditableProfileCardHeaderProps> = (
     props,
 ) => {
-    const {} = props;
+    const {} = props
 
-    const { t } = useTranslation();
+    const { t } = useTranslation()
 
-    const dispatch = useAppDispatch();
-    const readonly = useSelector(getProfileReadonly);
+    const dispatch = useAppDispatch()
+    const readonly = true
 
     const onEdit = useCallback(
         (event: MouseEvent<HTMLButtonElement>) => {
-            dispatch(editableProfileCardActions.setReadonly(true));
+            dispatch(editableProfileCardActions.setReadonly(true))
         },
         [dispatch],
-    );
+    )
 
     const onCancelEdit = useCallback(
         (event: MouseEvent<HTMLButtonElement>) => {
-            dispatch(editableProfileCardActions.setReadonly(false));
+            dispatch(editableProfileCardActions.setReadonly(false))
         },
         [dispatch],
-    );
+    )
 
     return (
         <div className={cn('profile-card__header', {}, [])}>
@@ -50,5 +48,5 @@ export const EditableProfileCardHeader: FC<EditableProfileCardHeaderProps> = (
                 )}
             </Row>
         </div>
-    );
-};
+    )
+}

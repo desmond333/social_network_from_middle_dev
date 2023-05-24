@@ -1,10 +1,10 @@
 import {
     ChangeEvent, FC, memo, useState,
-} from 'react';
-import { classNames as cn } from '@/g-shared/lib/classNames';
-import { FormInputText } from '../Text';
-import { InputProps } from '@/g-shared/ui/Input/types';
-import { IconDanger } from '@/g-shared/ui';
+} from 'react'
+import { FormInputText } from '../Text'
+import { classNames as cn } from '@/g-shared/lib/classNames'
+import { IconDanger } from '@/g-shared/ui'
+import { InputProps } from '@/g-shared/ui/Input/types'
 
 export const Input: FC<InputProps> = memo((props) => {
     const {
@@ -23,13 +23,14 @@ export const Input: FC<InputProps> = memo((props) => {
         inputMode = 'none',
         autoComplete = 'off',
         noti,
-    } = props;
+        readonly,
+    } = props
 
-    const [valueInput, setValueInput] = useState<string>(value);
+    const [valueInput, setValueInput] = useState<string>(value)
     const changeInputHandler = (e: ChangeEvent<HTMLInputElement>) => {
-        if (onChange) onChange(e.target.value);
-        setValueInput(e.target.value);
-    };
+        if (onChange) onChange(e.target.value)
+        setValueInput(e.target.value)
+    }
 
     return (
         <div
@@ -46,7 +47,9 @@ export const Input: FC<InputProps> = memo((props) => {
             )}
 
             <div
-                className={cn('input__body', { 'input__body--disabled': disabled })}
+                className={cn('input__body', {
+                    'input__body--disabled': disabled,
+                })}
                 tabIndex={1}
             >
                 {icon?.left && <div className="input__icon">{icon.left}</div>}
@@ -64,11 +67,16 @@ export const Input: FC<InputProps> = memo((props) => {
                     required={required}
                     inputMode={inputMode}
                     autoComplete={autoComplete}
+                    readOnly={readonly}
                 />
 
                 {icon?.right && <div className="input__icon">{icon.right}</div>}
                 {error && (
-                    <div className={cn('input__icon', { 'input__icon--error': error })}>
+                    <div
+                        className={cn('input__icon', {
+                            'input__icon--error': error,
+                        })}
+                    >
                         {/* <IconDanger className="icon icon--danger icon--size-sm" /> */}
                         <IconDanger />
                     </div>
@@ -81,5 +89,5 @@ export const Input: FC<InputProps> = memo((props) => {
                 </div>
             )}
         </div>
-    );
-});
+    )
+})

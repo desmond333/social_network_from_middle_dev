@@ -1,3 +1,8 @@
+import { Profile } from '@/f-entities/Profile'
+
 export interface EditableProfileCardSchema {
-  readonly: boolean
+    isLoading: boolean
+    readonly: boolean
+    data?: Profile
+    error?: string
 }
