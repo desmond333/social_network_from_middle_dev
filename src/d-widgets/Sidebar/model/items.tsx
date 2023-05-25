@@ -3,14 +3,14 @@ import {
     RoutePath,
     TAppRoutesWithoutNotFound,
     TRoutePath,
-} from '@/g-shared/config/routeConfig/routes';
-import { IconHome } from '@/g-shared/ui/Icon/Icons';
+} from '@/g-shared/config/routeConfig/routes'
+import { IconHome } from '@/g-shared/ui/Icon/Icons'
 
 export interface ISidebarItem {
-  path: TRoutePath
-  text: TAppRoutesWithoutNotFound
-  icon: JSX.Element
-  // icon: VFC<SVGProps<SVGSVGElement>>
+    path: TRoutePath
+    text: TAppRoutesWithoutNotFound
+    icon: JSX.Element
+    // icon: VFC<SVGProps<SVGSVGElement>>
 }
 
 export const SidebarItemsList: ISidebarItem[] = [
@@ -39,4 +39,9 @@ export const SidebarItemsList: ISidebarItem[] = [
         text: AppRoutes.ABOUT,
         icon: <IconHome />,
     },
-];
+    {
+        path: RoutePath.articles,
+        text: AppRoutes.ARTICLES,
+        icon: <IconHome />,
+    },
+]
