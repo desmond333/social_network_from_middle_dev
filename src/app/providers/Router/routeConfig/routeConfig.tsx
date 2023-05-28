@@ -13,7 +13,7 @@ import {
     TAppRoutes,
 } from '@/g-shared/config/routeConfig/routes'
 
-type AppRoutesProps = RouteProps & {
+export type AppRoutesProps = RouteProps & {
     authOnly?: boolean
 }
 
