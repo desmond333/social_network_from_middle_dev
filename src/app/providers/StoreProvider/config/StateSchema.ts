@@ -11,6 +11,7 @@ import { LoginSchema } from '@/e-features/AuthByUsername'
 import { CurrentLevelSchema } from '@/e-features/CurrentLevelDisplay'
 import { EditableProfileCardSchema } from '@/e-features/EditableProfileCard'
 import { WorkTimeSchema } from '@/e-features/WorkTimeTracking'
+import { ArticleDetailsSchema } from '@/f-entities/Article'
 import { UserSchema } from '@/f-entities/User'
 
 export interface StateSchema {
@@ -21,6 +22,7 @@ export interface StateSchema {
     // Асинхронные редюсеры
     loginForm?: LoginSchema
     editableProfileCard?: EditableProfileCardSchema
+    articleDetails?: ArticleDetailsSchema
 }
 
 export type StateSchemaKey = keyof StateSchema
